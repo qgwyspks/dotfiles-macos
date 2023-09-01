@@ -1,0 +1,57 @@
+window:
+  dimensions:
+    columns: 74
+    lines: 24
+  padding:
+    x: 18
+    y: 16
+  dynamic_padding: false
+  opacity: 0.82
+  dynamic_title: true
+
+scorlling:
+  history: 2500
+  multiplier: 3
+
+live_config_reload: true
+
+font:
+  size: 14.0
+  normal:
+    family: Mononoki Nerd Font
+    # family: JetBrainsMono Nerd Font
+    style: Regular
+    # style: Italic
+  bold:
+    family: Mononoki Nerd Font
+    style: Bold
+  italic:
+    family: Mononoki Nerd Font
+    style: Italic
+  bold_italic:
+    family: Mononoki Nerd Font
+    style: Bold Italic
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+cursor:
+  style:
+    shape: Beam
+    blinking: Always
+  unfocused_hollow: false
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_cursor_when_typing: false
+
+mouse_bindings:
+  - { mouse: Middle, action: Pasteselection }
+
+key_bindings:
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command, action: Copy  }
+  - { key: Q, mods: Command, action: Quit  }
+  # - { key: Return, mods: Alt, action: }
