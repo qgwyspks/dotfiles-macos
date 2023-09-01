@@ -1,0 +1,64 @@
+#format = ""
+
+right_format = """$cmd_duration"""
+add_newline = false
+
+[line_break]
+disabled = true
+
+[c]
+format = '[$symbol]($style)'
+style = 'bold 149'
+# disabled = true
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[✗](bold red)'
+
+[cmd_duration]
+min_time = 1
+format = '[$duration](bold yellow)'
+
+[conda]
+format = '[$symbol$environment](dimmed green)'
+disabled = true
+
+[directory]
+truncation_length = 3
+truncation_symbol = './'
+home_symbol = '~'
+
+[docker_context]
+disabled = true
+
+[golang]
+format = '[$symbol]($style)'
+style = 'bold cyan'
+# disabled = true
+
+[lua]
+format = '[$symbol]($style)'
+style = 'bold blue'
+
+[nodejs]
+format = '[$symbol]($style)'
+style = 'bold red'
+# disabled = true
+
+[os]
+format = '[($symbol)]($style)'
+style = "bold blue"
+disabled = true
+
+[os.symbols]
+Windows = ' '
+Macos = ' '
+#Arch = ""
+
+[package]
+disabled = true
+
+[python]
+format = '[$symbol]($style)'
+style = 'yello bold'
+
