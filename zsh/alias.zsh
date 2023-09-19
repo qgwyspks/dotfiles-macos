@@ -10,11 +10,6 @@ alias la='exa -a --icons' # 'ls --color -F -a'
 alias lla='exa -lha --icons' # 'ls --color -F -l -a'
 alias lt='exa -lhT --icons'
 
-alias sed='gsed'
-
-# pacman
-alias clean='sudo pacman -R $(pacman -Qdtq)'
-
 # mkdir
 alias mkdir='mkdir -p'
 
