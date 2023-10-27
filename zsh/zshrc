@@ -1,0 +1,7 @@
+ZSH_HOME="$HOME/.config/zsh"
+
+[[ ! -f ${ZSH_HOME}/alias.zsh ]] || source ${ZSH_HOME}/alias.zsh
+[[ ! -f ${ZSH_HOME}/env.zsh ]] || source ${ZSH_HOME}/env.zsh
+[[ ! -f ${ZSH_HOME}/plugins.zsh ]] || source ${ZSH_HOME}/plugins.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

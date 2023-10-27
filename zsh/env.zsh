@@ -2,6 +2,7 @@ export EDITOR=nvim
 
 export PATH="$HOME/.local/bin:$PATH"
 
+# curl
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 # starship
