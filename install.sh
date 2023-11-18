@@ -2,7 +2,8 @@
 
 BASEDIR=~/.config
 
-cp -r tmux ~/.config/
+cp tmux/tmux.conf ~/.tmux.conf
 cp -r zsh ~/.config/
+cp zsh/zshrc ~/.zshrc
 cp -r alacritty ~/.config/
-ln -s
+cp warprc ~/.warprc

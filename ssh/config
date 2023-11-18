@@ -1,5 +1,0 @@
-Include ~/.orbstack/ssh/config
-
-Host aliyun
-  Hostname 47.97.35.232
-  User ecs-user
