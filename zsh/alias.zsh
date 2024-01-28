@@ -3,12 +3,12 @@ alias -g ...='../..'
 alias -g ....='../../..'
 
 
-# ls
-alias ls='exa --icons' # 'ls --color -F'
-alias ll='exa -lh --icons' # 'ls --color -F -l'
-alias la='exa -a --icons' # 'ls --color -F -a'
-alias lla='exa -lha --icons' # 'ls --color -F -l -a'
-alias lt='exa -lhT --icons'
+# lsd -> ls
+alias la='lsd -A'  # Don't list implied . and ..
+alias ll='lsd -l --header'
+alias llg='lsd -l --header --git'
+alias lla='lsd -lA'
+alias lt='lsd --tree'
 
 # mkdir
 alias mkdir='mkdir -p'
@@ -20,9 +20,14 @@ alias vim="nvim"
 # zsh
 alias zshrc="nvim ~/.zshrc"
 
+alias tt="\time zsh -i -c exit"
+
 # Conda
 # alias paddle="conda activate paddle"
 #alias torch="conda activate torch"
+
+# Python
+alias piptree="pipdeptree"
 
 # LazyDocker
 alias lzd="lazydocker"
@@ -39,3 +44,7 @@ alias unproxy="unset https_proxy http_proxy all_proxy"
 
 # tmux
 alias t="tmux"
+
+# asciinema
+alias rec="asciinema rec"
+
