@@ -57,3 +57,5 @@ zinit light zdharma-continuum/history-search-multi-word
 
 #zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 
+zmodload zsh/zprof
+
