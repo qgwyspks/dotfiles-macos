@@ -1,25 +1,27 @@
 #!/usr/bin/env bash
 
 # Install tools using Homebrew
+tools=(
+    neovim
+    bat
+    exa
+    tmux
+    fzf
+    go
+    nvm
+    sqlite
+    mysql
+    redis
+)
 
-brew update && brew upgrade
+if ! command -v brew &> /dev/null; then
+    echo "Homebrew not found. Please install Homebrew first."
+    exit
+else
+    brew update && brew upgrade
+fi
 
-brew install neovim
-
-brew install bat
-
-brew install exa
-
-brew install tmux
-
-brew install fzf
-
-brew install go
-
-brew install nvm
-
-brew install sqlite
-
-brew install mysql
-
-brew install redis
+for tool in ${tools[@]}; do
+    echo "Installing $tool..."
+    brew install $tool
+done
