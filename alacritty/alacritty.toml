@@ -2,13 +2,13 @@
 live_config_reload = true    # 实时配置重新加载
 
 [window]
-dimensions = { columns = 74, lines = 24 } # 窗口尺寸（终端中的行/列数）
-padding = { x = 16, y = 26 }              # 窗口周围添加的空白区域
-decorations = "transparent"               # 窗口装饰 - 透明(macOS)
-dynamic_padding = false                   # 动态填充
-dynamic_title = true                      # 动态标题
-opacity = 0.82                            # 背景不透明度
-option_as_alt = "None"                    # Option(Macos) -> Alt -> OnlyLeft | OnlyRight| Both | None
+dimensions = { columns = 74, lines = 24 }  # 窗口尺寸（终端中的行/列数）
+padding = { x = 16, y = 26 }               # 窗口周围添加的空白区域
+decorations = "transparent"                # 窗口装饰 - 透明(macOS)
+dynamic_padding = false                    # 动态填充
+dynamic_title = true                       # 动态标题
+opacity = 0.82                             # 背景不透明度
+option_as_alt = "None"                     # Option(Macos) -> Alt -> OnlyLeft | OnlyRight| Both | None
 
 [scrolling]
 history = 2500  # 回滚缓冲区的最大行数
