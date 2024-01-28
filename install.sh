@@ -1,23 +1,40 @@
 #!/bin/bash
 
-BASEDIR=~/.config/test
+BASEDIR=~/.config/
 
-if [ ! -d "$BASEDIR" ]; then
-  mkdir -p $BASEDIR
-fi
+basedir_exists() {
+    if [ ! -d "$BASEDIR" ]; then
+        mkdir -p $BASEDIR
+    fi
+}
 
-if [ ! -d "$BASEDIR/zsh" ]; then
-    cp -r zsh $BASEDIR/
-fi
+set_zsh() {
+    if [ ! -d "$BASEDIR/zsh" ]; then
+        cp -r zsh $BASEDIR/
+    fi
 
-if [ ! -e "~/.zshrc"]; then
-    cp zsh/zshrc ~/.zshrc
-fi
+    if [ ! -e "~/.zshrc"]; then
+        cp zsh/zshrc ~/.zshrc
+    fi
+}
 
-if [ ! -e "~/.tmux.conf"]; then
-    cp tmux/tmux.conf ~/.tmux.conf
-fi
+set_tmux() {
+    if [ ! -e "~/.tmux.conf"]; then
+        cp tmux/tmux.conf ~/.tmux.conf
+    fi
+}
 
-if [ ! -d "$BASEDIR/alacritty" ]; then
-    cp -r alacritty $BASEDIR/
-fi
+set_alacritty() {
+    if [ ! -d "$BASEDIR/alacritty" ]; then
+        cp -r alacritty $BASEDIR/
+    fi
+}
+
+main() {
+    basedir_exists
+    set_zsh
+    set_tmux
+    set_alacritty
+}
+
+main
