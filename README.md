@@ -6,15 +6,13 @@
 - **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) + [starship](https://starship.rs/)
 - [**Tmux**](https://github.com/tmux/tmux/wiki)：tpm + tmux-open + tmux-prefix-highlight
 
-![Open-Source Software][OSS Icon]
-
 # Software
 
 自用的一些软件清单，尽量免费为主。
 
 > 大部分的软件都推荐使用 **Homebrew Cask** 安装，因为它会帮你选择适合的版本，且方便管理。
 
-推荐些好网站:+1:：
+推荐些好网站 :+1:：
 - **MacApp**：https://macapp.org.cn/
 - **appstorent**：https://appstorrent.ru/
 
