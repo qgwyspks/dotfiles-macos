@@ -1,26 +1,34 @@
- 我在 MacOS 上的 dotfiles 配置文件和自用的软件 :sparkles:。
+ 我在 macOS 上的 dotfiles 配置文件和自用的软件 :sparkles:。
 
 # Contents​ :book:
 
-- [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 MacOS 上提供了很多额外的 action 功能支持
+- [**Homebrew**](https://brew.sh/zh-cn/)：macOS 的包管理器
+
+  > 非常推荐使用 `homebrew` 来安装环境和软件
+
+- [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 macOS 上提供了很多额外的 action 功能支持
 
 - **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) + :rocket:[starship](https://starship.rs/)
 
 - [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器 [tpm](https://github.com/tmux-plugins/tpm) + [tmux-open](https://github.com/tmux-plugins/tmux-open) + [tmux-prefix-highlight](https://github.com/tmux-plugins/tmux-prefix-highlight)
 
+- [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器
+
 - [**bat**](https://github.com/sharkdp/bat)：`cat` 替代品
+
+- [**lsd**](https://github.com/lsd-rs/lsd)：`ls` 替代品
 
 - [**nvm**](https://github.com/nvm-sh/nvm)：Node.js 的版本管理器
 
 - [**Neovim**](https://neovim.io/)：基于 Vim 的文本编辑器，具有强大的插件系统
 
-- [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器
-
-- [**Miniforge**](https://github.com/conda-forge/miniforge)：包含 `Conda` 和  `Mamba` 的使用 `conda-forge` 作为默认 channel 的最小安装环境
+- [**Miniforge**](https://github.com/conda-forge/miniforge)：包含 `Conda` 和  `Mamba` 、使用 `conda-forge` 作为默认 channel 的最小安装环境
 
   > Anaconda​ :vs: Miniconda​ :vs: Micromamba :vs: ​Miniforge，相比较下来，我还是比较推荐最轻量的 Miniforge，它同时包含 `conda` 和 `mamba`，`mamba` 真的非常快 :zap:！
 
 - [**OrbStack**](https://orbstack.dev/)：快速、轻量、简单的 Docker 虚拟机容器软件
+
+- [**Software**](#Software)
 
 # Software​ :green_apple:
 
@@ -36,7 +44,7 @@
 
 - [**CotEditor**](https://coteditor.com/)：轻量的文本编辑器
 
-- **VSCode**：代码编辑器
+- [**VSCode**](https://code.visualstudio.com/)：代码编辑器
   
     > 不知道为什么，感觉 Mac 下的 vscode 好看很多！
     
@@ -45,7 +53,11 @@
     - PyCharm
     - GoLand
     
-    > 大学生可以用学生邮箱申请免费使用，一般一年重新验证一次资格
+    > 大学生可以用学生邮箱申请免费使用，一般一年重新验证一次资格。
+    
+- [**Xcode**](https://developer.apple.com/cn/xcode/)：用于 macOS app 开发的 IDE 和工具链
+
+    > 很多工具需要安装 `Xcode Command Line Tools`，不太推荐安装整个 Xcode，因为比较大，运行 `xcode-select --install` 即可。
 
 ## Tool
 
