@@ -143,11 +143,11 @@
 
 - **Clash系**：有 [ClashX](https://en.clashx.org/)、ClashX Pro、[Clash Verge](https://github.com/zzzgydi/clash-verge/releases) 和 CFW这些
   
-    > 不过 Clash 的内核 Premium 都删库跑路了，就 [Meta](https://github.com/MetaCubeX/ClashX.Meta)（[mihomo](https://github.com/MetaCubeX/mihomo)）的作者还在更新
+    > 不过 Clash 的内核 Premium 都删库跑路了，就 [Meta](https://github.com/MetaCubeX/ClashX.Meta)（[mihomo](https://github.com/MetaCubeX/mihomo)）的作者改名偷偷还在更新
     
 - [**sing-box**](https://apps.apple.com/us/app/sing-box/id6451272673)：上手难度偏高，支持的协议非常多，比较适合自建服务器的用户使用，也有相关的项目支持 Clash 的订阅转换
 
     > App Store 版本需要外区 ID，也可以使用 Homebrew Cask 安装 sfm 图形化界面
 
-> 如果不喜欢图形化界面的，可以选择使用命令行版本，自己写一个 plist 文件设置好开启启动即可。
+> 如果不喜欢图形化界面的，可以选择使用命令行版本，自己写一个 `plist` 文件设置好开机自启动即可。
 
