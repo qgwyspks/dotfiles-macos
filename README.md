@@ -28,7 +28,7 @@
 
 - [**OrbStack**](https://orbstack.dev/)：快速、轻量、简单的 Docker 虚拟机容器软件
 
-- [**Software**](#Software :green_apple:)
+- **Software**
 
 # Software​ :green_apple:
 
