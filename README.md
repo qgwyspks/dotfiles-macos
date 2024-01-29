@@ -1,12 +1,12 @@
  我在 macOS 上的 dotfiles 配置文件和自用的软件 :sparkles:。
 
-# Contents​ :book:
+# Shell :book:
+
+- [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 macOS 上提供了很多额外的 action 功能支持
 
 - [**Homebrew**](https://brew.sh/zh-cn/)：macOS 的包管理器
 
   > 非常推荐使用 `homebrew` 来安装环境和软件
-
-- [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 macOS 上提供了很多额外的 action 功能支持
 
 - **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) + :rocket:[starship](https://starship.rs/)
 
@@ -27,8 +27,6 @@
   > Anaconda​ :vs: Miniconda​ :vs: Micromamba :vs: ​Miniforge，相比较下来，我还是比较推荐最轻量的 Miniforge，它同时包含 `conda` 和 `mamba`，`mamba` 真的非常快 :zap:！
 
 - [**OrbStack**](https://orbstack.dev/)：快速、轻量、简单的 Docker 虚拟机容器软件
-
-- **Software**
 
 # Software​ :green_apple:
 
