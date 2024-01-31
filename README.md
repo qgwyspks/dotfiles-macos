@@ -28,6 +28,8 @@
 
 - [**OrbStack**](https://orbstack.dev/)：快速、轻量、简单的 Docker 虚拟机容器软件
 
+- [**harlequin**](https://github.com/tconbeer/harlequin)：终端的 SQL IDE，支持 DuckDB/SQLite
+
 # Software​ :green_apple:
 
 自用的一些软件清单，尽量免费为主。
@@ -103,6 +105,13 @@
 
   > 文件都在本地，**不用登录**让人很难不喜欢
 
+## 音乐 :musical_note:
+
+- [**网易云音乐**](https://music.163.com/#/download)
+- [**QQ 音乐**](https://y.qq.com/download/mac.html?part=1&ADTAG=YQQ)
+- [**Spotify**](https://open.spotify.com/)
+- [**YT Music**](https://github.com/steve228uk/YouTube-Music)：YouTube Music 的 Mac 应用包装器
+
 ## 笔记
 
 ### Markdown
@@ -136,6 +145,10 @@
 - [**Beekeeper Studio**](https://www.beekeeperstudio.io/)：MySQL/PostgreSQL/SQLite/SQL Server 等的数据库管理，非常美观、易用
 
     > 不知道为什么双击数据库文件，不会默认使用 DbGate，所以这边安装了 Beekeeper，启动速度也非常快。
+    
+- [**Tiny RDM**](https://github.com/tiny-craft/tiny-rdm)：轻量级跨平台 Redis 桌面管理器
+
+- [**harlequin**](https://github.com/tconbeer/harlequin)：终端的 SQL IDE，支持 DuckDB/SQLite
 
 ## 科学​ :crystal_ball:
 
