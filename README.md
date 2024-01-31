@@ -104,6 +104,10 @@
 - [**Bruno**](https://www.usebruno.com/)：离线的 API 客户端
 
   > 文件都在本地，**不用登录**让人很难不喜欢
+  
+- [**OpenInTerminal**](https://github.com/Ji4n1ng/OpenInTerminal)：Finder 工具栏应用程序，用于打开终端、打开指定 App 等
+
+  > 如果只需要打开终端的话，可以安装 [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite-zh.md)。
 
 ## 音乐 :musical_note:
 
