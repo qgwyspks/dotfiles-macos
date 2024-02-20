@@ -123,7 +123,7 @@
 - [**Typora**](https://typoraio.cn/)：所见即所得的 Markdown 编辑器和阅读器
 
     > 89 块 3 台设备我感觉还是蛮划算的，如果想要用免费版可以下载 0.11.18 版本。
-- [**Obsidian**](https://obsidian.md/)：强大的插件系统，笔记存储在本地，同步需要付费
+- [**Obsidian**](https://obsidian.md/)：强大的插件系统，笔记存储在本地，同步需要付费，如果都是苹果设备的话，iCloud 同步会比较方便
 - [**Notion**](https://www.notion.so/)：美观的笔记软件，块状的设计非常灵湖，多系统同步方便。笔记存储在云端，服务器在国外，速度会比较慢
 
     > 我这边安装 Notion，是为了方便 Obsidian 通过插件发布至 Notion，借用 Notion 分享一些笔记。

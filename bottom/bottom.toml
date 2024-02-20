@@ -1,0 +1,144 @@
+[flags]
+hide_avg_cpu = false  # 隐藏平均CPU使用率
+dot_marker = false  # 对图标使用点标记
+rate = "1s" # 刷新率
+left_legend = false  # CPU图例放在左边
+current_usage = false  # 当前使用率
+unnormalized_cpu = false  # 显示进程 CPU%，无需对核心数量进行标准化
+group_processes = false  # 默认情况下是否将具有相同名称的进程分组在一起。
+case_sensitive = false  # 区分大小写
+whole_word = false  # 整个单词匹配
+regex = false  # 正则表达式
+# Defaults to Celsius.  Temperature is one of:
+#temperature_type = "k"
+#temperature_type = "f"
+#temperature_type = "c"
+#temperature_type = "kelvin"
+#temperature_type = "fahrenheit"
+#temperature_type = "celsius"
+default_time_value = "60s"  # 默认时间间隔
+time_delta = 15000  # 时间间隔
+hide_time = false  # 隐藏时间刻度
+default_widget_type = "proc"  # 默认小部件类型
+default_widget_count = 1  # 默认小部件数量
+expanded_on_startup = false  # 启动时展开选中的小部件
+basic = false  # 基本模式
+use_old_network_legend = false  # 使用旧的网络图例样式
+hide_table_gap = false  # 隐藏表格间隙
+battery = true  # 显示电池小部件
+disable_click = false  # 禁用鼠标点击
+color = "nord"  # 主题"default", "default-light", "gruvbox", "gruvbox-light", "nord", "nord-light"
+mem_as_value = false  # 在进程小部件中显示内存值
+tree = false  # 进程树
+show_table_scroll_position = false  # 显示表滚动位置
+process_command = false  # 将进程显示为其命令。
+network_use_binary_prefix = false  # 网络图表使用二进制前缀
+network_use_bytes = false  # 网络图表使用字节
+network_use_log = false  # 网络图表使用对数刻度
+disable_advanced_kill = false  # 隐藏高级选项以停止类 Unix 系统上的进程。
+enable_gpu_memory = false  # 显示 GPU 内存
+enable_cache_memory = true  # 启用收集和显示缓存和缓冲区内存（在 Windows 上不可用）
+retention = "10m"  # 10 minutes
+
+[processes]
+columns = [
+    "PID",
+    "Name",
+    "CPU%",
+    "Mem%",
+    "R/s",
+    "W/s",
+    "T.Read",
+    "T.Write",
+    "User",
+    "State",
+]
+
+#[colors] # Uncomment if you want to use custom colors
+# Represents the colour of table headers (processes, CPU, disks, temperature).
+#table_header_color="LightBlue"
+# Represents the colour of the label each widget has.
+#widget_title_color="Gray"
+# Represents the average CPU color.
+#avg_cpu_color="Red"
+# Represents the colour the core will use in the CPU legend and graph.
+#cpu_core_colors=["LightMagenta", "LightYellow", "LightCyan", "LightGreen", "LightBlue", "LightRed", "Cyan", "Green", "Blue", "Red"]
+# Represents the colour RAM will use in the memory legend and graph.
+#ram_color="LightMagenta"
+# Represents the colour SWAP will use in the memory legend and graph.
+#swap_color="LightYellow"
+# Represents the colour ARC will use in the memory legend and graph.
+#arc_color="LightCyan"
+# Represents the colour the GPU will use in the memory legend and graph.
+#gpu_core_colors=["LightGreen", "LightBlue", "LightRed", "Cyan", "Green", "Blue", "Red"]
+# Represents the colour rx will use in the network legend and graph.
+#rx_color="LightCyan"
+# Represents the colour tx will use in the network legend and graph.
+#tx_color="LightGreen"
+# Represents the colour of the border of unselected widgets.
+#border_color="Gray"
+# Represents the colour of the border of selected widgets.
+#highlighted_border_color="LightBlue"
+# Represents the colour of most text.
+#text_color="Gray"
+# Represents the colour of text that is selected.
+#selected_text_color="Black"
+# Represents the background colour of text that is selected.
+#selected_bg_color="LightBlue"
+# Represents the colour of the lines and text of the graph.
+#graph_color="Gray"
+# Represents the colours of the battery based on charge
+#high_battery_color="green"
+#medium_battery_color="yellow"
+#low_battery_color="red"
+
+[[row]]
+# ratio = 30
+ratio = 2
+[[row.child]]
+ratio = 3
+[[row.child.child]]
+ratio = 3
+type = "mem"
+[[row.child.child]]
+ratio = 3
+type = "net"
+[[row.child.child]]
+type = "temp"
+[[row.child.child]]
+type = "disk"
+[[row.child]]
+ratio = 4
+[[row.child.child]]
+type = "cpu"
+[[row.child.child]]
+type = "proc"
+
+
+[disk_filter]
+is_list_ignored = true
+list = ["/dev/sda\\d+", "/dev/nvme0n1p2"]
+regex = true
+case_sensitive = false
+whole_word = false
+
+[mount_filter]
+is_list_ignored = true
+list = ["/mnt/.*", "/boot", "/System/.*"]
+regex = true
+case_sensitive = false      # 区分大小写
+whole_word = false          # 整个单词匹配时才匹配
+
+[temp_filter]
+is_list_ignored = true
+list = ["cpu", "wifi"]
+regex = false
+case_sensitive = false
+whole_word = false
+
+[net_filter]
+is_list_ignored = true
+list = ["virbr0.*"]
+regex = true
+case_sensitive = false
+whole_word = false
