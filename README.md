@@ -2,9 +2,9 @@
 
 # Shell :book:
 
-- [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 macOS 上提供了很多额外的 action 功能支持
+- [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 **MacOS** 上提供了很多额外的 `action` 功能支持
 
-- [**Homebrew**](https://brew.sh/zh-cn/)：macOS 的包管理器
+- [**Homebrew**](https://brew.sh/zh-cn/)：**MacOS** 的包管理器
 
   > 非常推荐使用 `homebrew` 来安装环境和软件
 
@@ -17,6 +17,10 @@
 - [**bat**](https://github.com/sharkdp/bat)：`cat` 替代品
 
 - [**lsd**](https://github.com/lsd-rs/lsd)：`ls` 替代品
+
+- [**dust**](https://github.com/bootandy/dust)：`du` 的替代品，查看磁盘的使用情况
+
+- [**tokei**](https://github.com/XAMPPRocky/tokei)：显示代码信息的统计程序
 
 - [**nvm**](https://github.com/nvm-sh/nvm)：Node.js 的版本管理器
 
@@ -38,6 +42,7 @@
 
 推荐些好网站​ :+1:：
 - **MacApp**：https://macapp.org.cn/
+- **MacKed**：https://macked.app/
 - **appstorent**：https://appstorrent.ru/
 
 ## IDE :memo:
@@ -72,6 +77,8 @@
 - [**Mac Mouse Fix**](https://macmousefix.com/)：鼠标滚动平滑工具
 
   > 同类型还有 [Mos](https://mos.caldis.me/)，但它很久不更新了
+  >
+  > 外接鼠标时可配置鼠标按钮的指定动作，我这边使用的是罗技G502，搭配 Logitech G Hub 实现鼠标控制。
 
 - [**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图
 
@@ -82,6 +89,8 @@
 - [**AppCleaner**](https://freemacsoft.net/appcleaner/)：轻量级的卸载小工具
 
 - [**Aldente Pro**](https://apphousekitchen.com/zh-hans/)：电池管理软件，限制最大充电电量 :battery:
+
+- [**BatteryBoi**](https://github.com/thebarbican19/BatteryBoi)：**MacOS** 菜单栏的替代电池 :battery: ​指示器
 
 - [**Dropover**](https://apps.apple.com/cn/app/dropover-%E6%9B%B4%E5%8A%A0%E5%AE%B9%E6%98%93%E6%8B%96%E6%94%BE%E6%96%87%E4%BB%B6/id1355679052?mt=12)：拖动文件更加容易
 
@@ -99,12 +108,14 @@
 
 - [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 hosts 文件，切换多个 hosts 方案
 
+  > 配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的
+
 - [**Hammerspoon**](https://www.hammerspoon.org/)：自动化工具，使用 Lua 脚本实现各种操作
 
 - [**Bruno**](https://www.usebruno.com/)：离线的 API 客户端
 
   > 文件都在本地，**不用登录**让人很难不喜欢
-  
+
 - [**OpenInTerminal**](https://github.com/Ji4n1ng/OpenInTerminal)：Finder 工具栏应用程序，用于打开终端、打开指定 App 等
 
   > 如果只需要打开终端的话，可以安装 [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite-zh.md)。
@@ -115,6 +126,7 @@
 - [**QQ 音乐**](https://y.qq.com/download/mac.html?part=1&ADTAG=YQQ)
 - [**Spotify**](https://open.spotify.com/)
 - [**YT Music**](https://github.com/steve228uk/YouTube-Music)：YouTube Music 的 Mac 应用包装器
+- [**MediaMate**](https://wouter01.github.io/MediaMate/)：优化 MacOS 系统 HUD，实现“**灵动岛**”效果
 
 ## 笔记
 
