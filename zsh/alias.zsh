@@ -23,9 +23,11 @@ alias zshrc="nvim ~/.zshrc"
 
 alias tt="\time zsh -i -c exit"
 
-# Conda
+# Conda/Mamba
+alias base="mamba activate base"
 # alias paddle="conda activate paddle"
-#alias torch="conda activate torch"
+alias pytorch="mamba activate pytorch"
+alias dea="mamba deactivate"
 
 # Python
 alias piptree="pipdeptree"
@@ -48,4 +50,7 @@ alias t="tmux"
 
 # asciinema
 alias rec="asciinema rec"
+
+# harlequin
+alias sql="harlequin"
 
