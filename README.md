@@ -1,4 +1,4 @@
- 我在 macOS 上的 dotfiles 配置文件和自用的软件 :sparkles:。
+ 我在 macOS 上的 dotfiles 配置文件和自用的一些软件 :sparkles:。
 
 # Shell :book:
 
@@ -21,6 +21,8 @@
 - [**dust**](https://github.com/bootandy/dust)：`du` 的替代品，查看磁盘的使用情况
 
 - [**tokei**](https://github.com/XAMPPRocky/tokei)：显示代码信息的统计程序
+
+- [**Bottom**](https://github.com/ClementTsang/bottom)：系统监视器
 
 - [**nvm**](https://github.com/nvm-sh/nvm)：Node.js 的版本管理器
 
@@ -72,15 +74,17 @@
 
 - [**Keka**](https://www.keka.io/zh-cn/)：解压缩软件
 
-  > App Store里付费，官网免费
+  > App Store 里付费，官网免费（很神奇）
 
 - [**Mac Mouse Fix**](https://macmousefix.com/)：鼠标滚动平滑工具
 
   > 同类型还有 [Mos](https://mos.caldis.me/)，但它很久不更新了
   >
-  > 外接鼠标时可配置鼠标按钮的指定动作，我这边使用的是罗技G502，搭配 Logitech G Hub 实现鼠标控制。
+  > 外接鼠标时可配置鼠标按钮的指定动作，我这边使用的是罗技G502，搭配 **Logitech G Hub** 实现鼠标控制。
 
 - [**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图
+
+- [**Snipaste**](https://zh.snipaste.com/)：截图+贴图（Windows 下也一直用这款）
 
 - [**Kap**](https://getkap.co/)：屏幕录制工具
 
@@ -104,11 +108,11 @@
 
 - [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 HiDPI
 
-  > 开启 HiDPI 后，又可以直接在**设置->显示器**中设置，就很奇怪 :question:
+  > 开启 **HiDPI** 后，又可以直接在**设置->显示器**中设置，就很奇怪 :question:
 
 - [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 hosts 文件，切换多个 hosts 方案
 
-  > 配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的
+  > 配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] -> [**读与写**]
 
 - [**Hammerspoon**](https://www.hammerspoon.org/)：自动化工具，使用 Lua 脚本实现各种操作
 
@@ -174,7 +178,7 @@
     
 - [**sing-box**](https://apps.apple.com/us/app/sing-box/id6451272673)：上手难度偏高，支持的协议非常多，比较适合自建服务器的用户使用，也有相关的项目支持 Clash 的订阅转换
 
-    > App Store 版本需要外区 ID，也可以使用 Homebrew Cask 安装 sfm 图形化界面
+    > App Store 版本需要外区 ID，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
 
-> 如果不喜欢图形化界面的，可以选择使用命令行版本，自己写一个 `plist` 文件设置好开机自启动即可。
+> 如果不喜欢图形化界面的，可以选择使用命令行版本（`sing-box`、`clash-meta` 或者 `clash-premium`都行），自己写一个 `plist` 文件设置好开机自启动即可。
 
