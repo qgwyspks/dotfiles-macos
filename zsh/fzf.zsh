@@ -1,4 +1,5 @@
 eval "$(fzf --zsh)"
+eval "$(gdircolors -b)"
 
 export FZF_DEFAULT_OPTS="
 --color=fg:-1,fg+:#b0e1df,bg:-1
