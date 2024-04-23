@@ -4,7 +4,6 @@ setopt correct # spelling correction
 autoload -Uz colors colors
 
 autoload -Uz compinit; compinit
-zstyle ':completion:*' menu select
 
 eval "$(zoxide init zsh --cmd z)"
 
