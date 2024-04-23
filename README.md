@@ -76,11 +76,15 @@
 
   > App Store 里付费，官网免费（很神奇）
 
+- [**Latest**](https://github.com/mangerlahn/Latest)：检查应用是否都是最新版本，提供更新以及具体的更新内容（开源免费）
+
 - [**Mac Mouse Fix**](https://macmousefix.com/)：鼠标滚动平滑工具
 
   > 同类型还有 [Mos](https://mos.caldis.me/)，但它很久不更新了
   >
   > 外接鼠标时可配置鼠标按钮的指定动作，我这边使用的是罗技G502，搭配 **Logitech G Hub** 实现鼠标控制。
+
+- [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理
 
 - [**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图
 

@@ -8,6 +8,7 @@ formulaes=(
     dust
     tokei
     bottom
+    tree
     tmux
     fzf
     go

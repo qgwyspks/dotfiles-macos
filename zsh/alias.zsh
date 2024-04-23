@@ -18,15 +18,13 @@ alias mkdir='mkdir -p'
 alias vi="nvim"
 alias vim="nvim"
 
-# zsh
-alias zshrc="nvim ~/.zshrc"
-
 alias tt="\time zsh -i -c exit"
 
 # Conda/Mamba
 alias base="mamba activate base"
-# alias paddle="conda activate paddle"
 alias pytorch="mamba activate pytorch"
+alias study="mamba activate study"
+alias lab="mamba activate jupyterlab"
 alias dea="mamba deactivate"
 
 # Python
@@ -34,6 +32,11 @@ alias piptree="pipdeptree"
 
 # LazyDocker
 alias lzd="lazydocker"
+
+# git
+alias gs="git status"
+alias gp="git push -u origin main"
+alias ga="git add"
 
 # LazyGit
 alias lg="lazygit"

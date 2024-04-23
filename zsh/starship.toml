@@ -1,49 +1,26 @@
 #format = ""
 
+# 根据 schema 提供自动补全
+"$schema" = 'https://starship.rs/config-schema.json'
 right_format = """$cmd_duration"""
 add_newline = false
 
 [line_break]
 disabled = true
 
-[c]
-format = '[$symbol]($style)'
-style = 'bold 149'
-# disabled = true
-
 [character]
-success_symbol = '[➜](bold green)'
+success_symbol = '[➜](bold bright-yellow)'
 error_symbol = '[✗](bold red)'
 
 [cmd_duration]
 min_time = 1
 format = '[$duration](bold yellow)'
 
-[conda]
-format = '[$symbol$environment](dimmed green)'
-disabled = true
-
 [directory]
 truncation_length = 3
 truncation_symbol = './'
 home_symbol = '~'
-
-[docker_context]
-disabled = true
-
-[golang]
-format = '[$symbol]($style)'
-style = 'bold cyan'
-# disabled = true
-
-[lua]
-format = '[$symbol]($style)'
-style = 'bold blue'
-
-[nodejs]
-format = '[$symbol]($style)'
-style = 'bold red'
-# disabled = true
+read_only = " 󰌾"
 
 [os]
 format = '[($symbol)]($style)'
@@ -52,13 +29,54 @@ disabled = true
 
 [os.symbols]
 Windows = ' '
-Macos = ' '
-#Arch = ""
+Macos = ' ' # ' '
+# Arch = ' '
+# 󰀘 
 
 [package]
 disabled = true
 
+[git_branch]
+format = 'on [$symbol$branch(:$remote_branch)]($style) '
+style = 'bold purple'
+# symbol = " "
+
+[c]
+format = '[$symbol]($style)'
+style = 'bold 149'
+symbol = " "
+# disabled = true
+
+[docker_context]
+symbol = " "
+disabled = true
+
+[golang]
+format = '[$symbol]($style)'
+style = 'bold cyan'
+symbol = " "
+# disabled = true
+
+[lua]
+format = '[$symbol]($style)'
+style = 'bold blue'
+symbol = " "
+
+[nodejs]
+format = '[$symbol]($style)'
+style = 'bold red'
+symbol = " "
+# disabled = true
+
 [python]
 format = '[$symbol]($style)'
 style = 'yello bold'
+symbol = " "
 
+[conda]
+format = '[$symbol$environment](dimmed green)'
+symbol = " "
+disabled = true
+
+[rust]
+symbol = " "

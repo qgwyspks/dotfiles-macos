@@ -1,0 +1,27 @@
+#! /usr/bin/env bash
+has_cmd() {
+	for opt in "$@"; do
+		command -v "$opt" >/dev/null
+	done
+}
+
+mime=$(file -Lbs --mime-type "$1")
+category=${mime%%/*}
+kind=${mime##*/}
+ext=${1##*.}
+if [ -d "$1" ]; then
+  if has_cmd lsd; then
+	  lsd -A --git --color=always --icon=always "$1"
+  fi
+elif [ "$category" = image ]; then
+	chafa "$1"
+	exiftool "$1"
+elif [ "$kind" = vnd.openxmlformats-officedocument.spreadsheetml.sheet ] || \
+	[ "$kind" = vnd.ms-excel ]; then
+	in2csv "$1" | xsv table | bat -ltsv --color=always
+elif [ "$category" = text ]; then
+	bat --color=always "$1"
+else
+	lesspipe.sh "$1" | bat --color=always
+fi
+# lesspipe.sh don't use eza, bat and chafa, it use ls and exiftool. so we create a lessfilter.
