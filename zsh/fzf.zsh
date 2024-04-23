@@ -1,8 +1,8 @@
 eval "$(fzf --zsh)"
 
-if [[ "$(uname)" == "Darwin" ]]; then
-  eval "$(gdircolors -b)"
-fi
+# if [[ "$(uname)" == "Darwin" ]]; then
+  # eval "$(gdircolors -b)"
+# fi
 
 export FZF_DEFAULT_OPTS="
 --color=fg:-1,fg+:#b0e1df,bg:-1
