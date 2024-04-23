@@ -8,7 +8,7 @@ alias ls='lsd'
 alias la='lsd -A'  # Don't list implied . and ..
 alias ll='lsd -l --header'
 alias llg='lsd -l --header --git'
-alias lla='lsd -lA'
+alias lla='lsd -lA --header'
 alias lt='lsd --tree'
 
 # mkdir

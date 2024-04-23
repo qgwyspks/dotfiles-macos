@@ -33,9 +33,6 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:*' prefix ''
 
-# 生成查询字符串的策略
-zstyle ':fzf-tab:complete:_zlua:*' query-string input
-
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
 export LESSOPEN='|~/.lessfilter %s'
 
