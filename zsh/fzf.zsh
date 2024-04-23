@@ -36,7 +36,7 @@ zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
 export LESSOPEN='|~/.lessfilter %s'
 
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -1 --color=always --icon=always $realpath'
-# zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat --color=always --style=numbers --line$realpath'
+# zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat --color=always --style=numbers $realpath'
 # zstyle ':fzf-tab:complete:ls:*' fzf-preview 'bat --color=always $realpath'
 
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
