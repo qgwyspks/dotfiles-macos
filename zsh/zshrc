@@ -7,3 +7,5 @@ ZSH_HOME="$HOME/.config/zsh"
 [[ ! -f ${ZSH_HOME}/fzf.zsh ]] || source ${ZSH_HOME}/fzf.zsh
 
 #source <(kubectl completion zsh)
+
+[[ "$TERM_PROGRAM" == "CodeEditApp_Terminal" ]] && . "/Applications/CodeEdit.app/Contents/Resources/codeedit_shell_integration.zsh"
