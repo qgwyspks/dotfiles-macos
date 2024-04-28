@@ -3,6 +3,7 @@ setopt correct # spelling correction
 
 autoload -Uz colors colors
 
+fpath+=~/.zfunc
 autoload -Uz compinit; compinit
 
 eval "$(zoxide init zsh --cmd z)"
