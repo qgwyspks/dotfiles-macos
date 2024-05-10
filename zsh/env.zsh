@@ -2,6 +2,8 @@ export EDITOR=nvim
 
 export PATH="$HOME/.local/bin:$PATH"
 
+export PATH="$HOME/go/bin:$PATH"
+
 # curl
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
