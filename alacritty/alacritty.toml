@@ -1,6 +1,10 @@
 # https://alacritty.org/config-alacritty.html
 live_config_reload = true    # 实时配置重新加载
 
+[env]
+# term = 'xterm-256color'
+# TERM = 'alacritty'
+
 [window]
 dimensions = { columns = 74, lines = 24 }  # 窗口尺寸（终端中的行/列数）
 padding = { x = 16, y = 26 }               # 窗口周围添加的空白区域
@@ -47,9 +51,9 @@ bindings = [
     { key = "Return" ,    mods = "Command|Shift", action = "ToggleSimpleFullscreen"}, # Command Shift Return -> 进入全屏而不占用其他空间(Macos)
     { key = "W",          mods = "Command|Shift", action = "HideOtherApplications"},  # Command Shift W      -> 隐藏其他应用程序
     { key = "T",          mods = "Command|Shift", action = "CreateNewTab"},           # Command Shift T      -> 创建新选项卡
-    { key = "ArrowLeft",  mods = "Command",       chars = "\u0001"},                  # Command Left         -> Alt-a
-    { key = "ArrowRight", mods = "Command",       chars = "\u0005"},                  # Command Right        -> Alt-e
-    { key = "Back",       mods = "Command",       chars = "\u0015"},                  # Command Back         -> Alt-U
+    { key = "ArrowLeft",  mods = "Command",       chars = "\u0001"},                  # Command Left (Fn)    -> Alt-a
+    { key = "ArrowRight", mods = "Command",       chars = "\u0005"},                  # Command Right (Fn)   -> Alt-e
+    { key = "Back",       mods = "Command",       chars = "\u0015"},                  # Command Back (Fn)    -> Alt-U
     { key = "N",          mods = "Command",       chars = "\u0001c"},                 # Command N            -> Alt-a c -> tmux new-window
     { key = "LBracket",   mods = "Command",       chars = "\u0001p"},                 # Command [            -> Alt-a p -> tmux previous-window
     { key = "RBracket",   mods = "Command",       chars = "\u0001n"},                 # Command ]            -> Alt-a n -> tmux next-window
