@@ -2,6 +2,8 @@
 alias -g ...='../..'
 alias -g ....='../../..'
 
+# clear
+alias c='clear'
 
 # lsd -> ls
 alias ls='lsd'
