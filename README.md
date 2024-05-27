@@ -84,7 +84,7 @@
   >
   > 外接鼠标时可配置鼠标按钮的指定动作，我这边使用的是罗技G502，搭配 **Logitech G Hub** 实现鼠标控制。
 
-- [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理
+- [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理，使用左 `Fn` 键
 
 - [**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图
 
@@ -109,6 +109,8 @@
 - [**AirBuddy**](https://v2.airbuddy.app/)：在 macOS 上查看你的无线设备
 
 - [**iStat Menus**](https://bjango.com/mac/istatmenus/)：我个人认为最好用的系统检监测工具（同类型免费替代产品很多）
+
+- [**Hot**](https://github.com/macmade/Hot)：CPU 温度检测
 
 - [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 HiDPI
 
