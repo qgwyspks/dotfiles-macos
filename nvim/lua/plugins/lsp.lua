@@ -1,59 +1,64 @@
+local languages = {
+    "bashls", -- Bash
+    -- "clangd",  -- C/C++
+    -- "csharp_ls", -- C#
+    -- "dockerls", -- Docker
+    -- "docker_compose_language_service",  -- Docker Compose
+    -- "html",  -- HTML
+    -- "cssls",  -- CSS
+    -- "tsserver",  -- JS/TS
+    -- "vimls",  -- VimL
+    "jsonls",  -- JSON
+    -- "taplo",  -- TOML
+    "gopls",  -- Go
+    "lua_ls",  -- Lua
+    "marksman",  -- Markdown
+    "pyright",  -- Python pylsp ruff rufflsp
+    -- "texlab",  -- LaTeX
+}
+
 return {
-  {
-    "williamboman/mason.nvim",
-    build = ":MasonUpdate",
-    cmd = "Mason",
-    keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
-    opts = {
+    {
+        "williamboman/mason.nvim",
+        build = ":MasonUpdate",
+        cmd = "Mason",
+        keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
+        config = function ()
+            require("mason").setup()
+        end
     },
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    opts = {
-      ensure_installed = {
-        "bashls", -- Bash
-        "clangd",                          -- C/C++
-        -- "csharo_ls",                       -- C#
-        "dockerls",                        -- Docker
-        "docker_compose_language_service", -- Docker Compose
-        "gopls",    -- Go
-        "lua_ls",   -- Lua
-        "marksman", -- Markdown
-        "pyright",  -- Python
-        "texlab",   -- LaTeX
-      },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        opts = {
+            ensure_installed = languages,
+            automatic_installation = true, -- 自动安装
+        },
     },
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      local lspconfig = require('lspconfig')
-      lspconfig.bashls.setup{}
-      lspconfig.clangd.setup{}
-      lspconfig.dockerls.setup{}
-      lspconfig.docker_compose_language_service.setup{}
-      lspconfig.gopls.setup{}
-      lspconfig.lua_ls.setup{}
-      lspconfig.marksman.setup{}
-      lspconfig.pyright.setup{}
-    end
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    version = false,
-    event = "InsertEnter",
-    dependencies = {
-      "saadparwaiz1/cmp_luasnip",
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-cmdline",
-      "andersevenrud/cmp-tmux",
-      "L3MON4D3/LuaSnip",
-      "rafamadriz/friendly-snippets",
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local lspconfig = require("lspconfig")
+            for _, language in ipairs(languages) do
+                lspconfig[language].setup({})
+            end
+        end
     },
-    config = function()
-      require("plugins.configs.cmp")
-    end
-  }
+    {
+        "hrsh7th/nvim-cmp",
+        version = false,
+        event = { "InsertEnter", "CmdlineEnter" },
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",     -- 文件路径
+            "hrsh7th/cmp-cmdline",  -- 补全底部命令行
+            "andersevenrud/cmp-tmux",
+            "L3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip",
+            "rafamadriz/friendly-snippets",
+        },
+        config = function()
+            require("plugins.configs.cmp")
+        end
+    }
 }

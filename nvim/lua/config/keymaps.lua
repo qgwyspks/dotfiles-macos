@@ -2,9 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-map = vim.keymap.set
+local map = vim.keymap.set
 
-opts = {
+local opts = {
     expr = true,
     silent = true
 }
@@ -33,3 +33,6 @@ map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window w
 
 -- 退出终端插入模式
 map("t", "<Esc>", "<C-\\><C-n>", opts)
+
+
+-- NvimTree

@@ -1,13 +1,16 @@
 return {
+    -- 消息通知
     {
         "rcarriga/nvim-notify",
         keys = {
             {"<leader>n", "<cmd>Notifications<CR>"},
         },
         opts = {
-            renfer = "compact",
+            render = "default",
+            stages = "fade"
         },
         config = function ()
+            -- 设置为默认通知
             vim.notify = require("notify")
         end
     },
@@ -18,52 +21,86 @@ return {
         version = "*",
         keys = {
             { "<leader>1", "<cmd>exe v:count1 . 'ToggleTerm'<CR>" },
-            { "<leader>g", "<cmd>lua _lazygit_toggle() <CR>" },
-            { "<leader>bt", "<cmd>lua _btop_toggle() <CR>" },
+            -- { "<leader>g", "<cmd>lua _lazygit_toggle() <CR>" },
+            { "<leader>bt", "<cmd>lua _btm_toggle() <CR>" },
         },
         config = function()
             require("plugins.configs.toggleterm")
         end
     },
 
-    -- markdown-preview
     {
-        "iamcco/markdown-preview.nvim",
-        lazy = true,
-        build = function()
-            vim.fn["mkdp#util#install"]()
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
         end,
-        keys = {
-            { "<leader>mp", "<cmd>MarkdownPreview<CR>" },
-            { "<leader>mps", "<cmd>MarkdownPreviewStop<CR>" },
-            { "<leader>mpt", "<cmd>MarkdownPreviewToggle<CR>" },
+        opts = {
+            plugins = { spelling = true },
+            defaults = {
+            mode = { "n", "v" },
+            ["g"] = { name = "+goto" },
+            ["gs"] = { name = "+surround" },
+            ["z"] = { name = "+fold" },
+            ["]"] = { name = "+next" },
+            ["["] = { name = "+prev" },
+            ["<leader><tab>"] = { name = "+tabs" },
+            ["<leader>b"] = { name = "+buffer" },
+            ["<leader>c"] = { name = "+code" },
+            ["<leader>f"] = { name = "+file/find" },
+            ["<leader>g"] = { name = "+git" },
+            ["<leader>gh"] = { name = "+hunks" },
+            ["<leader>q"] = { name = "+quit/session" },
+            ["<leader>s"] = { name = "+search" },
+            ["<leader>u"] = { name = "+ui" },
+            ["<leader>w"] = { name = "+windows" },
+            ["<leader>x"] = { name = "+diagnostics/quickfix" },
+            },
         },
-    },
+        -- config = function()
+        --     require("plugins.configs.which-key")
+        -- end,
+    }
+
+    -- markdown-preview
+    -- {
+    --     "iamcco/markdown-preview.nvim",
+    --     lazy = true,
+    --     build = function()
+    --         vim.fn["mkdp#util#install"]()
+    --     end,
+    --     keys = {
+    --         { "<leader>mp", "<cmd>MarkdownPreview<CR>" },
+    --         { "<leader>mps", "<cmd>MarkdownPreviewStop<CR>" },
+    --         { "<leader>mpt", "<cmd>MarkdownPreviewToggle<CR>" },
+    --     },
+    -- },
 
     -- rnvimr
-    {
-        "kevinhwang91/rnvimr",
-        lazy = true,
-        keys = {
-            { "<leader>rt", "<cmd>RnvimrToggle<CR>" },
-            { "<leader>rr", "<cmd>RnvimrResize<CR>" },
-        },
-    },
+    -- {
+    --     "kevinhwang91/rnvimr",
+    --     lazy = true,
+    --     keys = {
+    --         { "<leader>rt", "<cmd>RnvimrToggle<CR>" },
+    --         { "<leader>rr", "<cmd>RnvimrResize<CR>" },
+    --     },
+    -- },
 
     -- vimtex
-    {
-      "lervag/vimtex",
-      lazy = true,
-    },
+    -- {
+    --   "lervag/vimtex",
+    --   lazy = true,
+    -- },
 
     -- session-manager
-    {
-      "Shatur/neovim-session-manager",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-      },
-      config = function ()
-        require("plugins.configs.session")
-      end
-    }
+    -- {
+    --   "Shatur/neovim-session-manager",
+    --   dependencies = {
+    --     "nvim-lua/plenary.nvim",
+    --   },
+    --   config = function ()
+    --     require("plugins.configs.session")
+    --   end
+    -- }
 }

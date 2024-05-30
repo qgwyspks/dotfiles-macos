@@ -17,42 +17,43 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 Toggleterm.setup({
     size = 6,
     start_in_insert = true,
+    shade_terminals = false,  -- 终端底纹
 })
 
 local Terminal = require('toggleterm.terminal').Terminal
 
-local lazygit = Terminal:new({
-    cmd = "lazygit",
+-- local lazygit = Terminal:new({
+--     cmd = "lazygit",
+--     hidden = true,
+--     direction = "float",
+--     float_opts = {
+--         border = "double",
+--     },
+--     on_open = function(term)
+--         vim.cmd("startinsert")
+--         -- q 是退出
+--         map("n", "q", "<cmd>close<CR>", opts)
+--     end,
+--     on_close = function()
+--         vim.cmd("startinsert!")
+--     end
+-- })
+
+-- function _lazygit_toggle()
+--     lazygit:toggle()
+-- end
+
+
+local btm = Terminal:new({
+    cmd = "btm",
     hidden = true,
     direction = "float",
     float_opts = {
         border = "double",
     },
-    on_open = function(term)
-        vim.cmd("startinsert")
-        -- q 是退出
-        map("n", "q", "<cmd>close<CR>", opts)
-    end,
-    on_close = function()
-        vim.cmd("startinsert!")
-    end
 })
 
-function _lazygit_toggle()
-    lazygit:toggle()
-end
-
-
-local btop = Terminal:new({
-    cmd = "btop",
-    hidden = true,
-    direction = "float",
-    float_opts = {
-        border = "double",
-    },
-})
-
-function _btop_toggle()
-    btop:toggle()
+function _btm_toggle()
+    btm:toggle()
 end
 
