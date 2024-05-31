@@ -30,6 +30,21 @@ return {
     },
 
     {
+        "nvim-telescope/telescope.nvim",
+        tag = "1.6",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        keys = {
+            { "<leader>sf", "<cmd>Telescope find_files<CR>", desc="Find Files" },
+            { "<leader>sg", "<cmd>Telescope live_grep<CR>", desc="" },
+            { "<leader>sb", "<cmd>Telescope buffers<CR>", desc="Buffer" },
+            { "<leader>sh", "<cmd>Telescope help_tags<CR>", desc="Help Pages" },
+        },
+        -- config = function()
+        --     require("plugins.configs.toggleterm")
+        -- end,
+    },
+
+    {
         "folke/which-key.nvim",
         event = "VeryLazy",
         init = function()
