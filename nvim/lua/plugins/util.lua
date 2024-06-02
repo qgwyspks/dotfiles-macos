@@ -31,7 +31,7 @@ return {
 
     {
         "nvim-telescope/telescope.nvim",
-        tag = "1.6",
+        -- tag = "1.6",
         dependencies = { "nvim-lua/plenary.nvim" },
         keys = {
             { "<leader>sf", "<cmd>Telescope find_files<CR>", desc="Find Files" },
