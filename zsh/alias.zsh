@@ -20,6 +20,9 @@ alias mkdir='mkdir -p'
 alias vi="nvim"
 alias vim="nvim"
 
+# fastfetch
+alias neofetch="fastfetch"
+
 alias tt="\time zsh -i -c exit"
 
 # Conda/Mamba
