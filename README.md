@@ -86,6 +86,8 @@
 
 - [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理，使用左 `Fn` 键
 
+- [**Gopeed**](https://gopeed.com/zh-CN)：开源的现代化下载器（支持插件扩展）
+
 - [**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图
 
 - [**Snipaste**](https://zh.snipaste.com/)：截图+贴图（Windows 下也一直用这款）
@@ -93,6 +95,10 @@
 - [**Kap**](https://getkap.co/)：屏幕录制工具
 
 - [**IINA**](https://iina.io/)：现代媒体播放器
+
+- [**Pika**](https://superhighfives.com/pika)：开源颜色选择器
+
+- [**QuickRecorder**](https://lihaoyun6.github.io/quickrecorder/)：轻量级的开源屏幕录制工具
 
 - [**AppCleaner**](https://freemacsoft.net/appcleaner/)：轻量级的卸载小工具
 
@@ -111,6 +117,8 @@
 - [**iStat Menus**](https://bjango.com/mac/istatmenus/)：我个人认为最好用的系统检监测工具（同类型免费替代产品很多）
 
 - [**Hot**](https://github.com/macmade/Hot)：CPU 温度检测
+
+- [**WattsConnected**](https://apps.apple.com/us/app/wattsconnected/id1639692859?mt=12)：显示充电器提供的瓦数
 
 - [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 HiDPI
 
@@ -161,6 +169,8 @@
     > 实时预览是基于它自身的 TexpadTex 引擎渲染的，会需要额外安装那些需要的库
 
 ## 数据库
+
+- **SQLiteFlow**：SQLite 数据库管理
 
 - [**Sequel Ace**](https://sequel-ace.com/)：MySQL/MariaDB 数据库管理
 
