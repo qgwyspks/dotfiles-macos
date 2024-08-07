@@ -26,6 +26,7 @@ return {
         config = function(_, opts)
             if type(opts.ensure_installed) == "table" then
                 vim.list_extend(opts.ensure_installed, {"go", "gomod", "gowork", "gosum"})
+                vim.list_extend(opts.ensure_installed, {"rust", "ron"})
             end
             require("nvim-treesitter").setup(opts)
         end,

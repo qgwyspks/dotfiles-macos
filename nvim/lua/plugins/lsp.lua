@@ -9,7 +9,7 @@ local languages = {
     -- "tsserver",  -- JS/TS
     -- "vimls",  -- VimL
     "jsonls",  -- JSON
-    -- "taplo",  -- TOML
+    "taplo",  -- TOML
     "gopls",  -- Go
     "lua_ls",  -- Lua
     "marksman",  -- Markdown
@@ -51,9 +51,8 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
-
         config = function()
-            require("plugins.configs.lspconfig")
+            require("plugins.configs.lspconfig").setup(languages)
             -- local lspconfig = require("lspconfig")
             -- for _, language in ipairs(languages) do
             --     lspconfig[language].setup({})
@@ -73,7 +72,21 @@ return {
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip",
             "rafamadriz/friendly-snippets",
+            {
+                "Saecki/crates.nvim",
+                event = { "BufRead Cargo.toml" },
+                opts = {
+                    completion = {
+                    cmp = { enabled = true },
+                    },
+                },
+            },
         },
+        ---@param opts cmp.ConfigSchema
+        opts = function(_, opts)
+            opts.sources = opts.sources or {}
+            table.insert(opts.sources, { name = "crates" })
+        end,
         config = function()
             require("plugins.configs.cmp")
         end
