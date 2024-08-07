@@ -12,25 +12,22 @@ return {
             ensure_installed = {
                 "bash",
                 "c",
+                "dockerfile",
                 "html",
-                "json",
-                "jsonc",
+                "json", "jsonc",
                 "lua",
-                "markdown",
-                "markdown_inline",
+                "markdown", "markdown_inline",
                 "python",
-                "toml",
-                "vim",
-                "vimdoc",
-                "xml",
-                "yaml",
+                "toml", "xml", "yaml",
+                "vim", "vimdoc",
+                -- "go", "gomod", "gowork", "gosum"
             },
         },
         config = function(_, opts)
             if type(opts.ensure_installed) == "table" then
                 vim.list_extend(opts.ensure_installed, {"go", "gomod", "gowork", "gosum"})
             end
-            require("nvim-treesitter.configs").setup(opts)
+            require("nvim-treesitter").setup(opts)
         end,
     },
 

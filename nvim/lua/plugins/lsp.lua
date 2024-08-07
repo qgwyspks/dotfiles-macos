@@ -23,8 +23,17 @@ return {
         build = ":MasonUpdate",
         cmd = "Mason",
         keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
+        -- opts = { ensure_installed = { "goimports", "gofumpt" } },
         config = function ()
-            require("mason").setup()
+            require("mason").setup({
+                ui = {
+                    icons = {
+                        package_installed = "✓",
+                        package_pending = "➜",
+                        package_uninstalled = "✗"
+                    }
+                }
+            })
         end
     },
     {
@@ -33,14 +42,22 @@ return {
             ensure_installed = languages,
             automatic_installation = true, -- 自动安装
         },
+        config = function(_, opts)
+            -- if type(opts.ensure_installed) == "table" then
+            --     vim.list_extend(opts.ensure_installed, {"goimports", "gofumpt"})
+            -- end
+            require("mason-lspconfig").setup(opts)
+        end,
     },
     {
         "neovim/nvim-lspconfig",
+
         config = function()
-            local lspconfig = require("lspconfig")
-            for _, language in ipairs(languages) do
-                lspconfig[language].setup({})
-            end
+            require("plugins.configs.lspconfig")
+            -- local lspconfig = require("lspconfig")
+            -- for _, language in ipairs(languages) do
+            --     lspconfig[language].setup({})
+            -- end
         end
     },
     {
