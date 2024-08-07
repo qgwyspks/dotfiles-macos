@@ -2,7 +2,6 @@
 
 - Lazy.nvim
 
-
 ## 插件列表
 
 - [onedark](https://github.com/navarasu/onedark.nvim) 主题
@@ -20,4 +19,4 @@
 - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim) 连接 mason 和 lspconfig
 - [lspconfig](https://github.com/neovim/nvim-lspconfig) nvim lsp 客户端的配置
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) 补全引擎插件
-
+- [markview](https://github.com/OXY2DEV/markview.nvim) Markdown 预览

@@ -12,6 +12,7 @@ return {
             ensure_installed = {
                 "bash",
                 "c",
+                "html",
                 "json",
                 "jsonc",
                 "lua",
@@ -40,11 +41,6 @@ return {
         config = true,
     },
 
-    -- 左侧 git 提示
-    {
-        "lewis6991/gitsigns.nvim",
-    },
-
     {
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -61,5 +57,62 @@ return {
         opts = {
             use_diagnostic_signs = true
         }
+    },
+
+    -- markdown-preview
+    {
+        "OXY2DEV/markview.nvim",
+        lazy = false,  -- Recommended
+        -- ft = "markdown"  -- If you decide to lazy-load anyway
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons"
+        }
     }
+
+    -- markdown-preview
+    -- {
+    --     "iamcco/markdown-preview.nvim",
+    --     lazy = true,
+    --     build = function()
+    --         vim.fn["mkdp#util#install"]()
+    --     end,
+    --     keys = {
+    --         { "<leader>mp", "<cmd>MarkdownPreview<CR>" },
+    --         { "<leader>mps", "<cmd>MarkdownPreviewStop<CR>" },
+    --         { "<leader>mpt", "<cmd>MarkdownPreviewToggle<CR>" },
+    --     },
+    -- },
+
+    -- obsidian
+    -- {
+    --     "epwalsh/obsidian.nvim",
+    --     version = "*",  -- recommended, use latest release instead of latest commit
+    --     lazy = true,
+    --     ft = "markdown",
+    --     -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
+    --     -- event = {
+    --     --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
+    --     --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
+    --     --   -- refer to `:h file-pattern` for more examples
+    --     --   "BufReadPre path/to/my-vault/*.md",
+    --     --   "BufNewFile path/to/my-vault/*.md",
+    --     -- },
+    --     dependencies = {
+    --         "nvim-lua/plenary.nvim",
+    --     },
+    --     opts = {
+    --         workspaces = {
+    --             {
+    --                 name = "personal",
+    --                 path = "~/vaults/personal",
+    --             },
+    --             {
+    --                 name = "work",
+    --                 path = "~/vaults/work",
+    --             },
+    --         },
+    --     },
+    -- }
 }
+

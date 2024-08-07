@@ -60,4 +60,9 @@ return {
             },
         },
     },
+
+    -- 左侧 git 提示
+    {
+        "lewis6991/gitsigns.nvim",
+    },
 }
