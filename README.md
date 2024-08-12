@@ -14,9 +14,11 @@
 
 - [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器
 
-- [**bat**](https://github.com/sharkdp/bat)：`cat` 替代品
+- [**zoxide**]()：`cd` 的替代品，可以记住以前使用的文件路径，直接使用 `z` 命令自动建议文件路径。
 
-- [**lsd**](https://github.com/lsd-rs/lsd)：`ls` 替代品
+- [**bat**](https://github.com/sharkdp/bat)：`cat` 的替代品，它使用图表和语法突出显示而不是纯文本来显示文件
+
+- [**lsd**](https://github.com/lsd-rs/lsd)：`ls` 的替代品
 
 - [**dust**](https://github.com/bootandy/dust)：`du` 的替代品，查看磁盘的使用情况
 
@@ -26,7 +28,7 @@
 
 - [**nvm**](https://github.com/nvm-sh/nvm)：Node.js 的版本管理器
 
-- [**Neovim**](https://neovim.io/)：基于 Vim 的文本编辑器，具有强大的插件系统
+- [**NeoVim**](https://neovim.io/)：基于 Vim 的文本编辑器，具有强大的插件系统
 
 - [**Miniforge**](https://github.com/conda-forge/miniforge)：包含 `Conda` 和  `Mamba` 、使用 `conda-forge` 作为默认 channel 的最小安装环境
 
@@ -96,6 +98,8 @@
 
 - [**IINA**](https://iina.io/)：现代媒体播放器
 
+  - [**IINA-Plus**](https://github.com/xjbeta/iina-plus)：IINA 添加弹幕功能
+
 - [**Pika**](https://superhighfives.com/pika)：开源颜色选择器
 
 - [**QuickRecorder**](https://lihaoyun6.github.io/quickrecorder/)：轻量级的开源屏幕录制工具
@@ -162,7 +166,7 @@
 
 - [**MacTex**](https://tug.org/mactex/)：LaTeX 环境 = TextLive
 
-  > 有精简版本的 BasicTeX，但不建议安装，后续装包可能会有些不必要的麻烦。
+  > 有精简版本的 BasicTeX，但不建议安装，后续装包可能会有些不必要的麻烦。:star: 使用 **Homebrew** 安装可以选择 `mactex-no-gui`，少了好多不必要的 GUI 软件。
 
 - [**Texifier**](https://www.texifier.com/)：非常漂亮的 LaTeX 编辑器，支持实时预览
 
@@ -171,6 +175,8 @@
 ## 数据库
 
 - **SQLiteFlow**：SQLite 数据库管理
+
+- [**Navicat Premium Lite**](https://www.navicat.com.cn/download/navicat-premium-lite)：Navicat 精简版，支持 MySQL、PostgreSQL、SQL Server、Oracle、MariaDB，以及 Redis 和 MongoDB 等 NoSQL 数据库
 
 - [**Sequel Ace**](https://sequel-ace.com/)：MySQL/MariaDB 数据库管理
 
