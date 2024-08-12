@@ -68,20 +68,6 @@ return {
         }
     }
 
-    -- markdown-preview
-    -- {
-    --     "iamcco/markdown-preview.nvim",
-    --     lazy = true,
-    --     build = function()
-    --         vim.fn["mkdp#util#install"]()
-    --     end,
-    --     keys = {
-    --         { "<leader>mp", "<cmd>MarkdownPreview<CR>" },
-    --         { "<leader>mps", "<cmd>MarkdownPreviewStop<CR>" },
-    --         { "<leader>mpt", "<cmd>MarkdownPreviewToggle<CR>" },
-    --     },
-    -- },
-
     -- obsidian
     -- {
     --     "epwalsh/obsidian.nvim",
