@@ -6,6 +6,8 @@
 
 - [**Homebrew**](https://brew.sh/zh-cn/)：**MacOS** 的包管理器
 
+  > [!TIP]
+  >
   > 非常推荐使用 `homebrew` 来安装环境和软件
 
 - **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) + :rocket:[starship](https://starship.rs/)
@@ -42,6 +44,8 @@
 
 自用的一些软件清单，尽量免费为主。
 
+> [!TIP]
+>
 > 大部分的软件都推荐使用 **Homebrew Cask** 安装，因为它会帮你选择适合的版本，且方便管理。
 
 推荐些好网站​ :+1:：
@@ -55,6 +59,8 @@
 
 - [**VSCode**](https://code.visualstudio.com/)：代码编辑器
   
+    > [!NOTE]
+    >
     > 不知道为什么，感觉 Mac 下的 vscode 好看很多！
     
 - JetBrains
@@ -62,10 +68,14 @@
     - PyCharm
     - GoLand
     
+    > [!TIP]
+    >
     > 大学生可以用学生邮箱申请免费使用，一般一年重新验证一次资格。
     
 - [**Xcode**](https://developer.apple.com/cn/xcode/)：用于 macOS app 开发的 IDE 和工具链
 
+    > [!NOTE]
+    >
     > 很多工具需要安装 `Xcode Command Line Tools`，不太推荐安装整个 Xcode，因为比较大，运行 `xcode-select --install` 即可。
 
 ## Tool
@@ -76,15 +86,19 @@
 
 - [**Keka**](https://www.keka.io/zh-cn/)：解压缩软件
 
+  > [!TIP]
+  >
   > App Store 里付费，官网免费（很神奇）
 
 - [**Latest**](https://github.com/mangerlahn/Latest)：检查应用是否都是最新版本，提供更新以及具体的更新内容（开源免费）
 
 - [**Mac Mouse Fix**](https://macmousefix.com/)：鼠标滚动平滑工具
 
-  > 同类型还有 [Mos](https://mos.caldis.me/)，但它很久不更新了
+  > [!NOTE]
   >
-  > 外接鼠标时可配置鼠标按钮的指定动作，我这边使用的是罗技G502，搭配 **Logitech G Hub** 实现鼠标控制。
+  > 同类型还有 [Mos](https://mos.caldis.me/)，但它很久不更新了。
+  >
+  > 外接鼠标时可配置鼠标按钮的指定动作，我这边使用的是罗技G502，搭配 [**Logitech G Hub**](https://www.logitechg.com/en-us/innovation/g-hub.html) 实现鼠标控制。
 
 - [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理，使用左 `Fn` 键
 
@@ -126,20 +140,28 @@
 
 - [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 HiDPI
 
-  > 开启 **HiDPI** 后，又可以直接在**设置->显示器**中设置，就很奇怪 :question:
+  > [!NOTE]
+  >
+  > 开启 **HiDPI** 后，又可以直接在**设置->显示器**中设置，就很奇怪 :question:。
 
 - [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 hosts 文件，切换多个 hosts 方案
 
+  > [!IMPORTANT]
+  >
   > 配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] -> [**读与写**]
 
 - [**Hammerspoon**](https://www.hammerspoon.org/)：自动化工具，使用 Lua 脚本实现各种操作
 
 - [**Bruno**](https://www.usebruno.com/)：离线的 API 客户端
 
+  > [!NOTE]
+  >
   > 文件都在本地，**不用登录**让人很难不喜欢
 
 - [**OpenInTerminal**](https://github.com/Ji4n1ng/OpenInTerminal)：Finder 工具栏应用程序，用于打开终端、打开指定 App 等
 
+  > [!NOTE]
+  >
   > 如果只需要打开终端的话，可以安装 [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite-zh.md)。
 
 ## 音乐 :musical_note:
@@ -156,20 +178,32 @@
 
 - [**Typora**](https://typoraio.cn/)：所见即所得的 Markdown 编辑器和阅读器
 
+    > [!NOTE]
+    >
     > 89 块 3 台设备我感觉还是蛮划算的，如果想要用免费版可以下载 0.11.18 版本。
 - [**Obsidian**](https://obsidian.md/)：强大的插件系统，笔记存储在本地，同步需要付费，如果都是苹果设备的话，iCloud 同步会比较方便
 - [**Notion**](https://www.notion.so/)：美观的笔记软件，块状的设计非常灵湖，多系统同步方便。笔记存储在云端，服务器在国外，速度会比较慢
 
+    > [!NOTE]
+    >
     > 我这边安装 Notion，是为了方便 Obsidian 通过插件发布至 Notion，借用 Notion 分享一些笔记。
 
 ### LaTeX
 
 - [**MacTex**](https://tug.org/mactex/)：LaTeX 环境 = TextLive
 
-  > 有精简版本的 BasicTeX，但不建议安装，后续装包可能会有些不必要的麻烦。:star: 使用 **Homebrew** 安装可以选择 `mactex-no-gui`，少了好多不必要的 GUI 软件。
+  > [!NOTE]
+  >
+  > 有精简版本的 BasicTeX，但不建议安装，后续装包可能会有些不必要的麻烦。
+  >
+  > > [!TIP]
+  > >
+  > > :star: 使用 **Homebrew** 安装可以选择 `mactex-no-gui`，少了好多不必要的 GUI 软件。
 
 - [**Texifier**](https://www.texifier.com/)：非常漂亮的 LaTeX 编辑器，支持实时预览
 
+    > [!CAUTION]
+    >
     > 实时预览是基于它自身的 TexpadTex 引擎渲染的，会需要额外安装那些需要的库
 
 ## 数据库
@@ -182,10 +216,14 @@
 
 - [**DbGate**](https://dbgate.org/)：SQLite/MySQL/MariaDB/PostgreSQL/SQL Server/Oracle/MongoDB/Redis/Amazon Redshift/CockroachDB 支持 SQL+noSQL 的数据库管理
   
+    > [!NOTE]
+    >
     > 真的很喜欢 DbGate，开启速度是我目前见过**最快**​ :zap: 的！
     
 - [**Beekeeper Studio**](https://www.beekeeperstudio.io/)：MySQL/PostgreSQL/SQLite/SQL Server 等的数据库管理，非常美观、易用
 
+    > [!NOTE]
+    >
     > 不知道为什么双击数据库文件，不会默认使用 DbGate，所以这边安装了 Beekeeper，启动速度也非常快。
     
 - [**Tiny RDM**](https://github.com/tiny-craft/tiny-rdm)：轻量级跨平台 Redis 桌面管理器
@@ -196,11 +234,11 @@
 
 - **Clash系**：有 [ClashX](https://en.clashx.org/)、ClashX Pro、[Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases) 和 CFW这些。
   
-    > [!NOTE]
+    > [!WARNING]
     >
     > 不过 Clash 的内核 `Premium` 都删库跑路了，就 [Meta](https://github.com/MetaCubeX/mihomo) 的作者改名 `mihomo` 偷偷还在更新。
     >
-    > > [!important]
+    > > [!TIP]
     > >
     > > 所以这边更推荐基于 [Meta](https://github.com/MetaCubeX/mihomo) 的 [Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases)。 
     
@@ -210,5 +248,7 @@
     >
     > App Store 版本需要外区 ID，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
 
+> [!NOTE]
+>
 > 如果不喜欢图形化界面的，可以选择使用命令行版本（`sing-box`、`clash-meta` 或者 `clash-premium`都行），自己写一个 `plist` 文件设置好开机自启动即可。
 
