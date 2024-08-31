@@ -194,12 +194,20 @@
 
 ## 科学​ :crystal_ball:
 
-- **Clash系**：有 [ClashX](https://en.clashx.org/)、ClashX Pro、[Clash Verge](https://github.com/zzzgydi/clash-verge/releases) 和 CFW这些
+- **Clash系**：有 [ClashX](https://en.clashx.org/)、ClashX Pro、[Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases) 和 CFW这些。
   
-    > 不过 Clash 的内核 Premium 都删库跑路了，就 [Meta](https://github.com/MetaCubeX/ClashX.Meta)（[mihomo](https://github.com/MetaCubeX/mihomo)）的作者改名偷偷还在更新
+    > [!NOTE]
+    >
+    > 不过 Clash 的内核 `Premium` 都删库跑路了，就 [Meta](https://github.com/MetaCubeX/mihomo) 的作者改名 `mihomo` 偷偷还在更新。
+    >
+    > > [!important]
+    > >
+    > > 所以这边更推荐基于 [Meta](https://github.com/MetaCubeX/mihomo) 的 [Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases)。 
     
-- [**sing-box**](https://apps.apple.com/us/app/sing-box/id6451272673)：上手难度偏高，支持的协议非常多，比较适合自建服务器的用户使用，也有相关的项目支持 Clash 的订阅转换
+- [**sing-box**](https://apps.apple.com/us/app/sing-box/id6451272673)：上手难度偏高，支持的协议非常多，比较适合自建服务器 VPS 的用户使用，也有相关的项目支持 Clash 的订阅转换。
 
+    > [!NOTE]
+    >
     > App Store 版本需要外区 ID，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
 
 > 如果不喜欢图形化界面的，可以选择使用命令行版本（`sing-box`、`clash-meta` 或者 `clash-premium`都行），自己写一个 `plist` 文件设置好开机自启动即可。
