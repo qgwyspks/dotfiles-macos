@@ -23,6 +23,16 @@ alias vim='nvim'
 # fastfetch
 alias neofetch='fastfetch'
 
+
+# benchmark
+# zsh 基准测试
+alias benchzsh='for i in $(seq 1 5); do /usr/bin/time /bin/zsh --no-rcs -i -c exit; done'
+# raw zsh 基准测试
+alias benchrawzsh='for i in $(seq 1 20); do /usr/bin/time /bin/zsh --no-rcs -i -c exit; done'
+# zsh 插件启动时间分析测试
+alias benchplugin='zprof | less'
+
+
 alias tt='\time zsh -i -c exit'
 
 # Conda/Mamba

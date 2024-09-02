@@ -9,3 +9,4 @@ ZSH_HOME="$HOME/.config/zsh"
 #source <(kubectl completion zsh)
 
 [[ "$TERM_PROGRAM" == "CodeEditApp_Terminal" ]] && . "/Applications/CodeEdit.app/Contents/Resources/codeedit_shell_integration.zsh"
+
