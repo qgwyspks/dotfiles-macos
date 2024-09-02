@@ -1,4 +1,9 @@
-export EDITOR=nvim
+##
+## PATH & ENV
+##
+
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -38,7 +43,7 @@ export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/wsk/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/wsk/miniforge3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else

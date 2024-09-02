@@ -7,7 +7,7 @@ alias c='clear'
 
 # lsd -> ls
 alias ls='lsd'
-alias la='lsd -A'  # Don't list implied . and ..
+alias la='lsd -A' # Don't list implied . and ..
 alias ll='lsd -l --header'
 alias llg='lsd -l --header --git'
 alias lla='lsd -lA --header'
@@ -23,7 +23,6 @@ alias vim='nvim'
 # fastfetch
 alias neofetch='fastfetch'
 
-
 # benchmark
 # zsh 基准测试
 alias benchzsh='for i in $(seq 1 5); do /usr/bin/time /bin/zsh --no-rcs -i -c exit; done'
@@ -31,7 +30,6 @@ alias benchzsh='for i in $(seq 1 5); do /usr/bin/time /bin/zsh --no-rcs -i -c ex
 alias benchrawzsh='for i in $(seq 1 20); do /usr/bin/time /bin/zsh --no-rcs -i -c exit; done'
 # zsh 插件启动时间分析测试
 alias benchplugin='zprof | less'
-
 
 alias tt='\time zsh -i -c exit'
 
@@ -71,4 +69,3 @@ alias rec='asciinema rec'
 
 # harlequin
 alias sql='harlequin'
-

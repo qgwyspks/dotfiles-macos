@@ -1,3 +1,7 @@
+##
+## Plugins
+##
+
 # 手动安装 zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -17,7 +21,7 @@ zi ice as"command" from"gh-r" \
           atpull"%atclone" src"init.zsh"
 zi light starship/starship
 
-# 使用 fzf-tab 代替 fzf（fzf-tab需要在compinit之后，在autosuggestion和highlighting之前）
+# 使用 fzf-tab 代替 fzf（fzf-tab 需要在 compinit 之后，在 autosuggestion 和 highlighting 之前）
 # zi ice from"gh-r" as"program"
 # zi light junegunn/fzf
 zi ice wait lucid has 'fzf'
