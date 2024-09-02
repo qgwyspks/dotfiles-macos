@@ -5,7 +5,7 @@
 ## https://github.com/
 
 ZSH_HOME="$HOME/.config/zsh"
-files=(options alias env plugins fzf)
+files=(option alias env plugin fzf)
 
 source_if_exists() {
   [[ ! -f "$1" ]] || source "$1"
