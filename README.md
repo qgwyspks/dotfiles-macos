@@ -172,7 +172,7 @@
 - [**QQ 音乐**](https://y.qq.com/download/mac.html?part=1&ADTAG=YQQ)
 - [**Spotify**](https://open.spotify.com/)
 - [**YT Music**](https://github.com/steve228uk/YouTube-Music)：YouTube Music 的 Mac 应用包装器
-- [**MediaMate**](https://wouter01.github.io/MediaMate/)：优化 MacOS 系统 HUD，实现“**灵动岛**”效果
+- [**MediaMate**](https://wouter01.github.io/MediaMate/)：优化 MacOS 系统 HUD，实现「**灵动岛**」效果
 
 ## 笔记
 
@@ -238,7 +238,7 @@
   
     > [!warning]
     >
-    > 不过 Clash 的内核 `Premium` 都删库跑路了，就 [Meta](https://github.com/MetaCubeX/mihomo) 的作者改名 `mihomo` 偷偷还在更新。
+    > 不过 Clash 的内核 `Premium` 删库跑路了，就 [Meta](https://github.com/MetaCubeX/mihomo) 的作者改名 `mihomo` 偷偷还在更新。
     >
     > > [!tip]
     > >
@@ -248,7 +248,7 @@
 
     > [!note]
     >
-    > App Store 版本需要外区 ID，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
+    > App Store 版本需要外区 「Apple ID」，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
 
 > [!note]
 >

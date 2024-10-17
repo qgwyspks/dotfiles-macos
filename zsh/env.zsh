@@ -9,6 +9,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export PATH="$HOME/go/bin:$PATH"
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # curl
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 

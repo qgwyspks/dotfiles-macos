@@ -6,7 +6,7 @@ live_config_reload = true    # 实时配置重新加载
 # TERM = 'alacritty'
 
 [window]
-dimensions = { columns = 74, lines = 24 }  # 窗口尺寸（终端中的行/列数）
+dimensions = { columns = 74, lines = 24 }  # 窗口尺寸(终端中的行/列数)
 padding = { x = 16, y = 26 }               # 窗口周围添加的空白区域
 decorations = "transparent"                # 窗口装饰 - 透明(macOS)
 dynamic_padding = false                    # 动态填充
@@ -19,7 +19,7 @@ history = 2500  # 回滚缓冲区的最大行数
 multiplier = 3  # 每个输入滚动增量滚动的行数
 
 [font]
-size = 14.6
+size = 16  # 14.6
 normal = { family = "Mononoki Nerd Font", style = "Regular" }
 bold = { family = "Mononoki Nerd Font", style = "Bold" }
 italic = { family = "Mononoki Nerd Font", style = "Italic" }
