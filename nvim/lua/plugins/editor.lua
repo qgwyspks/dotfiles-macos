@@ -65,6 +65,9 @@ return {
         dependencies = {
             "nvim-treesitter/nvim-treesitter",
             "nvim-tree/nvim-web-devicons"
+        },
+        keys = {
+            { "<leader>mv", "<cmd>Markview<CR>" },
         }
     }
 

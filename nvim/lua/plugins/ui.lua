@@ -16,10 +16,11 @@ return {
         "nvim-tree/nvim-tree.lua",
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         keys = {
-            { "<C-n>", "<cmd>NvimTreeToggle<CR>" },  -- 打开或关闭树
-            { "<leader>nf", "<cmd>NvimTreeFocus<CR>" },  -- 如果树已关闭，则将其打开，然后将焦点放在该树上
+            { "<C-t>", "<cmd>NvimTreeToggle<CR>" },  -- 打开或关闭树
+            { "<leader>t", "<cmd>NvimTreeToggle<CR>" },  -- 打开或关闭树
+            { "<leader>tf", "<cmd>NvimTreeFocus<CR>" },  -- 如果树已关闭，则将其打开，然后将焦点放在该树上
             -- { "<leader>nff, "<cmd>NvimTreeFindFile<CR>" },  -- 在当前缓冲区的树中移动光标，如果需要，打开文件夹
-            { "<leader>nc", "<cmd>NvimTreeCollapse<CR>" },  -- 递归折叠 nvim tree
+            { "<leader>tc", "<cmd>NvimTreeCollapse<CR>" },  -- 递归折叠 nvim tree
         },
         config = function ()
             require("plugins.configs.nvim-tree")
