@@ -7,6 +7,7 @@ local opts = {
 }
 
 opts.servers.gopls = {
+    cmd = { 'gopls', 'serve' },
     settings = {
         gopls = {
             -- gofumpt = true,                     -- 使用 gofumpt 格式化代码
@@ -67,6 +68,35 @@ opts.servers.taplo = {
     },
 }
 
+opts.servers.lua_ls = {
+    cmd = {
+        "lua-language-server",
+        "--locale=zh-cn",
+    },
+    settings = {
+        Lua = {
+            diagnostics = {
+                unusedLocalExclude = { '_*' },
+                globals = { "vim" },
+                disbale = {
+                    'luadoc-miss-see-name',
+                    'undefined-field'
+                }
+            },
+            runtime = { version = 'LuaJIT' },
+            workspace = {
+                library = {
+                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                    [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+                },
+                checkThirdParty = false,
+            },
+            completion = { callSnippet = "Replace" },
+        },
+    },
+}
+
+
 local M = {}
 
 M.setup = function(languages)
@@ -75,6 +105,8 @@ M.setup = function(languages)
             lspconfig.gopls.setup(opts.servers.gopls)
         elseif language == "taplo" then
             lspconfig.taplo.setup(opts.servers.taplo)
+        elseif language == "lua_ls" then
+            lspconfig.lua_ls.setup(opts.servers.lua_ls)
         else
             lspconfig[language].setup(opts)
         end

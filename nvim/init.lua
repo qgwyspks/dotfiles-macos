@@ -1,2 +1,2 @@
-require("config.lazy")
+require("core.lazy")
 -- require("lazy").setup(plugins, opts)

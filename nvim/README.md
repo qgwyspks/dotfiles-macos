@@ -19,7 +19,7 @@
 ├── README.md
 ├── init.lua                 -- 配置入口
 └── lua/                     -- LUA 配置目录
-    ├── config/              -- 设置目录
+    ├── core/                -- 设置目录
     │   ├── autocmds.lua     -- 自动命令
     │   ├── keymaps.lua      -- 快捷键
     │   ├── lazy.lua         -- Lazy.nvim 安装

@@ -11,9 +11,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("config.keymaps")
-require("config.options")
-require("config.autocmds")
+require("core.keymaps")
+require("core.options")
+require("core.autocmds")
 
 require("lazy").setup({
 	spec = {

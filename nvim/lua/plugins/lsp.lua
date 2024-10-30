@@ -17,6 +17,7 @@ local languages = {
     -- "texlab",  -- LaTeX
 }
 
+
 return {
     {
         "williamboman/mason.nvim",
@@ -68,25 +69,25 @@ return {
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",     -- 文件路径
             "hrsh7th/cmp-cmdline",  -- 补全底部命令行
-            "andersevenrud/cmp-tmux",
+            -- "andersevenrud/cmp-tmux",
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip",
-            "rafamadriz/friendly-snippets",
-            {
-                "Saecki/crates.nvim",
-                event = { "BufRead Cargo.toml" },
-                opts = {
-                    completion = {
-                    cmp = { enabled = true },
-                    },
-                },
-            },
+            -- "rafamadriz/friendly-snippets",
+            -- {
+            --     "Saecki/crates.nvim",
+            --     event = { "BufRead Cargo.toml" },
+            --     opts = {
+            --         completion = {
+            --         cmp = { enabled = true },
+            --         },
+            --     },
+            -- },
         },
-        ---@param opts cmp.ConfigSchema
-        opts = function(_, opts)
-            opts.sources = opts.sources or {}
-            table.insert(opts.sources, { name = "crates" })
-        end,
+        -- ---@param opts cmp.ConfigSchema
+        -- opts = function(_, opts)
+        --     opts.sources = opts.sources or {}
+        --     table.insert(opts.sources, { name = "crates" })
+        -- end,
         config = function()
             require("plugins.configs.cmp")
         end
