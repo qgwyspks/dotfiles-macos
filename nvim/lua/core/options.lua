@@ -20,14 +20,14 @@ opt.linebreak = true   -- 换行不断开单词
 opt.smartindent = true -- 自动插入缩进
 opt.expandtab = true   -- 将使用空格(spaces)代替跳格(tabs)
 opt.list = true        -- 显示行末空格和制表符
-opt.tabstop = 2
-opt.shiftwidth = 2     -- 缩进大小
+opt.tabstop = 4
+opt.shiftwidth = 4     -- 缩进大小
 
 -- 行
 opt.number = true      -- 显示绝对行号
 opt.cursorline = true  -- 高亮当前行
 opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
-opt.scrolloff = 4      -- 保持在上方和下方的最少行数。
+opt.scrolloff = 8      -- 保持在上方和下方的最少行数。
 opt.sidescrolloff = 8  -- 保持在左侧和右侧的最少列数
 
 -- 搜索

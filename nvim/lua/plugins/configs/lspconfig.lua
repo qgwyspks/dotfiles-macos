@@ -1,4 +1,7 @@
-local lspconfig = require("lspconfig")
+local lspconfig_status, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_status then
+    return
+end
 
 local opts = {
     servers = {

@@ -11,12 +11,12 @@ return {
             indent = { enable = true },
             ensure_installed = {
                 "bash",
-                "c",
+                "c", "cpp", "rust",
                 "dockerfile",
                 "html",
-                "json", "jsonc",
+                "json",
                 "lua",
-                "markdown", "markdown_inline",
+                -- "markdown", "markdown_inline",
                 "python",
                 "toml", "xml", "yaml",
                 "vim", "vimdoc",
@@ -32,12 +32,26 @@ return {
         end,
     },
 
-    -- 自动补全括号
+    -- 异步格式化和 linting
     {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = true,
+        "nvimdev/guard.nvim",
+        -- lazy load by ft
+        -- lazy = true,
+        ft = { "lua", "python", "go", "json"},
+        dependencies = {
+            "nvimdev/guard-collection",
+        },
+        config = function()
+            require("plugins.configs.guard")
+        end,
     },
+
+    -- -- 自动补全括号
+    -- {
+    --     "windwp/nvim-autopairs",
+    --     event = "InsertEnter",
+    --     config = true,
+    -- },
 
     {
         "folke/trouble.nvim",

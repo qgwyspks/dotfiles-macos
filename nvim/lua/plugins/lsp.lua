@@ -65,9 +65,9 @@ return {
         version = false,
         event = { "InsertEnter", "CmdlineEnter" },
         dependencies = {
-            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-nvim-lsp",  -- 对lsp提供的补全信息进行提示
             "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-path",     -- 文件路径
+            "hrsh7th/cmp-path",     -- 文件内的路径进行补全
             "hrsh7th/cmp-cmdline",  -- 补全底部命令行
             -- "andersevenrud/cmp-tmux",
             "L3MON4D3/LuaSnip",
@@ -91,5 +91,29 @@ return {
         config = function()
             require("plugins.configs.cmp")
         end
+    },
+    {
+        'nvimdev/lspsaga.nvim',
+        after = 'nvim-lspconfig',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter',
+            'nvim-tree/nvim-web-devicons',
+        },
+        keys = {
+            { "t", "<cmd>Lspsaga term_toggle<CR>", desc = "浮动终端" },
+            { "<C-t>", "<cmd>Lspsaga term_toggle<CR>", desc = "浮动终端" },
+            { "<leader>ca", "<cmd>Lspsaga code_action<CR>", desc="显示代码操作"},
+            { "<leader>f", "<cmd>Lspsaga finder<CR>", desc="查看用法窗口"},
+            { "<leader>pd", "<cmd>Lspsaga peek_definition<CR>", desc="查看定义"},
+            { "<leader>pdt", "<cmd>Lspsaga peek_type_definition<CR>", desc="类型定义"},
+            { "<leader>gd", "<cmd>Lspsaga goto_definition<CR>", desc="转到定义"},
+            { "<leader>gdt", "<cmd>Lspsaga goto_type_definition<CR>", desc="转到类型定义"},
+            { "<leader>K", "<cmd>Lspsaga hover_doc<CR>", desc="显示悬停文档" },
+            { "<leader>rn", "<cmd>Lspsaga rename<CR>", desc="重命名" },
+            { "<leader>ol", "<cmd>Lspsaga outline<CR>", desc="大纲"},
+        },
+        config = function()
+            require('lspsaga').setup({})
+        end,
     }
 }

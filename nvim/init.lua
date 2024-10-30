@@ -1,2 +1,2 @@
 require("core.lazy")
--- require("lazy").setup(plugins, opts)
+-- require("lazy").setup(pluins, opts)

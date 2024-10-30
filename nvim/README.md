@@ -42,13 +42,14 @@
 - [bufferline](https://github.com/akinsho/bufferline.nvim) 缓冲区
 - [nvim-notify](https://github.com/rcarriga/nvim-notify) 消息通知
 - [toggleterm](https://github.com/akinsho/toggleterm.nvim) 内置终端
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) 语法高亮
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) 自动配对
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim) git 装饰
 - [trouble](https://github.com/folke/trouble.nvim) 诊断列表
-- [mason](https://github.com/williamboman/mason.nvim) lsp 管理
+- [mason](https://github.com/williamboman/mason.nvim) LSP 管理
 - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim) 连接 mason 和 lspconfig
 - [lspconfig](https://github.com/neovim/nvim-lspconfig) nvim lsp 客户端的配置
+- [lspsaga]()
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) 补全引擎插件
 - [markview](https://github.com/OXY2DEV/markview.nvim) Markdown 预览
 - [telescope](https://github.com/nvim-telescope/telescope.nvim) 列表模糊查找器
