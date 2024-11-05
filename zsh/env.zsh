@@ -7,19 +7,16 @@ export VISUAL="nvim"
 
 export PATH="$HOME/.local/bin:$PATH"
 
-export PATH="$HOME/go/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin"
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# curl
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # sqlite
-export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/sqlite/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/sqlite/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/sqlite/lib/pkgconfig"
+#export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+#export LDFLAGS="-L/opt/homebrew/opt/sqlite/lib"
+#export CPPFLAGS="-I/opt/homebrew/opt/sqlite/include"
+#export PKG_CONFIG_PATH="/opt/homebrew/opt/sqlite/lib/pkgconfig"
 
 # starship
 export STARSHIP_CONFIG=~/.config/zsh/starship.toml
@@ -37,10 +34,6 @@ export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebr
 export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
 export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 # export HOMEBREW_NO_INSTALL_FROM_API=1
-
-#export NVM_DIR="$HOME/.nvm"
-#  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-#  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # eval "$(/Users/wsk/miniforge3/bin/conda shell.zsh hook)"
 

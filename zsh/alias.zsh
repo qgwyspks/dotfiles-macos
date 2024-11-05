@@ -21,7 +21,7 @@ alias vi='nvim'
 alias vim='nvim'
 
 # fastfetch
-alias neofetch='fastfetch'
+# alias neofetch='fastfetch'
 
 # benchmark
 # zsh 基准测试
