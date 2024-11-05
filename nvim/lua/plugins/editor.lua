@@ -23,7 +23,7 @@ return {
                 -- "go", "gomod", "gowork", "gosum"
             },
         },
-        config = function(_, opts)
+        config = function (_, opts)
             if type(opts.ensure_installed) == "table" then
                 vim.list_extend(opts.ensure_installed, {"go", "gomod", "gowork", "gosum"})
                 vim.list_extend(opts.ensure_installed, {"rust", "ron"})
@@ -41,7 +41,7 @@ return {
         dependencies = {
             "nvimdev/guard-collection",
         },
-        config = function()
+        config = function ()
             require("plugins.configs.guard")
         end,
     },
@@ -72,18 +72,39 @@ return {
     },
 
     -- markdown-preview
+    -- {
+    --     "OXY2DEV/markview.nvim",
+    --     lazy = false,  -- Recommended
+    --     -- ft = "markdown"  -- If you decide to lazy-load anyway
+    --     dependencies = {
+    --         "nvim-treesitter/nvim-treesitter",
+    --         "nvim-tree/nvim-web-devicons"
+    --     },
+    --     keys = {
+    --         { "<leader>mv", "<cmd>Markview<CR>" },
+    --     }
+    -- }
     {
-        "OXY2DEV/markview.nvim",
-        lazy = false,  -- Recommended
-        -- ft = "markdown"  -- If you decide to lazy-load anyway
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "nvim-tree/nvim-web-devicons"
-        },
-        keys = {
-            { "<leader>mv", "<cmd>Markview<CR>" },
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+        ft = { 'markdown' },
+        ---@module 'render-markdown'
+        ---@type render.md.UserConfig
+        opts = {
+            render_modes = true,  -- 渲染模式 { 'n', 'c'}
+            pipe_table = { preset = 'round' },  -- 圆边框
+            heading = { border = true },
+            indent = { enabled = true },
+            code = { sign = 'language' },
+            checkbox = {
+                unchecked = { icon = '✘ ' },
+                checked = {
+                    icon = '✔ ',
+                    scope_highlight = '@Markup.strikethrough',
+                },
+                custom = { todo = { rendered = '◯ ' } },
+            },
         }
     }
-
 }
 
