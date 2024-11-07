@@ -20,13 +20,7 @@ setopt hist_ignore_dups       # 忽略重复的命令
 setopt hist_ignore_all_dups   # 如果重复，删除旧的记录
 setopt hist_ignore_space      # 忽略空格开头的命令
 setopt hist_verify
-setopt share_history # 所有会话共享历史记录
+setopt share_history          # 所有会话共享历史记录
 
-function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+eval "$(atuin init zsh)"
+

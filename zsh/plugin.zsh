@@ -56,7 +56,7 @@ zi light zsh-users/zsh-completions
 #zi light trapd00r/LS_COLORS
 
 zi snippet OMZ::lib/completion.zsh
-zi snippet OMZ::lib/history.zsh
+# zi snippet OMZ::lib/history.zsh
 #zi snippet OMZ::lib/key-bindings.zsh
 zi snippet OMZ::plugins/sudo/sudo.plugin.zsh
 
@@ -71,8 +71,11 @@ zi light mfaerevaag/wd
 # zinit ice svn
 # zinit snippet OMZ::plugins/extract
 
-zi ice wait"1" lucid
-zi light zdharma-continuum/history-search-multi-word
+# Shell 历史记录
+# zi load ellie/atuin
+
+# zi ice wait"1" lucid
+# zi light zdharma-continuum/history-search-multi-word
 
 #bindkey '^R' history-search-multi-word
 
