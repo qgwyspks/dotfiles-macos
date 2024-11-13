@@ -7,8 +7,6 @@ fpath+=~/.zfunc
 autoload -Uz compinit
 compinit
 
-eval "$(zoxide init zsh --cmd z)"
-
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=2000
@@ -22,5 +20,7 @@ setopt hist_ignore_space      # 忽略空格开头的命令
 setopt hist_verify
 setopt share_history          # 所有会话共享历史记录
 
+eval "$(zoxide init zsh --cmd z)"
+# eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
 

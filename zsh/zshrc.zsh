@@ -5,6 +5,7 @@
 ## https://github.com/
 
 ZSH_HOME="$HOME/.config/zsh"
+# files=(option alias env init_zim fzf)
 files=(option alias env plugin fzf)
 
 source_if_exists() {
