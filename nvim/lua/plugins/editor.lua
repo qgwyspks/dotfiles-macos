@@ -13,13 +13,13 @@ return {
                 "bash",
                 "c", "cpp", "rust",
                 "dockerfile",
-                "html",
+                -- "html",
                 "json",
                 "lua",
                 -- "markdown", "markdown_inline",
                 "python",
                 "toml", "xml", "yaml",
-                "vim", "vimdoc",
+                -- "vim", "vimdoc",
                 -- "go", "gomod", "gowork", "gosum"
             },
         },
@@ -53,23 +53,23 @@ return {
     --     config = true,
     -- },
 
-    {
-        "folke/trouble.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        cmd = { "TroubleToggle", "Trouble" },
-        keys = {
-            { "<leader>xx", "<cmd>TroubleToggle<CR>" },
-            { "<leader>xc",  "<cmd>TroubleClose<CR>" },
-            { "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", desc = "Document Diagnostics (Trouble)" },
-            { "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", desc = "Workspace Diagnostics (Trouble)" },
-            { "<leader>xr",  "<cmd>TroubleToggle lsp_references<CR>" },
-            { "<leader>xq",  "<cmd>TroubleToggle quickfix<CR>", desc = "Quickfix List (Trouble)" },
-            { "<leader>xl", "<cmd>TroubleToggle loclist<CR>", desc = "Location List (Trouble)" },
-        },
-        opts = {
-            use_diagnostic_signs = true
-        }
-    },
+    -- {
+    --     "folke/trouble.nvim",
+    --     dependencies = { "nvim-tree/nvim-web-devicons" },
+    --     cmd = { "TroubleToggle", "Trouble" },
+    --     keys = {
+    --         { "<leader>xx", "<cmd>TroubleToggle<CR>" },
+    --         { "<leader>xc",  "<cmd>TroubleClose<CR>" },
+    --         { "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", desc = "Document Diagnostics (Trouble)" },
+    --         { "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", desc = "Workspace Diagnostics (Trouble)" },
+    --         { "<leader>xr",  "<cmd>TroubleToggle lsp_references<CR>" },
+    --         { "<leader>xq",  "<cmd>TroubleToggle quickfix<CR>", desc = "Quickfix List (Trouble)" },
+    --         { "<leader>xl", "<cmd>TroubleToggle loclist<CR>", desc = "Location List (Trouble)" },
+    --     },
+    --     opts = {
+    --         use_diagnostic_signs = true
+    --     }
+    -- },
 
     -- markdown-preview
     -- {

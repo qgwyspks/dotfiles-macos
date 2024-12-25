@@ -15,16 +15,29 @@ return {
     --         vim.cmd([[colorscheme tokyonight]])
     --     end,
     -- },
+    -- https://github.com/ellisonleao/gruvbox.nvim
     {
-        "navarasu/onedark.nvim",
+        "ellisonleao/gruvbox.nvim",
         lazy = false,
+        proiority = 1000,
         config = function()
-            require("onedark").setup({
-                style = "dark",
-                transparent = true
+            require("gruvbox").setup({
+                transparent_mode = true -- 透明背景
             })
-            require("onedark").load()
-            -- vim.cmd([[colorscheme onedark]])
+            vim.o.background = "dark" -- or "light"
+            vim.cmd([[colorscheme gruvbox]])
         end,
     }
+    -- {
+    --     "navarasu/onedark.nvim",
+    --     lazy = false,
+    --     config = function()
+    --         require("onedark").setup({
+    --             style = "dark",
+    --             transparent = true
+    --         })
+    --         require("onedark").load()
+    --         -- vim.cmd([[colorscheme onedark]])
+    --     end,
+    -- }
 }

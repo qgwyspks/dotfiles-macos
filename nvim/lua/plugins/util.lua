@@ -15,28 +15,28 @@ return {
     --     end
     -- },
 
-    {
-        "folke/which-key.nvim",
-        event = "VeryLazy",
-        init = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-        end,
-        opts = {
-            plugins = { spelling = true },
-            -- defaults = {
-            --     mode = { "n", "v" },
-            --     ["g"] = { name = "+goto" },
-            --     ["gs"] = { name = "+surround" },
-            --     ["z"] = { name = "+fold" },
-            --     ["]"] = { name = "+next" },
-            --     ["["] = { name = "+prev" },
-            -- },
-        },
-        -- config = function()
-        --     require("plugins.configs.which-key")
-        -- end,
-    },
+    -- {
+    --     "folke/which-key.nvim",
+    --     event = "VeryLazy",
+    --     init = function()
+    --         vim.o.timeout = true
+    --         vim.o.timeoutlen = 300
+    --     end,
+    --     opts = {
+    --         plugins = { spelling = true },
+    --         -- defaults = {
+    --         --     mode = { "n", "v" },
+    --         --     ["g"] = { name = "+goto" },
+    --         --     ["gs"] = { name = "+surround" },
+    --         --     ["z"] = { name = "+fold" },
+    --         --     ["]"] = { name = "+next" },
+    --         --     ["["] = { name = "+prev" },
+    --         -- },
+    --     },
+    --     -- config = function()
+    --     --     require("plugins.configs.which-key")
+    --     -- end,
+    -- },
 
     -- vimtex
     -- {
