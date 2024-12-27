@@ -17,6 +17,12 @@ local ft = require('guard.filetype')
 --             :lint('ruff')
 ft('python'):fmt('lsp'):append('ruff'):lint('ruff')
 
+-- ft('c,cpp'):fmt({
+--     cmd = 'clang-format',
+--     stdin = true,
+--     ignore_patterns = { 'neovim', 'vim' },
+-- })
+
 ft('lua'):fmt('lsp')
         :append('stylua')
         -- :lint('selene')
@@ -25,7 +31,11 @@ ft('go'):fmt('lsp'):append('gofmt')
 
 ft('json'):fmt('lsp')
 
-ft('sh'):lint('shellcheck')
+ft('sh'):fmt({
+    cmd = 'shfmt',
+    args = { '-' },
+    stdin = true,
+}):lint('shellcheck')
 
 vim.g.guard_config = {
     fmt_on_save = true,

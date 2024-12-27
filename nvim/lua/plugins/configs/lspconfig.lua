@@ -3,13 +3,27 @@ if not lspconfig_status then
     return
 end
 
+-- local has_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+-- local has_blink, blink = pcall(require, "blink.cmp")
+
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+---@class PluginLspOpts
 local opts = {
+    ---@type lspconfig.options
     servers = {
     },
     capabilities = capabilities,
 }
+
+-- opts.capabilities = vim.tbl_deep_extend(
+--     "force",
+--     {},
+--     vim.lsp.protocol.make_client_capabilities(),
+--     has_cmp and cmp_nvim_lsp.default_capabilities or {},
+--     has_blink and blink.get_lsp_capabilities() or {}
+-- )
 
 opts.servers.gopls = {
     cmd = { 'gopls', 'serve' },

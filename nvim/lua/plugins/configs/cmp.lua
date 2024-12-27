@@ -3,32 +3,48 @@ if not cmp_status then
     return
 end
 
+local lspkind_status, lspkind = pcall(require, "lspkind")
+if not lspkind_status then
+    return
+end
+
 local luasnip_status, luasnip = pcall(require, "luasnip")
 if not luasnip_status then
     return
 end
 
 cmp.setup({
+    view = {
+        entries = 'custom', -- 'custom' | 'wildmenu' | 'native'
+    },
     window = {
         completion = {
-            winhighlight = "Normal:CmpWin,FloatBorder:CmpWinBor,Search:None",
+            winhighlight = "Normal:None,FloatBorder:None,Search:None",
             border = 'rounded',
             col_offset = -3,
             side_padding = 0,
             scrollbar = true,
         },
         documentation = {
-            winhighlight = 'Normal:CmpDocumentation,FloatBorder:CmpWinBor,Search:None',
+            winhighlight = 'Normal:None,FloatBorder:None,Search:None',
             border = 'rounded',
             scrollbar = true,
         },
     },
     formatting = {
         fields = { 'kind', 'abbr', 'menu' },
-        format = function(_, vim_item)
-            vim_item.menu = ' ' .. (vim_item.kind or '')
+        format = function(entry, vim_item)
+            local kind = lspkind.cmp_format({
+                mode = "symbol_text",
+                maxwidth = 50,
+            })(entry, vim_item)
+            local strings = vim.split(kind.kind, "%s", { trimempty = true })
+            kind.kind = " " .. (strings[1] or "") .. " "
+            kind.menu = " " .. (strings[2] or "") .. "."
+            return kind
+            -- vim_item.menu = ' ' .. (vim_item.kind or '')
             -- vim_item.kind = _G._kind_icons[vim_item.kind] or ''
-            return vim_item
+            -- return vim_item
         end,
     },
     snippet = {

@@ -32,6 +32,3 @@ map("n", "<leader>\\", "<C-W>v", { desc = "Split window right" })
 
 -- 退出终端插入模式
 map("t", "<Esc>", "<C-\\><C-n>", opts)
-
-
--- NvimTree

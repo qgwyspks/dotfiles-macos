@@ -16,7 +16,7 @@ return {
                 -- "html",
                 "json",
                 "lua",
-                -- "markdown", "markdown_inline",
+                "markdown", "markdown_inline",
                 "python",
                 "toml", "xml", "yaml",
                 -- "vim", "vimdoc",

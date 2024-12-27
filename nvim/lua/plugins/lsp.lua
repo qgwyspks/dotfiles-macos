@@ -1,6 +1,6 @@
 local languages = {
     "bashls", -- Bash
-    -- "clangd",  -- C/C++
+    "clangd",  -- C/C++
     -- "csharp_ls", -- C#
     -- "dockerls", -- Docker
     -- "docker_compose_language_service",  -- Docker Compose
@@ -12,7 +12,7 @@ local languages = {
     -- "taplo",  -- TOML
     "gopls",  -- Go
     "lua_ls",  -- Lua
-    "marksman",  -- Markdown
+    -- "marksman",  -- Markdown
     "pyright",  -- Python pylsp ruff rufflsp
     -- "texlab",  -- LaTeX
 }
@@ -21,29 +21,94 @@ local languages = {
 return {
     {
         'saghen/blink.cmp',
-        dependencies =  { 'rafamadriz/friendly-snippets' },
         version = '*',
+        dependencies = { "rafamadriz/friendly-snippets" },
+        event = { "InsertEnter"},
+
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
         opts = {
-            keymap = { preset = 'default' },
+            keymap = {
+                preset = 'none',  -- 'default'
+                ['<Tab>'] = {
+                    'select_next',  -- 选择下一项，如果在底部循环到列表顶部
+                    'snippet_forward',  -- 跳转到下一个片段占位符
+                    'fallback',
+                },
+                ['<S-Tab>'] = {  -- Shift-Tab
+                    'select_prev',
+                    'snippet_backward',
+                    'fallback',
+                },
+                ['<CR>'] = {'accept', 'fallback' },
+                ['<C-e>'] = { 'hide', 'fallback' },
+            },
             appearance = {
                 use_nvim_cmp_as_default = true,
-                nerd_font_variant = 'mono'
+                nerd_font_variant = 'mono',
+                kind_icons = _G._kind_icons,
+            },
+            completion = {
+                menu = {
+                    auto_show = true,
+                    border = 'rounded',
+                    winhighlight = 'Normal:None,FloatBorder:None,CursorLine:BlinkCmpMenuSelection,Search:None',
+                    scrolloff = 2,
+                    scrollbar = true,
+                    draw = {
+                        padding = 1,
+                        gap = 2,
+                        columns = {
+                            { 'kind_icon' },
+                            { 'label', 'label_description', gap = 1 },
+                            { 'kind' },
+                        }
+                    }
+                },
+                documentation = {
+                    auto_show = true,  -- 自动显示文档
+                    auto_show_delay_ms = 50,
+                    treesitter_highlighting = true,  -- CPU 卡顿可以设置为 false
+                    window = {
+                        border = 'rounded',
+                        winhighlight = 'Normal:None,FloatBorder:None,Search:None',
+                    },
+                },
+                list = { selection = 'manual'},  -- 选择列表 'preselect' | 'manual' | 'auto_insert'
+                accept = { auto_brackets = { enabled = true } },  -- 自动补全括号
+                ghost_text = { enabled = true },  -- 内联虚拟文本
             },
             sources = {
                 default = { 'lsp', 'path', 'snippets', 'buffer' },
+                cmdline = {}
             },
+            signature = {
+                window = {
+                    border = 'rounded',
+                }
+            }
         },
         opts_extend = { "sources.default" }
     },
     {
         'neovim/nvim-lspconfig',
-        dependencies = { 'saghens/blink.cmp' },
+        dependencies = { 'saghen/blink.cmp' },
 
-        config = function ()
-            require('plugins.configs.lspconfig').setup(languages)
+        opts = {
+            servers = {
+                lua_ls = {}
+            }
+        },
+        config = function()
+            require("plugins.configs.lspconfig").setup(languages)
         end
+        -- config = function (_, opts)
+        --     local lspconfig = require("lspconfig")
+        --     for server, config in ipairs(opts.servers) do
+        --         config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+        --         lspconfig[server].setup(config)
+        --     end
+        -- end
     },
     -- {
     --     "williamboman/mason.nvim",
@@ -51,6 +116,7 @@ return {
     --     cmd = "Mason",
     --     keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
     --     -- opts = { ensure_installed = { "goimports", "gofumpt" } },
+    --     ---@param opts MasonSettings
     --     config = function ()
     --         require("mason").setup({
     --             ui = {
@@ -69,6 +135,7 @@ return {
     --         ensure_installed = languages,
     --         automatic_installation = true, -- 自动安装
     --     },
+    --     ---@param opts MasonLspConfigSettings
     --     config = function(_, opts)
     --         -- if type(opts.ensure_installed) == "table" then
     --         --     vim.list_extend(opts.ensure_installed, {"goimports", "gofumpt"})
@@ -91,10 +158,11 @@ return {
     --     version = false,
     --     event = { "InsertEnter", "CmdlineEnter" },
     --     dependencies = {
+    --         "onsails/lspkind.nvim",
     --         "hrsh7th/cmp-nvim-lsp",  -- 对lsp提供的补全信息进行提示
     --         "hrsh7th/cmp-buffer",
     --         "hrsh7th/cmp-path",     -- 文件内的路径进行补全
-    --         "hrsh7th/cmp-cmdline",  -- 补全底部命令行
+    --         -- "hrsh7th/cmp-cmdline",  -- 补全底部命令行
     --         -- "andersevenrud/cmp-tmux",
     --         "L3MON4D3/LuaSnip",
     --         "saadparwaiz1/cmp_luasnip",
