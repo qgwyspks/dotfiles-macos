@@ -1,3 +1,11 @@
 [manager]
 
-
+keymap = [
+    { on = "<Esc>",   run = "escape" },
+    { on = "q",       run = "quit" },
+    
+    { on = "<Up>",    run = "arrow -1", desc = "Move cursor up" },
+    { on = "<Down>",  run = "arrow 1",  desc = "Move cursor down" },
+    { on = "<Left>",  run = "leave",    desc = "Go back to the parent directory" },
+    { on = "<Right>", run = "enter",    desc = "Enter the child directory" },
+]
