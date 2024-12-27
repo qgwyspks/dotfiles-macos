@@ -3,10 +3,12 @@ if not lspconfig_status then
     return
 end
 
+local capabilities = require("blink.cmp").get_lsp_capabilities()
+
 local opts = {
     servers = {
-
     },
+    capabilities = capabilities,
 }
 
 opts.servers.gopls = {

@@ -8,8 +8,8 @@ local languages = {
     -- "cssls",  -- CSS
     -- "tsserver",  -- JS/TS
     -- "vimls",  -- VimL
-    "jsonls",  -- JSON
-    "taplo",  -- TOML
+    -- "jsonls",  -- JSON
+    -- "taplo",  -- TOML
     "gopls",  -- Go
     "lua_ls",  -- Lua
     "marksman",  -- Markdown
@@ -20,78 +20,104 @@ local languages = {
 
 return {
     {
-        "williamboman/mason.nvim",
-        build = ":MasonUpdate",
-        cmd = "Mason",
-        keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
-        -- opts = { ensure_installed = { "goimports", "gofumpt" } },
-        config = function ()
-            require("mason").setup({
-                ui = {
-                    icons = {
-                        package_installed = "✓",
-                        package_pending = "➜",
-                        package_uninstalled = "✗"
-                    }
-                }
-            })
-        end
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
+        'saghen/blink.cmp',
+        dependencies =  { 'rafamadriz/friendly-snippets' },
+        version = '*',
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
         opts = {
-            ensure_installed = languages,
-            automatic_installation = true, -- 自动安装
+            keymap = { preset = 'default' },
+            appearance = {
+                use_nvim_cmp_as_default = true,
+                nerd_font_variant = 'mono'
+            },
+            sources = {
+                default = { 'lsp', 'path', 'snippets', 'buffer' },
+            },
         },
-        config = function(_, opts)
-            -- if type(opts.ensure_installed) == "table" then
-            --     vim.list_extend(opts.ensure_installed, {"goimports", "gofumpt"})
-            -- end
-            require("mason-lspconfig").setup(opts)
-        end,
+        opts_extend = { "sources.default" }
     },
     {
-        "neovim/nvim-lspconfig",
-        config = function()
-            require("plugins.configs.lspconfig").setup(languages)
-            -- local lspconfig = require("lspconfig")
-            -- for _, language in ipairs(languages) do
-            --     lspconfig[language].setup({})
-            -- end
+        'neovim/nvim-lspconfig',
+        dependencies = { 'saghens/blink.cmp' },
+
+        config = function ()
+            require('plugins.configs.lspconfig').setup(languages)
         end
     },
-    {
-        "hrsh7th/nvim-cmp",
-        version = false,
-        event = { "InsertEnter", "CmdlineEnter" },
-        dependencies = {
-            "hrsh7th/cmp-nvim-lsp",  -- 对lsp提供的补全信息进行提示
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-path",     -- 文件内的路径进行补全
-            "hrsh7th/cmp-cmdline",  -- 补全底部命令行
-            -- "andersevenrud/cmp-tmux",
-            "L3MON4D3/LuaSnip",
-            "saadparwaiz1/cmp_luasnip",
-            -- "rafamadriz/friendly-snippets",
-            -- {
-            --     "Saecki/crates.nvim",
-            --     event = { "BufRead Cargo.toml" },
-            --     opts = {
-            --         completion = {
-            --         cmp = { enabled = true },
-            --         },
-            --     },
-            -- },
-        },
-        -- ---@param opts cmp.ConfigSchema
-        -- opts = function(_, opts)
-        --     opts.sources = opts.sources or {}
-        --     table.insert(opts.sources, { name = "crates" })
-        -- end,
-        config = function()
-            require("plugins.configs.cmp")
-        end
-    },
+    -- {
+    --     "williamboman/mason.nvim",
+    --     build = ":MasonUpdate",
+    --     cmd = "Mason",
+    --     keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
+    --     -- opts = { ensure_installed = { "goimports", "gofumpt" } },
+    --     config = function ()
+    --         require("mason").setup({
+    --             ui = {
+    --                 icons = {
+    --                     package_installed = "✓",
+    --                     package_pending = "➜",
+    --                     package_uninstalled = "✗"
+    --                 }
+    --             }
+    --         })
+    --     end
+    -- },
+    -- {
+    --     "williamboman/mason-lspconfig.nvim",
+    --     opts = {
+    --         ensure_installed = languages,
+    --         automatic_installation = true, -- 自动安装
+    --     },
+    --     config = function(_, opts)
+    --         -- if type(opts.ensure_installed) == "table" then
+    --         --     vim.list_extend(opts.ensure_installed, {"goimports", "gofumpt"})
+    --         -- end
+    --         require("mason-lspconfig").setup(opts)
+    --     end,
+    -- },
+    -- {
+    --     "neovim/nvim-lspconfig",
+    --     config = function()
+    --         require("plugins.configs.lspconfig").setup(languages)
+    --         -- local lspconfig = require("lspconfig")
+    --         -- for _, language in ipairs(languages) do
+    --         --     lspconfig[language].setup({})
+    --         -- end
+    --     end
+    -- },
+    -- {
+    --     "hrsh7th/nvim-cmp",
+    --     version = false,
+    --     event = { "InsertEnter", "CmdlineEnter" },
+    --     dependencies = {
+    --         "hrsh7th/cmp-nvim-lsp",  -- 对lsp提供的补全信息进行提示
+    --         "hrsh7th/cmp-buffer",
+    --         "hrsh7th/cmp-path",     -- 文件内的路径进行补全
+    --         "hrsh7th/cmp-cmdline",  -- 补全底部命令行
+    --         -- "andersevenrud/cmp-tmux",
+    --         "L3MON4D3/LuaSnip",
+    --         "saadparwaiz1/cmp_luasnip",
+    --         -- "rafamadriz/friendly-snippets",
+    --         -- {
+    --         --     "Saecki/crates.nvim",
+    --         --     event = { "BufRead Cargo.toml" },
+    --         --     opts = {
+    --         --         completion = {
+    --         --         cmp = { enabled = true },
+    --         --         },
+    --         --     },
+    --         -- },
+    --     },
+    --     -- ---@param opts cmp.ConfigSchema
+    --     -- opts = function(_, opts)
+    --     --     opts.sources = opts.sources or {}
+    --     --     table.insert(opts.sources, { name = "crates" })
+    --     -- end,
+    --     config = function()
+    --         require("plugins.configs.cmp")
+    --     end
+    -- },
     {
         'nvimdev/lspsaga.nvim',
         after = 'nvim-lspconfig',
