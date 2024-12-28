@@ -100,21 +100,30 @@ opts.servers.lua_ls = {
                 disbale = {
                     'luadoc-miss-see-name',
                     'undefined-field'
-                }
+                },
+                neededFileStatus = {
+                    ["codestyle-check"] = "Any",  -- 代码格式化
+                },
             },
-            runtime = { version = 'LuaJIT' },
+            runtime = { version = 'LuaJIT' },  -- 使用内置 LSP 客户端
             workspace = {
                 library = {
                     [vim.fn.expand("$VIMRUNTIME/lua")] = true,
                     [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
                 },
-                checkThirdParty = false,
+                checkThirdParty = false,  -- 不检查第三方库
             },
-            completion = { callSnippet = "Replace" },
+            completion = { callSnippet = "Replace" },  -- 仅显示调用片段
+            format = {
+                enable = true,
+                defaultConfig = {
+                    indent_style = "space",
+                    indent_size = "4",
+                }
+            }
         },
     },
 }
-
 
 local M = {}
 

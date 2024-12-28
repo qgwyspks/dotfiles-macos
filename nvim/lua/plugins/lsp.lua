@@ -44,7 +44,7 @@ return {
                 ['<C-e>'] = { 'hide', 'fallback' },
             },
             appearance = {
-                use_nvim_cmp_as_default = true,
+                use_nvim_cmp_as_default = false,
                 nerd_font_variant = 'mono',
                 kind_icons = _G._kind_icons,
             },
@@ -58,18 +58,20 @@ return {
                     draw = {
                         padding = 1,
                         gap = 2,
+                        treesitter = { "lps" },
                         columns = {
                             { 'kind_icon' },
                             { 'label', 'label_description', gap = 1 },
                             { 'kind' },
-                        }
-                    }
+                        },
+                    },
                 },
                 documentation = {
                     auto_show = true,  -- 自动显示文档
-                    auto_show_delay_ms = 50,
+                    auto_show_delay_ms = 200,
                     treesitter_highlighting = true,  -- CPU 卡顿可以设置为 false
                     window = {
+                        max_width = 40,
                         border = 'rounded',
                         winhighlight = 'Normal:None,FloatBorder:None,Search:None',
                     },
@@ -192,6 +194,13 @@ return {
         dependencies = {
             'nvim-treesitter/nvim-treesitter',
             'nvim-tree/nvim-web-devicons',
+        },
+        opts = {
+            ui = {
+                border = 'single',
+                devicon = true,
+                title = true,
+            }
         },
         keys = {
             { "t", "<cmd>Lspsaga term_toggle<CR>", desc = "浮动终端" },
