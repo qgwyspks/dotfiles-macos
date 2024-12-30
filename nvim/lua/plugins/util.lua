@@ -15,28 +15,39 @@ return {
     --     end
     -- },
 
-    -- {
-    --     "folke/which-key.nvim",
-    --     event = "VeryLazy",
-    --     init = function()
-    --         vim.o.timeout = true
-    --         vim.o.timeoutlen = 300
-    --     end,
-    --     opts = {
-    --         plugins = { spelling = true },
-    --         -- defaults = {
-    --         --     mode = { "n", "v" },
-    --         --     ["g"] = { name = "+goto" },
-    --         --     ["gs"] = { name = "+surround" },
-    --         --     ["z"] = { name = "+fold" },
-    --         --     ["]"] = { name = "+next" },
-    --         --     ["["] = { name = "+prev" },
-    --         -- },
-    --     },
-    --     -- config = function()
-    --     --     require("plugins.configs.which-key")
-    --     -- end,
-    -- },
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        opts = {
+            preset = "helix",
+            keys = {
+                scroll_down = "<c-d>",
+                scroll_up = "<c-u>",
+            },
+            icons = {
+                mappings = false,
+            },
+        },
+        keys = {
+            {
+                "<leader>?",
+                function()
+                    require("which-key").show({ global = false })
+                end,
+                desc = "快捷键",
+            },
+            {
+                "<leader>.",
+                function()
+                    require("which-key").show({ loop = true })
+                end,
+                desc = "快捷键窗口保持",
+            }
+        },
+        -- config = function()
+        --     require("plugins.configs.which-key")
+        -- end,
+    },
 
     -- vimtex
     -- {

@@ -33,10 +33,10 @@ local buttons = {
             opts = { hl = "SpecialComment", position = "center" }
         },
         { type = "padding", val = 1 },
-        button("s", "  > Sessions", ":SessionManager load_session<CR>"),
+        -- button("s", "  > Sessions", ":SessionManager load_session<CR>"),
         button("n", "  > New file", ":ene <BAR> startinsert <CR>"),
-        button("f", "  > Find file", ":Telescope find_files <CR>"),
-        button("r", "  > Recent files", ":Telescope oldfiles <CR>"),
+        -- button("f", "  > Find file", ":Telescope find_files <CR>"),
+        -- button("r", "  > Recent files", ":Telescope oldfiles <CR>"),
         button("l", "󰒲  > Lazy", ":Lazy <CR>"),
         button("q", "  > Quit", ":qa <CR>"),
     },
