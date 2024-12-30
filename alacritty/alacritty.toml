@@ -20,7 +20,7 @@ history = 2500  # 回滚缓冲区的最大行数
 multiplier = 3  # 每个输入滚动增量滚动的行数
 
 [font]
-size        = 15  # 14.6
+size        = 15.6  # 14.6
 normal      = { family = "Maple Mono NF CN", style = "Light"       }
 bold        = { family = "Maple Mono NF CN", style = "Bold"        }
 italic      = { family = "Maple Mono NF CN", style = "Light Italic" }
