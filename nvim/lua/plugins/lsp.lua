@@ -23,7 +23,7 @@ return {
         'saghen/blink.cmp',
         version = '*',
         dependencies = { "rafamadriz/friendly-snippets" },
-        event = { "InsertEnter"},
+        event = { "InsertEnter" },
 
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
@@ -82,7 +82,16 @@ return {
             },
             sources = {
                 default = { 'lsp', 'path', 'snippets', 'buffer' },
-                cmdline = {}
+                cmdline = {},
+                --[[
+                providers = {
+                    markdown = {
+                        name = 'RenderMarkdown',
+                        module = 'render-markdown.integ.blink',
+                        fallbacks = { 'lsp' },
+                    },
+                },
+                --]]
             },
             signature = {
                 enabled = true,

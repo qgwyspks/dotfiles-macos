@@ -48,7 +48,61 @@ return {
         --     require("plugins.configs.which-key")
         -- end,
     },
-
+    {
+        'folke/noice.nvim',
+        event = "VeryLazy",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+        },
+        keys = {
+            { "<leader>na", function() require("noice").cmd("enable") end, desc = "Noice Enable" },
+            { "<leader>nd", function() require("noice").cmd("disable") end, desc = "Noice Disable" },
+        },
+        config = function()
+            require("plugins.configs.noice")
+        end,
+    },
+    {
+        'is0n/jaq-nvim',
+        ft = { 'go', 'lua', 'python', 'shell' },
+        -- event = "VeryLazy",
+        opts = {
+            cmds = {
+                internal = {
+                    lua = "luafile %",
+                    vim = "source %",
+                },
+                external = {
+                    python = "python3 %",
+                    go     = "go run %",
+                    sh     = "sh %",
+                }
+            },
+            behavior = {
+                default = "float",
+            },
+            ui = {
+                float = { 
+                    border = "rounded",
+                    height = 0.2,
+                    weight = 0.1,
+                    x = 0.5,
+                    y = 0.5,
+                },
+                terminal = {
+                    position = "bot",
+                    size = 4,
+                    line_no = true,
+                },
+            },
+        },
+        keys = {
+            { "<leader>jf", "<cmd>Jaq float<CR>", desc = "Run Code in Float" },
+            { "<leader>jt", "<cmd>Jaq terminal<CR>", desc = "Run Code in Terminal" },
+            { "<leader>jb", "<cmd>Jaq bang<CR>", desc = "Run Code in Bang" },
+            { "<leader>jq", "<cmd>Jaq quickfix<CR>", desc = "QuickFix" },
+        },
+    },
     -- vimtex
     -- {
     --   "lervag/vimtex",

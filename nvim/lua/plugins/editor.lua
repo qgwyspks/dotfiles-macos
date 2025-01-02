@@ -19,6 +19,7 @@ return {
                 "markdown", "markdown_inline",
                 "python",
                 "toml",
+                "regex",
                 -- "xml", "yaml",
                 "vim", "vimdoc",
                 "go", "gomod", "gowork", "gosum"
@@ -92,7 +93,11 @@ return {
             pipe_table = { preset = 'round' },  -- 圆边框
             heading = { border = true },
             indent = { enabled = true },
-            code = { sign = 'language' },
+            code = { 
+                sign = 'language',
+                left_pad = 2,
+                right_pad = 4,
+            },
             checkbox = {
                 unchecked = { icon = '✘ ' },
                 checked = {
