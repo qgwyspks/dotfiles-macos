@@ -18,16 +18,13 @@ return {
                 "lua",
                 "markdown", "markdown_inline",
                 "python",
-                "toml", "xml", "yaml",
-                -- "vim", "vimdoc",
-                -- "go", "gomod", "gowork", "gosum"
+                "toml",
+                -- "xml", "yaml",
+                "vim", "vimdoc",
+                "go", "gomod", "gowork", "gosum"
             },
         },
-        config = function (_, opts)
-            if type(opts.ensure_installed) == "table" then
-                vim.list_extend(opts.ensure_installed, {"go", "gomod", "gowork", "gosum"})
-                vim.list_extend(opts.ensure_installed, {"rust", "ron"})
-            end
+        config = function(_, opts)
             require("nvim-treesitter").setup(opts)
         end,
     },
@@ -37,11 +34,11 @@ return {
         "nvimdev/guard.nvim",
         -- lazy load by ft
         -- lazy = true,
-        ft = { "lua", "python", "go", "json"},
+        ft = { "lua", "python", "go", "json" },
         dependencies = {
             "nvimdev/guard-collection",
         },
-        config = function ()
+        config = function()
             require("plugins.configs.guard")
         end,
     },

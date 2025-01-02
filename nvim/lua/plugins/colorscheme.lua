@@ -22,7 +22,18 @@ return {
         proiority = 1000,
         config = function()
             require("gruvbox").setup({
-                transparent_mode = true -- 透明背景
+                italic = {
+                    strings = true,
+                    emphasis = true,
+                    comments = true,
+                    operators = false,
+                    folds = true,
+                },
+                transparent_mode = true, -- 透明背景
+                overrides = {
+                    -- ["@function"] = { link = "GruvboxGreenBold", italic = true },
+                    ["@keyword"] = { fg = "#fb4934", italic = true },
+                },
             })
             vim.o.background = "dark" -- or "light"
             vim.cmd([[colorscheme gruvbox]])

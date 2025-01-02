@@ -58,7 +58,7 @@ return {
                     draw = {
                         padding = 1,
                         gap = 2,
-                        treesitter = { "lps" },
+                        treesitter = { 'lsp' },
                         columns = {
                             { 'kind_icon' },
                             { 'label', 'label_description', gap = 1 },
@@ -76,7 +76,7 @@ return {
                         winhighlight = 'Normal:None,FloatBorder:None,Search:None',
                     },
                 },
-                list = { selection = 'manual'},  -- 选择列表 'preselect' | 'manual' | 'auto_insert'
+                list = { selection = 'manual' },  -- 选择列表 'preselect' | 'manual' | 'auto_insert'
                 accept = { auto_brackets = { enabled = true } },  -- 自动补全括号
                 ghost_text = { enabled = true },  -- 内联虚拟文本
             },
@@ -85,9 +85,10 @@ return {
                 cmdline = {}
             },
             signature = {
+                enabled = true,
                 window = {
                     border = 'rounded',
-                }
+                },
             }
         },
         opts_extend = { "sources.default" }

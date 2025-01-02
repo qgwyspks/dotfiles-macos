@@ -11,7 +11,6 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 ---@class PluginLspOpts
 local opts = {
-    ---@type lspconfig.options
     servers = {
     },
     capabilities = capabilities,
@@ -50,7 +49,7 @@ opts.servers.gopls = {
                 rangeVariableTypes = true,      -- 启用范围变量类型提示
             },
             analyses = {
-                fieldalignment = true,          -- 检查结构体字段是否对齐，建议优化字段顺序以减少内存占用
+                -- fieldalignment = true,          -- 检查结构体字段是否对齐，建议优化字段顺序以减少内存占用
                 nilness = true,                 -- 检查可能的 nil 值错误
                 unusedparams = true,            -- 检查未使用的函数参数
                 unusedwrite = true,             -- 检查对变量的未使用参数
