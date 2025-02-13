@@ -6,7 +6,7 @@ return {
         --     "nvim-tree/nvim-web-devicons",
         --     "nvim-lua/plenary.nvim"
         -- },
-        config = function ()
+        config = function()
             require("plugins.configs.alpha")
         end
     },
@@ -31,7 +31,7 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function ()
+        config = function()
             require("plugins.configs.lualine")
         end
     },
@@ -78,7 +78,7 @@ return {
     -- 左侧 git 提示
     {
         "lewis6991/gitsigns.nvim",
-        config = function ()
+        config = function()
             require("plugins.configs.gitsigns")
         end
     },

@@ -82,7 +82,7 @@ return {
                 default = "float",
             },
             ui = {
-                float = { 
+                float = {
                     border = "rounded",
                     height = 0.2,
                     weight = 0.1,

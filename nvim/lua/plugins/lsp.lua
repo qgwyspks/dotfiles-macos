@@ -40,7 +40,7 @@ return {
                     'snippet_backward',
                     'fallback',
                 },
-                ['<CR>'] = {'accept', 'fallback' },
+                ['<CR>'] = { 'accept', 'fallback' },
                 ['<C-e>'] = { 'hide', 'fallback' },
             },
             appearance = {
@@ -50,7 +50,7 @@ return {
             },
             completion = {
                 menu = {
-                    auto_show = true,
+                    auto_show = function(ctx) return ctx.mode ~= 'cmdline' end,
                     border = 'rounded',
                     winhighlight = 'Normal:None,FloatBorder:None,CursorLine:BlinkCmpMenuSelection,Search:None',
                     scrolloff = 2,
@@ -76,12 +76,22 @@ return {
                         winhighlight = 'Normal:None,FloatBorder:None,Search:None',
                     },
                 },
-                list = { selection = 'manual' },  -- 选择列表 'preselect' | 'manual' | 'auto_insert'
+                list = { selection = { preselect = false, auto_insert = false } },  -- 选择列表 'preselect' | 'manual' | 'auto_insert'
                 accept = { auto_brackets = { enabled = true } },  -- 自动补全括号
                 ghost_text = { enabled = true },  -- 内联虚拟文本
             },
             sources = {
-                default = { 'lsp', 'path', 'snippets', 'buffer' },
+                -- default = { 'lsp', 'path', 'snippets', 'buffer' },
+                default = function(ctx)
+                    local success, node = pcall(vim.treesitter.get_node)
+                    if vim.bo.filetype == 'lua' then
+                        return { 'lsp', 'path' }
+                    elseif success and node and vim.tbl_contains({ 'comment', 'line_comment', 'block_comment' }, node:type()) then
+                        return { 'buffer' }
+                    else
+                        return { 'lsp', 'path', 'snippets', 'buffer' }
+                    end
+                end,
                 cmdline = {},
                 --[[
                 providers = {
@@ -105,7 +115,6 @@ return {
     {
         'neovim/nvim-lspconfig',
         dependencies = { 'saghen/blink.cmp' },
-
         opts = {
             servers = {
                 lua_ls = {}
@@ -215,15 +224,15 @@ return {
         keys = {
             { "t", "<cmd>Lspsaga term_toggle<CR>", desc = "浮动终端" },
             { "<C-t>", "<cmd>Lspsaga term_toggle<CR>", desc = "浮动终端" },
-            { "<leader>ca", "<cmd>Lspsaga code_action<CR>", desc="显示代码操作"},
-            { "<leader>f", "<cmd>Lspsaga finder<CR>", desc="查看用法窗口"},
-            { "<leader>pd", "<cmd>Lspsaga peek_definition<CR>", desc="查看定义"},
-            { "<leader>pdt", "<cmd>Lspsaga peek_type_definition<CR>", desc="类型定义"},
-            { "<leader>gd", "<cmd>Lspsaga goto_definition<CR>", desc="转到定义"},
-            { "<leader>gdt", "<cmd>Lspsaga goto_type_definition<CR>", desc="转到类型定义"},
-            { "<leader>K", "<cmd>Lspsaga hover_doc<CR>", desc="显示悬停文档" },
-            { "<leader>rn", "<cmd>Lspsaga rename<CR>", desc="重命名" },
-            { "<leader>ol", "<cmd>Lspsaga outline<CR>", desc="大纲"},
+            { "<leader>ca", "<cmd>Lspsaga code_action<CR>", desc = "显示代码操作" },
+            { "<leader>f", "<cmd>Lspsaga finder<CR>", desc = "查看用法窗口" },
+            { "<leader>pd", "<cmd>Lspsaga peek_definition<CR>", desc = "查看定义" },
+            { "<leader>pdt", "<cmd>Lspsaga peek_type_definition<CR>", desc = "类型定义" },
+            { "<leader>gd", "<cmd>Lspsaga goto_definition<CR>", desc = "转到定义" },
+            { "<leader>gdt", "<cmd>Lspsaga goto_type_definition<CR>", desc = "转到类型定义" },
+            { "<leader>K", "<cmd>Lspsaga hover_doc<CR>", desc = "显示悬停文档" },
+            { "<leader>rn", "<cmd>Lspsaga rename<CR>", desc = "重命名" },
+            { "<leader>ol", "<cmd>Lspsaga outline<CR>", desc = "大纲" },
         },
         config = function()
             require('lspsaga').setup({})

@@ -93,7 +93,7 @@ return {
             pipe_table = { preset = 'round' },  -- 圆边框
             heading = { border = true },
             indent = { enabled = true },
-            code = { 
+            code = {
                 sign = 'language',
                 left_pad = 2,
                 right_pad = 4,

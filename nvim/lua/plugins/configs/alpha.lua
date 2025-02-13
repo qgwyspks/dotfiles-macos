@@ -47,7 +47,7 @@ local config = {
     layout = {
         { type = "padding", val = 1 },
         header,
-        { type = "padding", val = 1},
+        { type = "padding", val = 1 },
         buttons
     },
     opts = {
