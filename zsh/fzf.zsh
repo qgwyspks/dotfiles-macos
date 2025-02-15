@@ -65,3 +65,4 @@ zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
 	"recent commit object name") git show --color=always $word | delta ;;
 	*) git log --color=always $word ;;
 	esac'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'lsd -1 $realpath'

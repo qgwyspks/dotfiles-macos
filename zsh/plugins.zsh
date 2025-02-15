@@ -9,8 +9,8 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # 如果你在 compinit 之后获取 zinit.zsh
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+# autoload -Uz _zinit
+# (( ${+_comps} )) && _comps[zinit]=_zinit
 
 # starship 主题
 # line 1: 从 github release 克隆 starship 二进制文件作为 command
@@ -26,16 +26,7 @@ zi light starship/starship
 # zi light junegunn/fzf
 zi ice wait lucid has 'fzf'
 zi light Aloxaf/fzf-tab
-# zi ice wait lucid
-# zi light Freed-Wu/fzf-tab-source
 
-# zinit wait lucid light-mode for \
-#   atinit"zicompinit; zicdreplay" \
-#       zdharma-continuum/fast-syntax-highlighting \
-#   atload"_zsh_autosuggest_start" \
-#       zsh-users/zsh-autosuggestions \
-#   blockf atpull'zinit creinstall -q .' \
-#       zsh-users/zsh-completions
 # 语法高亮
 zi ice wait lucid atinit"zicompinit; zicdreplay"
 zi light zdharma-continuum/fast-syntax-highlighting
@@ -81,4 +72,10 @@ zi light mfaerevaag/wd
 
 #zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 
-# zmodload zsh/zprof
+autoload -U compinit && compinit
+
+zinit cdreplay -a
+
+eval "$(zoxide init zsh --cmd z)"
+# eval "$(starship init zsh)"
+eval "$(atuin init zsh)"

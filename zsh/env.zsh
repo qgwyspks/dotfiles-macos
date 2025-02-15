@@ -2,12 +2,14 @@
 ## PATH & ENV
 ##
 
+export PATH="$HOME/.local/bin:$PATH"
+
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-export PATH="$HOME/.local/bin:$PATH"
-
 export PATH="$PATH:$HOME/go/bin"
+
+# export PATH="$PATH:$HOME/miniforge3/bin"
 
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"

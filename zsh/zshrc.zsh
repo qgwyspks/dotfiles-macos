@@ -5,13 +5,20 @@
 ## https://github.com/
 
 ZSH_HOME="$HOME/.config/zsh"
-# files=(option alias env init_zim fzf)
-files=(option alias env plugin fzf)
+
+declare -a files=(
+  env
+  aliases
+  options
+  plugins
+  fzf
+)
 
 source_if_exists() {
   [[ ! -f "$1" ]] || source "$1"
 }
 
-for file in "${files[@]}"; do
+for file in "${files[@]}"
+do
   source_if_exists "${ZSH_HOME}/${file}.zsh"
 done
