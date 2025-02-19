@@ -20,12 +20,12 @@
     // "separator",
     {
       "type": "custom",
-      "format": "┌────────────────────────────────────────────┐"
+      "format": "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"// "┌────────────────────────────────────────────┐"
     },
     {
       "type": "os",
       "key": "  󰌢  OS       ",
-      "format": "{3} {9}"
+      "format": "{9}"
     },
     {
       "type": "uptime",
@@ -54,30 +54,40 @@
       "type": "memory",
       "key": "    Memory   "
     },
-    {
-      "type": "swap",
-      "key": "  󰔚  Swap     "
-    },
+    //{
+    //  "type": "swap",
+    //  "key": "  󰔚  Swap     "
+    // },
     // {
     //   "type": "disk",
     //   "key": "    Disk     ",
     //   "format": "{1} / {2} ({3})"
     // },
     {
+       "type":  "packages",
+       "key": "  󰏖  Packages ",
+       "format": "{brew} (brew), {brew-cask} (brew-cask)"
+    },
+    {
       "type": "localip",
       "key": "    Local IP "
     },
     {
       "type": "custom",
-      "format": "└────────────────────────────────────────────┘"
+      // "format": "└────────────────────────────────────────────┘"
+      "format": "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
     },
     // "battery",
     // "break",
+    // {
+    //   "type": "colors",
+    //   "paddingLeft": 5,
+    //   "symbol": "circle"
+    // },
     {
-      "type": "colors",
-      "paddingLeft": 5,
-      "symbol": "circle"
-    }
+      "type": "custom",
+      "format": "    \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m "
+  }
   ]
-  // #     󰌢  󰍹  󰻠  󰍛  󰘚    󱈑        󰔚        󰊠  󰅐    󰝚      󰀻        󰮯      󰩠  󰩟  󰝚  󰸉  󰏖        󰉼
+  // #     󰌢  󰍹  󰻠  󰍛  󰘚    󱈑        󰔚        󰊠  󰅐    󰝚      󰀻        󰮯      󰩠  󰩟  󰝚  󰸉  󰏖        󰉼 󰨇  
 }
