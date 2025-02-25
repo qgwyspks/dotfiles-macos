@@ -28,10 +28,11 @@ zi ice wait lucid has 'fzf'
 zi light Aloxaf/fzf-tab
 
 # 语法高亮
-zi ice wait lucid atinit"zicompinit; zicdreplay"
-zi light zdharma-continuum/fast-syntax-highlighting
+# zi ice wait lucid atinit"zicompinit; zicdreplay"
+# zi light zdharma-continuum/fast-syntax-highlighting
 # 设置主题 fast-theme -t free
-# zinit light zsh-users/zsh-syntax-highlighting
+zi ice wait lucid wait='0'
+zi light zsh-users/zsh-syntax-highlighting
 
 # 自动建议
 zi ice wait lucid atload"_zsh_autosuggest_start"
