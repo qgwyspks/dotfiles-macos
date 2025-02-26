@@ -31,3 +31,11 @@ autocmd("BufWritePre", {
   end
 })
 --]]
+-- vim.api.nvim_create_autocmd("VimLeave", {
+--     desc = "重置终端光标形状",
+--     callback = function()
+--         -- 设置光标形状
+--         vim.fn.system("echo -ne '\\e[6 q'")
+--     end
+-- })
+

@@ -92,7 +92,7 @@ return {
                         return { 'lsp', 'path', 'snippets', 'buffer' }
                     end
                 end,
-                cmdline = {},
+                -- cmdline = {},
                 --[[
                 providers = {
                     markdown = {
