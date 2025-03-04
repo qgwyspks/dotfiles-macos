@@ -2,18 +2,16 @@
 [general]
 live_config_reload = true    # 实时配置重新加载
 
-[env]
-# term = 'xterm-256color'
-# TERM = 'alacritty'
-
 [window]
 dimensions = { columns = 74, lines = 24 }  # 窗口尺寸(终端中的行/列数)
-padding = { x = 16, y = 26 }               # 窗口周围添加的空白区域
+padding = { x = 16, y = 20 }               # 窗口周围添加的空白区域
 decorations = "transparent"                # 窗口装饰 - 透明(macOS)
 dynamic_padding = true                     # 动态填充
 dynamic_title = true                       # 动态标题，允许终端应用更改窗口标题
 opacity = 0.82                             # 背景不透明度
+blur = false                               # 透明窗口后面的内容不进行模糊处理
 option_as_alt = "None"                     # Option(Macos) -> Alt -> OnlyLeft | OnlyRight| Both | None
+level = "Normal"                           # 窗口优先级 AlwaysOnTop(最上面)
 
 [scrolling]
 history = 2500  # 回滚缓冲区的最大行数
@@ -25,11 +23,6 @@ normal      = { family = "Maple Mono NF CN", style = "Light"       }
 bold        = { family = "Maple Mono NF CN", style = "Bold"        }
 italic      = { family = "Maple Mono NF CN", style = "Light Italic" }
 bold_italic = { family = "Maple Mono NF CN", style = "Bold Italic"  }
-# size  = 16  # 14.6
-# normal = { family = "Mononoki Nerd Font", style = "Regular" }
-# bold = { family = "Mononoki Nerd Font", style = "Bold" }
-# italic = { family = "Mononoki Nerd Font", style = "Italic" }
-# bold_italic = { family = "Mononoki Nerd Font", style = "Bold Italic" }
 offset = { x = 0, y = 2 }  # 每个字符周围的额外空间, x -> 字母间距, y -> 行距
 
 [selection]
