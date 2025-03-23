@@ -11,17 +11,18 @@ opt.mouse = "a"                      -- 开启鼠标模式
 opt.showmode = false                 -- 不显示当前模式
 opt.cmdheight = 1                    -- 命令行高度
 opt.termguicolors = true             -- 开启终端的 24 位颜色
-opt.wrap = false                     -- Disable line wrap
 opt.wildmode = "longest:full,full"   -- 命令行补全模式
 
 -- 缩进
-opt.autoindent = true  -- 换行自动缩进
-opt.linebreak = true   -- 换行不断开单词
-opt.smartindent = true -- 自动插入缩进
-opt.expandtab = true   -- 将使用空格(spaces)代替跳格(tabs)
-opt.list = true        -- 显示行末空格和制表符
-opt.tabstop = 4
-opt.shiftwidth = 4     -- 缩进大小
+opt.autoindent  = true  -- 换行自动缩进
+opt.smartindent = true  -- 自动插入缩进
+opt.breakindent = true
+opt.wrap        = true  -- 在任意位置换行
+opt.linebreak   = true  -- 换行不断开单词，只在空白处换行
+opt.expandtab   = true  -- 将使用空格(spaces)代替跳格(tabs)
+opt.list        = true  -- 显示行末空格和制表符
+opt.tabstop     = 4
+opt.shiftwidth  = 4     -- 缩进大小
 
 -- 行
 opt.number = true      -- 显示绝对行号
