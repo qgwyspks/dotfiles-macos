@@ -91,7 +91,7 @@
 ### 学术 :school_satchel:
 
 - [**Zotero**](https://www.zotero.org/)：文献管理软件。支持「[**插件功能**](https://zotero-chinese.com/plugins/)」 :arrow_down: ：
-  - [**Ethereal Style**](https://github.com/MuiseDestiny/zotero-style)：增强界面功能，:heavy_plus_sign: [**easyScholar**](https://www.easyscholar.cc/) 显示影响因子。
+  - [**Ethereal Style**](https://github.com/MuiseDestiny/zotero-style)：增强界面功能， :heavy_plus_sign: [**easyScholar**](https://www.easyscholar.cc/) 显示影响因子。
   - [**Translate for Zotero**](https://github.com/windingwind/zotero-pdf-translate)：翻译插件。
 
 ## 数据库
@@ -151,7 +151,7 @@
 
 - [**Maccy**](https://maccy.app)：轻量级的剪贴板工具 :clipboard:。
 
-- [**Gopeed**](https://gopeed.com/zh-CN)：:arrow_down_small: ​开源的现代化下载器（支持插件扩展）。
+- [**Gopeed**](https://gopeed.com/zh-CN)： :arrow_down_small: ​开源的现代化下载器（支持插件扩展）。
 
 - ~~[**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图。~~
 
@@ -197,7 +197,7 @@
 
   > :bangbang: **Important**：配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] :arrow_right: [**读与写**]
   
-- [**Hammerspoon**](https://www.hammerspoon.org/)：:hammer: ​自动化工具，使用 Lua 脚本实现各种操作。
+- [**Hammerspoon**](https://www.hammerspoon.org/)：​ :hammer: ​自动化工具，使用 Lua 脚本实现各种操作。
 
 - [**Bruno**](https://www.usebruno.com/)：免费开源的 API 测试工具（离线）。
 
