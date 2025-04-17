@@ -2,12 +2,15 @@
 
 ---
 
+:rainbow: 个人的 「**Nvim**」 配置方案，使用 [**lazy.nvim**](https://github.com/folke/lazy.nvim) :zzz: ​插件管理器。
+
+<img src="../img/nvim.png" alt="nvim" style="zoom: 25%;" /><img src="../img/which-key.png" alt="which-key" style="zoom:25%;" /> 
+
 <!-- markdown-toc GitLab -->
 
 - [配置结构](#配置结构)
 - [插件列表](#插件列表)
 - [快捷键](#快捷键)
-- Lazy.nvim
 
 <!-- markdown-toc -->
 
@@ -35,24 +38,32 @@
 
 ## 插件列表
 
-- [onedark](https://github.com/navarasu/onedark.nvim) 主题
-- [alpha-nvim](https://github.com/goolord/alpha-nvim) 欢迎界面
-- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) 文件树
-- [lualine](https://github.com/nvim-lualine/lualine.nvim) 状态栏
-- [bufferline](https://github.com/akinsho/bufferline.nvim) 缓冲区
-- [nvim-notify](https://github.com/rcarriga/nvim-notify) 消息通知
-- [toggleterm](https://github.com/akinsho/toggleterm.nvim) 内置终端
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) 语法高亮
-- [nvim-autopairs](https://github.com/windwp/nvim-autopairs) 自动配对
-- [gitsigns](https://github.com/lewis6991/gitsigns.nvim) git 装饰
-- [trouble](https://github.com/folke/trouble.nvim) 诊断列表
-- [mason](https://github.com/williamboman/mason.nvim) LSP 管理
-- [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim) 连接 mason 和 lspconfig
-- [lspconfig](https://github.com/neovim/nvim-lspconfig) nvim lsp 客户端的配置
-- [lspsaga]()
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) 补全引擎插件
-- [markview](https://github.com/OXY2DEV/markview.nvim) Markdown 预览
-- [telescope](https://github.com/nvim-telescope/telescope.nvim) 列表模糊查找器
+- ~~[onedark](https://github.com/navarasu/onedark.nvim) ：主题~~
+- [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)：主题 :evergreen_tree:（设置了透明背景）
+- [alpha-nvim](https://github.com/goolord/alpha-nvim)：欢迎界面 :foggy:
+- ~~[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)：文件树 :file_folder:~~
+- [lualine](https://github.com/nvim-lualine/lualine.nvim)：状态栏
+- ~~[bufferline](https://github.com/akinsho/bufferline.nvim)：缓冲区~~
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)：git 提示 :bulb:
+- [vim-startuptime](https://github.com/dstein64/vim-startuptime)：查看 `nvim` 启动事件时间信息 :hourglass:
+- ~~[nvim-notify](https://github.com/rcarriga/nvim-notify)：消息通知 :bell:~~
+- ~~[toggleterm](https://github.com/akinsho/toggleterm.nvim)：内置终端~~
+- [which-key](https://github.com/folke/which-key.nvim)：显示可用的快捷键弹出窗口 :mag:
+- [noice](https://github.com/folke/noice.nvim)：替换了 `messages`、`cmdline` 和 `popupmenu` 的 UI
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)：语法高亮 :vertical_traffic_light:
+- ~~[nvim-autopairs](https://github.com/windwp/nvim-autopairs)：自动配对~~
+- [guard](https://github.com/nvimdev/guard.nvim)：异步格式化和代码检查工具
+- ~~[markview](https://github.com/OXY2DEV/markview.nvim)：Markdown 预览~~
+- [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)：Markdown 预览
+- ~~[trouble](https://github.com/folke/trouble.nvim)：诊断列表~~
+- ~~[mason](https://github.com/williamboman/mason.nvim)：LSP 管理~~
+- ~~[mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)：连接 mason 和 lspconfig~~
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)：Nvim LSP 客户端的配置
+- [lspsaga](https://github.com/nvimdev/lspsaga.nvim)：增强 LSP
+- ~~[nvim-cmp](https://github.com/hrsh7th/nvim-cmp)：补全引擎插件~~
+- [blink.cmp](https://github.com/Saghen/blink.cmp)：支持 LSP 和外部源的高校补全插件
+
+删除了 Mason 系列，改用系统的包管理器来自己安装需要的 LSP 和 Formatter 等。
 
 ## 快捷键
 
