@@ -8,10 +8,8 @@
 
 - [**Homebrew**](https://brew.sh/zh-cn/)：**MacOS** 的包管理器。
 
-  > [!tip]
-  >
-  > 非常推荐使用 `homebrew` 来安装环境和软件
-
+  > **Important**：非常推荐使用 `homebrew` 来安装环境和软件。
+  
 - **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) + :rocket:[starship](https://starship.rs/)。
 
 - [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器 [tpm](https://github.com/tmux-plugins/tpm) + [tmux-open](https://github.com/tmux-plugins/tmux-open) + [tmux-prefix-highlight](https://github.com/tmux-plugins/tmux-prefix-highlight)。
@@ -36,17 +34,13 @@
 
 - [**Miniforge**](https://github.com/conda-forge/miniforge)：包含 `Conda` 和  `Mamba` 、使用 `conda-forge` 作为默认 channel 的最小安装环境。
 
-  > [!tip]
-  >
-  > Anaconda​ :vs: Miniconda​ :vs: Micromamba :vs: ​Miniforge，相比较下来，我还是比较推荐最轻量的 Miniforge，它同时包含 `conda` 和 `mamba`，`mamba` 真的非常快 :zap:！
-
+  > **Tip**：Anaconda :vs: Miniconda :vs: Micromamba :vs: Miniforge，相比较下来，我还是比较推荐最轻量的 Miniforge，它同时包含 `conda` 和 `mamba`，`mamba` 真的非常快 :zap:！
+  
 - [**uv**](https://docs.astral.sh/uv/)：Python 包和项目管理器​ :hammer_and_wrench:。
 
-  > [!tip]
-  >
-  > 替代了很多常见的工具，如 `pip`、`pipx`、`poetry`、`pyenv` 等等。
-
-- [**OrbStack**](https://orbstack.dev/)：快速、轻量、简单的 Docker 虚拟机容器软件
+  > **Note**：替代了很多常见的工具，如 `pip`、`pipx`、`poetry`、`pyenv` 等等。
+  
+- [**OrbStack**](https://orbstack.dev/)：:whale: 快速、轻量、简单的 Docker 虚拟机容器软件。
 
 ## 笔记 :book:
 
@@ -54,17 +48,13 @@
 
 - [**Typora**](https://typoraio.cn/)：所见即所得的 [Markdown](https://markdown.com.cn/) 编辑器和阅读器。
 
-  > [!note]
-  >
-  > 89 块 3 台设备我感觉还是蛮划算的，如果想要用免费版可以下载 0.11.18 版本。
-
+  > **Tip**：89 块 3 台设备我感觉还是蛮划算的，如果想要用免费版可以下载 0.11.18 版本。
+  
 - [**Obsidian**](https://obsidian.md/)：强大的插件系统，笔记存储在本地，同步需要付费，如果都是苹果设备的话，iCloud 同步会比较方便。
 
 - [**Notion**](https://www.notion.so/)：美观的笔记软件，块状的设计非常灵湖，多系统同步方便。笔记存储在云端，服务器在国外，速度会比较慢。
 
-  > [!note]
-  >
-  > 我这边安装 Notion，是为了方便 Obsidian 通过插件发布至 Notion，借用 Notion 分享一些笔记。
+  > **Note**：我这边安装 Notion，是为了方便 Obsidian 通过插件发布至 Notion，借用 Notion 分享一些笔记。
 
 ### LaTeX :mortar_board:
 
@@ -76,20 +66,14 @@
 
 - [**MacTex**](https://tug.org/mactex/)：LaTeX 环境 = TextLive。
 
-  > [!note]
+  > - 有精简版本的 BasicTeX，但不建议安装，后续装包可能会有些不必要的麻烦。
   >
-  > 有精简版本的 BasicTeX，但不建议安装，后续装包可能会有些不必要的麻烦。
-  >
-  > > [!tip]
-  > >
-  > > :star: 使用 **Homebrew** 安装可以选择 `mactex-no-gui`，少了好多不必要的 GUI 软件。
-
+  > - :star: 使用 **Homebrew** 安装可以选择 `mactex-no-gui`，少了好多不必要的 GUI 软件。
+  
 - [**Texifier**](https://www.texifier.com/)：非常漂亮的 LaTeX 编辑器，支持实时预览。
 
-  > [!caution]
-  >
-  > 实时预览是基于它自身的 TexpadTex 引擎渲染的，会需要额外安装那些需要的库。
-
+  > **Caution**：实时预览是基于它自身的 TexpadTex 引擎渲染的，会需要额外安装那些需要的库。
+  
 - [**TeXstudio**](https://texstudio.sourceforge.net/)：跨系统的 LaTex 编辑器，开箱即用。
 
 > [!note]
@@ -151,12 +135,10 @@
 
 - [**LOGI OPTIONS+**](https://www.logitech.com/zh-cn/setup/ergosetup/logi-options.html)：罗技官方提供的鼠标增强工具。
 
-  > [!note]
-  >
   > 最近换了 Logi 的 `MX Master 3s` 无线办公鼠标，手感各种都很舒服（不愧是上了苹果官网图片的鼠标）。
   >
   > 也有部分原因是罗技游戏鼠标配套的 [**G Hub**](https://www.logitechg.com/zh-cn/innovation/g-hub.html) 在 Mac 下实在是太难受了。
-
+  
 - [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理，使用左 `Fn` 键。
 
 - [**Maccy**](https://maccy.app)：轻量级的剪贴板工具 :clipboard:。
@@ -201,18 +183,12 @@
 
 - [**WattsConnected**](https://apps.apple.com/us/app/wattsconnected/id1639692859?mt=12)：显示充电器 :battery: ​提供的瓦数。
 
-- [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 HiDPI（收费）。
-
-  > [!note]
-  >
-  > 开启 **HiDPI** 后，又可以直接在**设置->显示器**中设置，就很奇怪 :question:。
+- [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 **HiDPI**（收费）。
 
 - [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 hosts 文件，切换多个 hosts 方案。
 
-  > [!important]
-  >
-  > 配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] -> [**读与写**]
-
+  > **Important**：配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] -> [**读与写**]
+  
 - [**Hammerspoon**](https://www.hammerspoon.org/)：:hammer: ​自动化工具，使用 Lua 脚本实现各种操作。
 
 - [**Bruno**](https://www.usebruno.com/)：免费开源的 API 测试工具（离线）。
@@ -237,19 +213,13 @@
 
 - **Clash系**：有 [ClashX](https://en.clashx.org/)、ClashX Pro、[Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases) 和 CFW这些。
   
-    > [!warning]
+    > **Warning**：不过 Clash 的内核 `Premium` 删库跑路了，就 [Meta](https://github.com/MetaCubeX/mihomo) 的作者改名 `mihomo` 偷偷还在更新。
     >
-    > 不过 Clash 的内核 `Premium` 删库跑路了，就 [Meta](https://github.com/MetaCubeX/mihomo) 的作者改名 `mihomo` 偷偷还在更新。
-    >
-    > > [!tip]
-    > >
-    > > 所以这边更推荐基于 [Meta](https://github.com/MetaCubeX/mihomo) 的 [Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases)。 
+    > 所以这边更推荐基于 [Meta](https://github.com/MetaCubeX/mihomo) 的 [Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases)。 
     
 - [**sing-box**](https://apps.apple.com/us/app/sing-box/id6451272673)：上手难度偏高，支持的协议非常多，比较适合自建服务器 VPS 的用户使用，也有相关的项目支持 Clash 的订阅转换。
 
-    > [!note]
-    >
-    > App Store 版本需要外区 「Apple ID」，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
+    > **Note**：App Store 版本需要外区 「Apple ID」，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
 
 > [!note]
 >
