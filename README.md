@@ -2,9 +2,9 @@
 
 # Shell :book:
 
-- [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 **MacOS** 上提供了很多额外的 `action` 功能支持
+- [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 **MacOS** 上提供了很多额外的 `action` 功能支持。
 
-- [**Homebrew**](https://brew.sh/zh-cn/)：**MacOS** 的包管理器
+- [**Homebrew**](https://brew.sh/zh-cn/)：**MacOS** 的包管理器。
 
   > [!tip]
   >
@@ -14,7 +14,7 @@
 
 - [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器 [tpm](https://github.com/tmux-plugins/tpm) + [tmux-open](https://github.com/tmux-plugins/tmux-open) + [tmux-prefix-highlight](https://github.com/tmux-plugins/tmux-prefix-highlight)
 
-- [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器
+- [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器。
 
 - [**zoxide**]()：`cd` 的替代品，可以记住以前使用的文件路径，直接使用 `z` 命令自动建议文件路径。
 
