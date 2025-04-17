@@ -14,7 +14,7 @@
   
 - **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) :heavy_plus_sign: :rocket:[starship](https://starship.rs/)。
 
-- [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器 [tpm](https://github.com/tmux-plugins/tpm) :heavy_plus_sign: [tmux-open](https://github.com/tmux-plugins/tmux-open) :heavy_plus_sign:+ [tmux-prefix-highlight](https://github.com/tmux-plugins/tmux-prefix-highlight)。
+- [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器。
 
 - [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器 :mag_right:。
 
