@@ -13,7 +13,7 @@ local languages = {
     "gopls",  -- Go
     "lua_ls",  -- Lua
     -- "marksman",  -- Markdown
-    "pyright",  -- Python pylsp ruff rufflsp
+    -- "pyright",  -- Python pylsp ruff rufflsp
     -- "texlab",  -- LaTeX
 }
 
