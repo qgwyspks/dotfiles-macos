@@ -4,7 +4,7 @@
 
 :rainbow: 个人的 「**Nvim**」 配置方案，使用 [**lazy.nvim**](https://github.com/folke/lazy.nvim) :zzz: ​插件管理器。
 
-<img src="../img/nvim.png" alt="nvim" style="zoom: 25%;" /><img src="../img/which-key.png" alt="which-key" style="zoom:25%;" /> 
+<img src="../img/nvim.png" width="50%"/><img src="../img/which-key.png" width="50%"/> 
 
 <!-- markdown-toc GitLab -->
 
