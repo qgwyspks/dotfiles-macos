@@ -10,11 +10,11 @@
 
 - [**Homebrew**](https://brew.sh/zh-cn/)：**MacOS** 的包管理器。
 
-  > **Important**：非常推荐使用 `homebrew` 来安装环境和软件。
+  > :bangbang: **Important**：非常推荐使用 `homebrew` 来安装环境和软件。
   
-- **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) + :rocket:[starship](https://starship.rs/)。
+- **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) :heavy_plus_sign: :rocket:[starship](https://starship.rs/)。
 
-- [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器 [tpm](https://github.com/tmux-plugins/tpm) + [tmux-open](https://github.com/tmux-plugins/tmux-open) + [tmux-prefix-highlight](https://github.com/tmux-plugins/tmux-prefix-highlight)。
+- [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器 [tpm](https://github.com/tmux-plugins/tpm) :heavy_plus_sign: [tmux-open](https://github.com/tmux-plugins/tmux-open) :heavy_plus_sign:+ [tmux-prefix-highlight](https://github.com/tmux-plugins/tmux-prefix-highlight)。
 
 - [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器 :mag_right:。
 
@@ -34,17 +34,21 @@
 
 - [**NeoVim**](https://neovim.io/)：基于 Vim 的文本编辑器，具有强大的插件系统 [lazy.nvim](https://lazy.folke.io/) :zzz:。
 
-  > 我的 「[配置文件](./nvim/README.md)」:sparkles:。
+  >  :soon: 我的 「 :round_pushpin:[配置文件](./nvim/README.md)」  :end:。
 
 - [**Miniforge**](https://github.com/conda-forge/miniforge)：包含 `Conda` 和  `Mamba` 、使用 `conda-forge` 作为默认 channel 的最小安装环境。
 
-  > **Tip**：Anaconda :vs: Miniconda :vs: Micromamba :vs: Miniforge，相比较下来，我还是比较推荐最轻量的 Miniforge，它同时包含 `conda` 和 `mamba`，`mamba` 真的非常快 :zap:！
+  > :bulb: **Tip**：[Anaconda](https://www.anaconda.com/download) :vs: [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) :vs: [Micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html) :vs: [Miniforge](https://github.com/conda-forge/miniforge)，相比较下来，我还是比较推荐最轻量的 Miniforge，它同时包含 `conda` 和 `mamba`，`mamba` 真的非常快 :zap:！
 
 - [**uv**](https://docs.astral.sh/uv/)：Python 包和项目管理器​ :hammer_and_wrench:。
 
-  > **Note**：替代了很多常见的工具，如 `pip`、`pipx`、`poetry`、`pyenv` 等等。
+  > :round_pushpin: **Note**：替代了很多常见的工具，如 `pip`、`pipx`、`poetry`、`pyenv` 等等。
 
-- [**OrbStack**](https://orbstack.dev/)：:whale: 快速、轻量、简单的 Docker 虚拟机容器软件。
+- [**OrbStack**](https://orbstack.dev/)： :whale: 快速、轻量、简单的 [Docker](https://www.docker.com/) 虚拟机容器软件。
+
+- [**lima**](https://lima-vm.io/)：Linux 虚拟机。
+
+- [**mas**](https://github.com/mas-cli/mas)：Mac App Store 的命令行界面。
 
 ## 笔记 :book:
 
@@ -52,21 +56,21 @@
 
 - [**Typora**](https://typoraio.cn/)：所见即所得的 [Markdown](https://markdown.com.cn/) 编辑器和阅读器。
 
-  > **Tip**：89 块 3 台设备我感觉还是蛮划算的，如果想要用免费版可以下载 0.11.18 版本。
+  > :bulb: **Tip**：89 块 3 台设备我感觉还是蛮划算的，如果想要用免费版可以下载 0.11.18 版本。
   
 - [**Obsidian**](https://obsidian.md/)：强大的插件系统，笔记存储在本地，同步需要付费，如果都是苹果设备的话，iCloud 同步会比较方便。
 
 - [**Notion**](https://www.notion.so/)：美观的笔记软件，块状的设计非常灵湖，多系统同步方便。笔记存储在云端，服务器在国外，速度会比较慢。
 
-  > **Note**：我这边安装 Notion，是为了方便 Obsidian 通过插件发布至 Notion，借用 Notion 分享一些笔记。
+  > :round_pushpin: **Note**：我这边安装 Notion，是为了方便 Obsidian 通过插件发布至 Notion，借用 Notion 分享一些笔记。
 
 ### LaTeX :mortar_board:
 
-[$\mathbb{Latex}$](https://www.latex-project.org/) 是一个高质量的排版系统，专为生产技术文档和科学文档而设计的。
+[$LaTex$](https://www.latex-project.org/) 是一个高质量的排版系统，专为生产技术文档和科学文档而设计的。
 
 >  [!note]
 >
-> 我个人是推荐本地使用 `VSCode` + `LaTex Workshop`，在线 :cloud: 的话就 [**Overleaf**](https://cn.overleaf.com/)。
+> 我个人是推荐本地使用 `VSCode` :heavy_plus_sign: `LaTex Workshop`，在线 :cloud: 的话就 [**Overleaf**](https://cn.overleaf.com/)。
 
 - [**MacTex**](https://tug.org/mactex/)：LaTeX 环境 = TextLive。
 
@@ -76,7 +80,7 @@
   
 - [**Texifier**](https://www.texifier.com/)：非常漂亮的 LaTeX 编辑器，支持实时预览。
 
-  > **Caution**：实时预览是基于它自身的 TexpadTex 引擎渲染的，会需要额外安装那些需要的库。
+  > :exclamation: **Caution**：实时预览是基于它自身的 TexpadTex 引擎渲染的，会需要额外安装那些需要的库。
   
 - [**TeXstudio**](https://texstudio.sourceforge.net/)：跨系统的 LaTex 编辑器，开箱即用。
 
@@ -123,9 +127,9 @@
 
 ## Tool  :hammer_and_wrench:
 
-- [**CotEditor**](https://coteditor.com/)：轻量的文本编辑器。
+- [**CotEditor**](https://coteditor.com/)：轻量的文本编辑器 :memo:。
 
-- [**Raycast**](https://www.raycast.com/)：替代 `Spotlight`，有插件功能（免费版够用）。
+- [**Raycast**](https://www.raycast.com/)： :mag_right: ​替代 `Spotlight`，有插件功能（免费版够用）。
 
 - ~~**CheatSheet**：长按**⌘**快速查看应用程序的快捷键。~~
 
@@ -143,31 +147,31 @@
   >
   > 也有部分原因是罗技游戏鼠标配套的 [**G Hub**](https://www.logitechg.com/zh-cn/innovation/g-hub.html) 在 Mac 下实在是太难受了。
   
-- [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理，使用左 `Fn` 键。
+- [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理 :diamond_shape_with_a_dot_inside:，使用左 `Fn` 键。 
 
 - [**Maccy**](https://maccy.app)：轻量级的剪贴板工具 :clipboard:。
 
-- [**Gopeed**](https://gopeed.com/zh-CN)：开源的现代化下载器（支持插件扩展）。
+- [**Gopeed**](https://gopeed.com/zh-CN)：:arrow_down_small: ​开源的现代化下载器（支持插件扩展）。
 
 - ~~[**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图。~~
 
-- [**Snipaste**](https://zh.snipaste.com/)：截图+贴图（Windows 下也一直用这款）。
+- [**Snipaste**](https://zh.snipaste.com/)：截图 :heavy_plus_sign: ​贴图（Windows 下也一直用这款）。
 
 - ~~[**Kap**](https://getkap.co/)：屏幕录制工具。~~
 
-- [**QuickRecorder**](https://lihaoyun6.github.io/quickrecorder/)：轻量级的开源屏幕录制工具。
+- [**QuickRecorder**](https://lihaoyun6.github.io/quickrecorder/)：轻量级的开源屏幕录制工具 :movie_camera:。
 
 - [**IINA**](https://iina.io/)：现代媒体播放器 :clapper:。
 
   - [**IINA-Plus**](https://github.com/xjbeta/iina-plus)：IINA 添加弹幕功能。
 
-- [**Pika**](https://superhighfives.com/pika)：开源颜色选择器。
+- [**Pika**](https://superhighfives.com/pika)：开源颜色 :art: ​选择器。
 
-- [**Monitor Control**](https://monitorcontrol.app/)：控制外接显示器亮度、音量。
+- [**Monitor Control**](https://monitorcontrol.app/)：控制外接显示器亮度 :low_brightness:、音量 :speaker:。
 
 - ~~[**AppCleaner**](https://freemacsoft.net/appcleaner/)：轻量级的卸载小工具。~~
 
-- [**Pearcleaner**](https://itsalin.com/appInfo/?id=pearcleaner)：开源免费的 Mac 应用清理工具。
+- [**Pearcleaner**](https://itsalin.com/appInfo/?id=pearcleaner)：开源免费的 Mac 应用清理工具 :barber: ​。
 
 - [**Aldente Pro**](https://apphousekitchen.com/zh-hans/)：电池管理软件，限制最大充电电量 :battery:（收费）。
 
@@ -179,19 +183,19 @@
 
 - **Silicon**：识别软件的兼容，也可以使用 [Silicon Info](https://apps.apple.com/cn/app/silicon-info/id1542271266?mt=12)。
 
-- ~~[**AirBuddy**](https://v2.airbuddy.app/)：在 macOS 上查看你的无线设备。~~
+- ~~[**AirBuddy**](https://v2.airbuddy.app/)：在 macOS 上查看你的无线设备 :signal_strength:。~~
 
 - [**iStat Menus**](https://bjango.com/mac/istatmenus/)：我个人认为最好用的系统检监测工具 :bar_chart:（同类型免费替代产品很多）
 
 - [**Hot**](https://github.com/macmade/Hot)：CPU 温度 :fire: 检测。
 
-- [**WattsConnected**](https://apps.apple.com/us/app/wattsconnected/id1639692859?mt=12)：显示充电器 :battery: ​提供的瓦数。
+- [**WattsConnected**](https://apps.apple.com/us/app/wattsconnected/id1639692859?mt=12)：显示充电器 :electric_plug: ​提供的瓦数。
 
-- [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 **HiDPI**（收费）。
+- [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非 4K 显示器开启「**HiDPI**」（收费）。
 
-- [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 hosts 文件，切换多个 hosts 方案。
+- [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 `hosts` 文件，切换多个 `hosts` 方案。
 
-  > **Important**：配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] -> [**读与写**]
+  > :bangbang: **Important**：配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] :arrow_right: [**读与写**]
   
 - [**Hammerspoon**](https://www.hammerspoon.org/)：:hammer: ​自动化工具，使用 Lua 脚本实现各种操作。
 
@@ -199,7 +203,7 @@
 
 - [**Rapid API**](https://paw.cloud/)：原名 `Paw`， 专为 Mac 设计的 API 工具，背靠 [Rapid API Hub](https://rapidapi.com/) 中心。
 
-- [**Reqable**](https://reqable.com/zh-CN/)：``Fiddler` + `Charles` + `Postman`，新一代 API 开发工具。
+- [**Reqable**](https://reqable.com/zh-CN/)：`Fiddler` :heavy_plus_sign: `Charles` :heavy_plus_sign: `Postman`，新一代 API 开发工具。
 
 - [**Hoppscotch**](https://hoppscotch.io/)：开源免费的 API 开发工具。
 
@@ -207,23 +211,23 @@
 
 - [**OpenInTerminal-Lite**](https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite-zh.md)：上面的功能删减版，如果只有打开终端的需求的话 。
 
-- [**NeoHtop**](https://abdenasser.github.io/neohtop/)：跨平台的系统监视器。
+- [**NeoHtop**](https://abdenasser.github.io/neohtop/)：跨平台的系统监视器 :bar_chart:。
 
 - [**Sentinel**](https://itsalin.com/appInfo/?id=sentinel)：修复软件、自动签名的工具。
 
 - [**ChatGPT**](https://openai.com/chatgpt/download/)：ChatGPT 客户端软件。
 
-## :underage: 科学​ :crystal_ball:
+## :underage: :secret: :bangbang: :gun:
 
 - **Clash系**：有 [ClashX](https://en.clashx.org/)、ClashX Pro、[Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases) 和 CFW这些。
   
-    > **Warning**：不过 Clash 的内核 `Premium` 删库跑路了，就 [Meta](https://github.com/MetaCubeX/mihomo) 的作者改名 `mihomo` 偷偷还在更新。
+    > :warning: **Warning**：不过 Clash 的内核 `Premium` 删库跑路了，就 [Meta](https://github.com/MetaCubeX/mihomo) 的作者改名 `mihomo` 偷偷还在更新。
     >
     > 所以这边更推荐基于 [Meta](https://github.com/MetaCubeX/mihomo) 的 [Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases)。 
     
 - [**sing-box**](https://apps.apple.com/us/app/sing-box/id6451272673)：上手难度偏高，支持的协议非常多，比较适合自建服务器 VPS 的用户使用，也有相关的项目支持 Clash 的订阅转换。
 
-    > **Note**：App Store 版本需要外区 「Apple ID」，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
+    > :round_pushpin: **Note**：App Store 版本需要外区 「Apple ID」，也可以使用 Homebrew Cask 安装 `SFM` 图形化界面
 
 > [!note]
 >
