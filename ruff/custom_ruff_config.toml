@@ -1,0 +1,8 @@
+indent-width = 4
+line-length = 120
+
+[format]
+# indent-style = "space"
+quote-style = "single"
+skip-magic-trailing-comma = false
+
