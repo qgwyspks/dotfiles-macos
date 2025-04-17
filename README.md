@@ -1,6 +1,8 @@
  我在 macOS 上的 dotfiles 配置文件和自用的一些软件 :sparkles:。
 
-# 编程 :tophat:
+# 工作环境 :tophat:
+
+![alacritty](./img/alacritty.png)
 
 ## Shell :ghost:
 
@@ -32,14 +34,16 @@
 
 - [**NeoVim**](https://neovim.io/)：基于 Vim 的文本编辑器，具有强大的插件系统 [lazy.nvim](https://lazy.folke.io/) :zzz:。
 
+  > 我的 「[配置文件](./nvim/README.md)」:sparkles:。
+
 - [**Miniforge**](https://github.com/conda-forge/miniforge)：包含 `Conda` 和  `Mamba` 、使用 `conda-forge` 作为默认 channel 的最小安装环境。
 
   > **Tip**：Anaconda :vs: Miniconda :vs: Micromamba :vs: Miniforge，相比较下来，我还是比较推荐最轻量的 Miniforge，它同时包含 `conda` 和 `mamba`，`mamba` 真的非常快 :zap:！
-  
+
 - [**uv**](https://docs.astral.sh/uv/)：Python 包和项目管理器​ :hammer_and_wrench:。
 
   > **Note**：替代了很多常见的工具，如 `pip`、`pipx`、`poetry`、`pyenv` 等等。
-  
+
 - [**OrbStack**](https://orbstack.dev/)：:whale: 快速、轻量、简单的 Docker 虚拟机容器软件。
 
 ## 笔记 :book:
