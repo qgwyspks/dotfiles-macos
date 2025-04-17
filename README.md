@@ -1,6 +1,8 @@
  我在 macOS 上的 dotfiles 配置文件和自用的一些软件 :sparkles:。
 
-# Shell :book:
+# 编程 :tophat:
+
+## Shell :ghost:
 
 - [**Alacritty**](https://alacritty.org/)：极简主义的跨平台终端模拟器，非常快速，在 **MacOS** 上提供了很多额外的 `action` 功能支持。
 
@@ -10,41 +12,117 @@
   >
   > 非常推荐使用 `homebrew` 来安装环境和软件
 
-- **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) + :rocket:[starship](https://starship.rs/)
+- **zsh**：[zinit](https://zdharma-continuum.github.io/zinit/wiki/) + :rocket:[starship](https://starship.rs/)。
 
-- [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器 [tpm](https://github.com/tmux-plugins/tpm) + [tmux-open](https://github.com/tmux-plugins/tmux-open) + [tmux-prefix-highlight](https://github.com/tmux-plugins/tmux-prefix-highlight)
+- [**Tmux**](https://github.com/tmux/tmux/wiki)：终端复用器 [tpm](https://github.com/tmux-plugins/tpm) + [tmux-open](https://github.com/tmux-plugins/tmux-open) + [tmux-prefix-highlight](https://github.com/tmux-plugins/tmux-prefix-highlight)。
 
-- [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器。
+- [**fzf**](https://github.com/junegunn/fzf)：通用的命令行模糊查找器 :mag_right:。
 
 - [**zoxide**]()：`cd` 的替代品，可以记住以前使用的文件路径，直接使用 `z` 命令自动建议文件路径。
 
-- [**bat**](https://github.com/sharkdp/bat)：`cat` 的替代品，它使用图表和语法突出显示而不是纯文本来显示文件
+- [**bat**](https://github.com/sharkdp/bat)：`cat` 的替代品，它使用图表和语法突出显示而不是纯文本来显示文件。
 
-- [**lsd**](https://github.com/lsd-rs/lsd)：`ls` 的替代品
+- [**lsd**](https://github.com/lsd-rs/lsd)：`ls` 的替代品。
 
-- [**dust**](https://github.com/bootandy/dust)：`du` 的替代品，查看磁盘的使用情况
+- [**dust**](https://github.com/bootandy/dust)：`du` 的替代品，查看磁盘的使用情况。
 
-- [**tokei**](https://github.com/XAMPPRocky/tokei)：显示代码信息的统计程序
+- [**tokei**](https://github.com/XAMPPRocky/tokei)：显示代码信息的统计程序。
 
-- [**Bottom**](https://github.com/ClementTsang/bottom)：系统监视器
+- [**Bottom**](https://github.com/ClementTsang/bottom)：系统监视器。
 
-- [**nvm**](https://github.com/nvm-sh/nvm)：Node.js 的版本管理器
+- ~~[**nvm**](https://github.com/nvm-sh/nvm)：Node.js 的版本管理器。~~
 
-- [**NeoVim**](https://neovim.io/)：基于 Vim 的文本编辑器，具有强大的插件系统
+- [**NeoVim**](https://neovim.io/)：基于 Vim 的文本编辑器，具有强大的插件系统 [lazy.nvim](https://lazy.folke.io/) :zzz:。
 
-- [**Miniforge**](https://github.com/conda-forge/miniforge)：包含 `Conda` 和  `Mamba` 、使用 `conda-forge` 作为默认 channel 的最小安装环境
+- [**Miniforge**](https://github.com/conda-forge/miniforge)：包含 `Conda` 和  `Mamba` 、使用 `conda-forge` 作为默认 channel 的最小安装环境。
 
   > [!tip]
   >
   > Anaconda​ :vs: Miniconda​ :vs: Micromamba :vs: ​Miniforge，相比较下来，我还是比较推荐最轻量的 Miniforge，它同时包含 `conda` 和 `mamba`，`mamba` 真的非常快 :zap:！
 
+- [**uv**](https://docs.astral.sh/uv/)：Python 包和项目管理器​ :hammer_and_wrench:。
+
+  > [!tip]
+  >
+  > 替代了很多常见的工具，如 `pip`、`pipx`、`poetry`、`pyenv` 等等。
+
 - [**OrbStack**](https://orbstack.dev/)：快速、轻量、简单的 Docker 虚拟机容器软件
 
-- [**harlequin**](https://github.com/tconbeer/harlequin)：终端的 SQL IDE，支持 DuckDB/SQLite
+## 笔记 :book:
+
+### Markdown :pencil:
+
+- [**Typora**](https://typoraio.cn/)：所见即所得的 [Markdown](https://markdown.com.cn/) 编辑器和阅读器。
+
+  > [!note]
+  >
+  > 89 块 3 台设备我感觉还是蛮划算的，如果想要用免费版可以下载 0.11.18 版本。
+
+- [**Obsidian**](https://obsidian.md/)：强大的插件系统，笔记存储在本地，同步需要付费，如果都是苹果设备的话，iCloud 同步会比较方便。
+
+- [**Notion**](https://www.notion.so/)：美观的笔记软件，块状的设计非常灵湖，多系统同步方便。笔记存储在云端，服务器在国外，速度会比较慢。
+
+  > [!note]
+  >
+  > 我这边安装 Notion，是为了方便 Obsidian 通过插件发布至 Notion，借用 Notion 分享一些笔记。
+
+### LaTeX :mortar_board:
+
+[$\mathbb{Latex}$](https://www.latex-project.org/) 是一个高质量的排版系统，专为生产技术文档和科学文档而设计的。
+
+>  [!note]
+>
+> 我个人是推荐本地使用 `VSCode` + `LaTex Workshop`，在线 :cloud: 的话就 [**Overleaf**](https://cn.overleaf.com/)。
+
+- [**MacTex**](https://tug.org/mactex/)：LaTeX 环境 = TextLive。
+
+  > [!note]
+  >
+  > 有精简版本的 BasicTeX，但不建议安装，后续装包可能会有些不必要的麻烦。
+  >
+  > > [!tip]
+  > >
+  > > :star: 使用 **Homebrew** 安装可以选择 `mactex-no-gui`，少了好多不必要的 GUI 软件。
+
+- [**Texifier**](https://www.texifier.com/)：非常漂亮的 LaTeX 编辑器，支持实时预览。
+
+  > [!caution]
+  >
+  > 实时预览是基于它自身的 TexpadTex 引擎渲染的，会需要额外安装那些需要的库。
+
+- [**TeXstudio**](https://texstudio.sourceforge.net/)：跨系统的 LaTex 编辑器，开箱即用。
+
+> [!note]
+>
+> 还有个轻量级的用于排版文档的标记语言 [**Typst**](https://typst.app/)，有兴趣可以试试。 
+
+### 学术 :school_satchel:
+
+- [**Zotero**](https://www.zotero.org/)：文献管理软件。支持「[**插件功能**](https://zotero-chinese.com/plugins/)」 :arrow_down: ：
+  - [**Ethereal Style**](https://github.com/MuiseDestiny/zotero-style)：增强界面功能，:heavy_plus_sign: [**easyScholar**](https://www.easyscholar.cc/) 显示影响因子。
+  - [**Translate for Zotero**](https://github.com/windingwind/zotero-pdf-translate)：翻译插件。
+
+## 数据库
+
+- ~~[**SQLiteFlow**](https://www.sqliteflow.com/zh-Hans/)：SQLite 数据库管理器（收费）。~~
+
+- [**Native SQLite Manager**](https://apps.apple.com/cn/app/native-sqlite-manager/id1416282836?mt=12)：SQLite 数据库管理器（App Store 下载，收费）。
+
+- [**Navicat Premium Lite**](https://www.navicat.com.cn/download/navicat-premium-lite)：Navicat 精简版，支持 MySQL、PostgreSQL、SQL Server、Oracle、MariaDB，以及 Redis 和 MongoDB 等 NoSQL 数据库。
+
+- [**Sequel Ace**](https://sequel-ace.com/)：MySQL/MariaDB 数据库管理（App Store 下载）。
+
+- [**DbGate**](https://dbgate.org/)：SQLite/MySQL/MariaDB/PostgreSQL/SQL Server/Oracle/MongoDB/Redis/Amazon Redshift/CockroachDB 支持 SQL+noSQL 的数据库管理。
+
+- [**Beekeeper Studio**](https://www.beekeeperstudio.io/)：MySQL/PostgreSQL/SQLite/SQL Server 等的数据库管理，非常美观、易用。
+
+- [**Tiny RDM**](https://github.com/tiny-craft/tiny-rdm)：轻量级跨平台 Redis 桌面管理器。
+
+- ~~[**harlequin**](https://github.com/tconbeer/harlequin)：终端的 SQL IDE，支持 DuckDB/SQLite。~~
 
 # Software​ :green_apple:
 
-自用的一些软件清单，尽量免费为主。
+自用的一些软件清单，尽量**免费**为主。
 
 > [!tip]
 >
@@ -55,184 +133,107 @@
 - **MacKed**：https://macked.app/
 - **appstorent**：https://appstorrent.ru/
 
-## IDE :memo:
+## Tool  :hammer_and_wrench:
 
-- [**CotEditor**](https://coteditor.com/)：轻量的文本编辑器
+- [**CotEditor**](https://coteditor.com/)：轻量的文本编辑器。
 
-- [**VSCode**](https://code.visualstudio.com/)：代码编辑器
-  
-    > [!note]
-    >
-    > 不知道为什么，感觉 Mac 下的 vscode 好看很多！
-    
-- JetBrains
-    - [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)：如果有账号，使用 toolbox 来管理会非常方便
-    - PyCharm
-    - GoLand
-    
-    > [!tip]
-    >
-    > 大学生可以用学生邮箱申请免费使用，一般一年重新验证一次资格。
-    
-- [**Xcode**](https://developer.apple.com/cn/xcode/)：用于 macOS app 开发的 IDE 和工具链
+- [**Raycast**](https://www.raycast.com/)：替代 `Spotlight`，有插件功能（免费版够用）。
 
-    > [!note]
-    >
-    > 很多工具需要安装 `Xcode Command Line Tools`，不太推荐安装整个 Xcode，因为比较大，运行 `xcode-select --install` 即可。
+- ~~**CheatSheet**：长按**⌘**快速查看应用程序的快捷键。~~
 
-## Tool
+- [**Keka**](https://www.keka.io/zh-cn/)：解压缩软件（App Store 里付费，官网免费）。
 
-- [**Raycast**](https://www.raycast.com/)：替代 Spotlight，有插件功能（免费版够用）
+- [**The Unarchiver**](https://theunarchiver.com/)：解压缩软件，支持打开 RAR。
 
-- **CheatSheet**：长按**⌘**快速查看应用程序的快捷键
+- ~~[**Latest**](https://github.com/mangerlahn/Latest)：检查应用是否都是最新版本，提供更新以及具体的更新内容（开源免费）。~~
 
-- [**Keka**](https://www.keka.io/zh-cn/)：解压缩软件
+- ~~[**Mac Mouse Fix**](https://macmousefix.com/)：鼠标滚动平滑工具。~~
 
-  > [!tip]
-  >
-  > App Store 里付费，官网免费（很神奇）
-
-- [**Latest**](https://github.com/mangerlahn/Latest)：检查应用是否都是最新版本，提供更新以及具体的更新内容（开源免费）
-
-- [**Mac Mouse Fix**](https://macmousefix.com/)：鼠标滚动平滑工具
+- [**LOGI OPTIONS+**](https://www.logitech.com/zh-cn/setup/ergosetup/logi-options.html)：罗技官方提供的鼠标增强工具。
 
   > [!note]
   >
-  > 同类型还有 [Mos](https://mos.caldis.me/)，但它很久不更新了。
+  > 最近换了 Logi 的 `MX Master 3s` 无线办公鼠标，手感各种都很舒服（不愧是上了苹果官网图片的鼠标）。
   >
-  > 外接鼠标时可配置鼠标按钮的指定动作，我这边使用的是罗技G502，搭配 [**Logitech G Hub**](https://www.logitechg.com/en-us/innovation/g-hub.html) 实现鼠标控制。
+  > 也有部分原因是罗技游戏鼠标配套的 [**G Hub**](https://www.logitechg.com/zh-cn/innovation/g-hub.html) 在 Mac 下实在是太难受了。
 
-- [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理，使用左 `Fn` 键
+- [**Loop**](https://github.com/MrKai77/Loop)：简化窗口管理，使用左 `Fn` 键。
 
-- [**Gopeed**](https://gopeed.com/zh-CN)：开源的现代化下载器（支持插件扩展）
+- [**Maccy**](https://maccy.app)：轻量级的剪贴板工具 :clipboard:。
 
-- [**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图
+- [**Gopeed**](https://gopeed.com/zh-CN)：开源的现代化下载器（支持插件扩展）。
 
-- [**Snipaste**](https://zh.snipaste.com/)：截图+贴图（Windows 下也一直用这款）
+- ~~[**Shottr**](https://shottr.cc/)：轻量级截图工具，支持滚动长截图和贴图。~~
 
-- [**Kap**](https://getkap.co/)：屏幕录制工具
+- [**Snipaste**](https://zh.snipaste.com/)：截图+贴图（Windows 下也一直用这款）。
 
-- [**IINA**](https://iina.io/)：现代媒体播放器
+- ~~[**Kap**](https://getkap.co/)：屏幕录制工具。~~
 
-  - [**IINA-Plus**](https://github.com/xjbeta/iina-plus)：IINA 添加弹幕功能
+- [**QuickRecorder**](https://lihaoyun6.github.io/quickrecorder/)：轻量级的开源屏幕录制工具。
 
-- [**Pika**](https://superhighfives.com/pika)：开源颜色选择器
+- [**IINA**](https://iina.io/)：现代媒体播放器 :clapper:。
 
-- [**QuickRecorder**](https://lihaoyun6.github.io/quickrecorder/)：轻量级的开源屏幕录制工具
+  - [**IINA-Plus**](https://github.com/xjbeta/iina-plus)：IINA 添加弹幕功能。
 
-- [**AppCleaner**](https://freemacsoft.net/appcleaner/)：轻量级的卸载小工具
+- [**Pika**](https://superhighfives.com/pika)：开源颜色选择器。
 
-- [**Aldente Pro**](https://apphousekitchen.com/zh-hans/)：电池管理软件，限制最大充电电量 :battery:
+- [**Monitor Control**](https://monitorcontrol.app/)：控制外接显示器亮度、音量。
 
-- [**BatteryBoi**](https://github.com/thebarbican19/BatteryBoi)：**MacOS** 菜单栏的替代电池 :battery: ​指示器
+- ~~[**AppCleaner**](https://freemacsoft.net/appcleaner/)：轻量级的卸载小工具。~~
 
-- [**Dropover**](https://apps.apple.com/cn/app/dropover-%E6%9B%B4%E5%8A%A0%E5%AE%B9%E6%98%93%E6%8B%96%E6%94%BE%E6%96%87%E4%BB%B6/id1355679052?mt=12)：拖动文件更加容易
+- [**Pearcleaner**](https://itsalin.com/appInfo/?id=pearcleaner)：开源免费的 Mac 应用清理工具。
 
-- [**Easydict**](https://github.com/tisfeng/Easydict)：词典翻译 App，[Bob](https://bobtranslate.com/guide/) 的免费替代品
+- [**Aldente Pro**](https://apphousekitchen.com/zh-hans/)：电池管理软件，限制最大充电电量 :battery:（收费）。
 
-- **Silicon**：识别软件的兼容，也可以使用 [Silicon Info](https://apps.apple.com/cn/app/silicon-info/id1542271266?mt=12)
+- ~~[**BatteryBoi**](https://github.com/thebarbican19/BatteryBoi)：**MacOS** 菜单栏的替代电池 :battery: ​指示器。~~
 
-- [**AirBuddy**](https://v2.airbuddy.app/)：在 macOS 上查看你的无线设备
+- ~~[**Dropover**](https://apps.apple.com/cn/app/dropover-%E6%9B%B4%E5%8A%A0%E5%AE%B9%E6%98%93%E6%8B%96%E6%94%BE%E6%96%87%E4%BB%B6/id1355679052?mt=12)：拖动文件更加容易（收费）。~~
 
-- [**iStat Menus**](https://bjango.com/mac/istatmenus/)：我个人认为最好用的系统检监测工具（同类型免费替代产品很多）
+- ~~[**Easydict**](https://github.com/tisfeng/Easydict)：词典翻译 App，[Bob](https://bobtranslate.com/guide/) 的免费替代品。~~
 
-- [**Hot**](https://github.com/macmade/Hot)：CPU 温度检测
+- **Silicon**：识别软件的兼容，也可以使用 [Silicon Info](https://apps.apple.com/cn/app/silicon-info/id1542271266?mt=12)。
 
-- [**WattsConnected**](https://apps.apple.com/us/app/wattsconnected/id1639692859?mt=12)：显示充电器提供的瓦数
+- ~~[**AirBuddy**](https://v2.airbuddy.app/)：在 macOS 上查看你的无线设备。~~
 
-- [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 HiDPI
+- [**iStat Menus**](https://bjango.com/mac/istatmenus/)：我个人认为最好用的系统检监测工具 :bar_chart:（同类型免费替代产品很多）
+
+- [**Hot**](https://github.com/macmade/Hot)：CPU 温度 :fire: 检测。
+
+- [**WattsConnected**](https://apps.apple.com/us/app/wattsconnected/id1639692859?mt=12)：显示充电器 :battery: ​提供的瓦数。
+
+- [**BetterDisplay**](https://github.com/waydabber/BetterDisplay/blob/landing/README.md)：非4K显示器开启 HiDPI（收费）。
 
   > [!note]
   >
   > 开启 **HiDPI** 后，又可以直接在**设置->显示器**中设置，就很奇怪 :question:。
 
-- [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 hosts 文件，切换多个 hosts 方案
+- [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 hosts 文件，切换多个 hosts 方案。
 
   > [!important]
   >
   > 配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] -> [**读与写**]
 
-- [**Hammerspoon**](https://www.hammerspoon.org/)：自动化工具，使用 Lua 脚本实现各种操作
+- [**Hammerspoon**](https://www.hammerspoon.org/)：:hammer: ​自动化工具，使用 Lua 脚本实现各种操作。
 
-- [**Bruno**](https://www.usebruno.com/)：离线的 API 客户端
+- [**Bruno**](https://www.usebruno.com/)：免费开源的 API 测试工具（离线）。
 
-  > [!note]
-  >
-  > 文件都在本地，**不用登录**让人很难不喜欢
+- [**Rapid API**](https://paw.cloud/)：原名 `Paw`， 专为 Mac 设计的 API 工具，背靠 [Rapid API Hub](https://rapidapi.com/) 中心。
 
-- [**OpenInTerminal**](https://github.com/Ji4n1ng/OpenInTerminal)：Finder 工具栏应用程序，用于打开终端、打开指定 App 等
+- [**Reqable**](https://reqable.com/zh-CN/)：``Fiddler` + `Charles` + `Postman`，新一代 API 开发工具。
 
-  > [!note]
-  >
-  > 如果只需要打开终端的话，可以安装 [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite-zh.md)。
+- [**Hoppscotch**](https://hoppscotch.io/)：开源免费的 API 开发工具。
 
-## 音乐 :musical_note:
+- [**OpenInTerminal**](https://github.com/Ji4n1ng/OpenInTerminal)：`Finder` 工具栏应用程序，用于打开终端、打开指定 App 等。
 
-- [**网易云音乐**](https://music.163.com/#/download)
-- [**QQ 音乐**](https://y.qq.com/download/mac.html?part=1&ADTAG=YQQ)
-- [**Spotify**](https://open.spotify.com/)
-- [**YT Music**](https://github.com/steve228uk/YouTube-Music)：YouTube Music 的 Mac 应用包装器
-- [**MediaMate**](https://wouter01.github.io/MediaMate/)：优化 MacOS 系统 HUD，实现「**灵动岛**」效果
+- [**OpenInTerminal-Lite**](https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite-zh.md)：上面的功能删减版，如果只有打开终端的需求的话 。
 
-## 笔记
+- [**NeoHtop**](https://abdenasser.github.io/neohtop/)：跨平台的系统监视器。
 
-### Markdown
+- [**Sentinel**](https://itsalin.com/appInfo/?id=sentinel)：修复软件、自动签名的工具。
 
-- [**Typora**](https://typoraio.cn/)：所见即所得的 Markdown 编辑器和阅读器
+- [**ChatGPT**](https://openai.com/chatgpt/download/)：ChatGPT 客户端软件。
 
-    > [!note]
-    >
-    > 89 块 3 台设备我感觉还是蛮划算的，如果想要用免费版可以下载 0.11.18 版本。
-- [**Obsidian**](https://obsidian.md/)：强大的插件系统，笔记存储在本地，同步需要付费，如果都是苹果设备的话，iCloud 同步会比较方便
-- [**Notion**](https://www.notion.so/)：美观的笔记软件，块状的设计非常灵湖，多系统同步方便。笔记存储在云端，服务器在国外，速度会比较慢
-
-    > [!note]
-    >
-    > 我这边安装 Notion，是为了方便 Obsidian 通过插件发布至 Notion，借用 Notion 分享一些笔记。
-
-### LaTeX
-
-- [**MacTex**](https://tug.org/mactex/)：LaTeX 环境 = TextLive
-
-  > [!note]
-  >
-  > 有精简版本的 BasicTeX，但不建议安装，后续装包可能会有些不必要的麻烦。
-  >
-  > > [!tip]
-  > >
-  > > :star: 使用 **Homebrew** 安装可以选择 `mactex-no-gui`，少了好多不必要的 GUI 软件。
-
-- [**Texifier**](https://www.texifier.com/)：非常漂亮的 LaTeX 编辑器，支持实时预览
-
-    > [!caution]
-    >
-    > 实时预览是基于它自身的 TexpadTex 引擎渲染的，会需要额外安装那些需要的库
-
-## 数据库
-
-- **SQLiteFlow**：SQLite 数据库管理
-
-- [**Navicat Premium Lite**](https://www.navicat.com.cn/download/navicat-premium-lite)：Navicat 精简版，支持 MySQL、PostgreSQL、SQL Server、Oracle、MariaDB，以及 Redis 和 MongoDB 等 NoSQL 数据库
-
-- [**Sequel Ace**](https://sequel-ace.com/)：MySQL/MariaDB 数据库管理
-
-- [**DbGate**](https://dbgate.org/)：SQLite/MySQL/MariaDB/PostgreSQL/SQL Server/Oracle/MongoDB/Redis/Amazon Redshift/CockroachDB 支持 SQL+noSQL 的数据库管理
-  
-    > [!note]
-    >
-    > 真的很喜欢 DbGate，开启速度是我目前见过**最快**​ :zap: 的！
-    
-- [**Beekeeper Studio**](https://www.beekeeperstudio.io/)：MySQL/PostgreSQL/SQLite/SQL Server 等的数据库管理，非常美观、易用
-
-    > [!note]
-    >
-    > 不知道为什么双击数据库文件，不会默认使用 DbGate，所以这边安装了 Beekeeper，启动速度也非常快。
-    
-- [**Tiny RDM**](https://github.com/tiny-craft/tiny-rdm)：轻量级跨平台 Redis 桌面管理器
-
-- [**harlequin**](https://github.com/tconbeer/harlequin)：终端的 SQL IDE，支持 DuckDB/SQLite
-
-## 科学​ :crystal_ball:
+## :underage: 科学​ :crystal_ball:
 
 - **Clash系**：有 [ClashX](https://en.clashx.org/)、ClashX Pro、[Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases) 和 CFW这些。
   
