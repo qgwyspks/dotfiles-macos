@@ -217,6 +217,8 @@
 
 - [**ChatGPT**](https://openai.com/chatgpt/download/)：ChatGPT 客户端软件。
 
+- [**ProNotes**](https://www.pronotes.app/)：Apple Notes 扩展插件，添加 Markdown 支持。
+
 ## :underage: :secret: :bangbang: :gun:
 
 - **Clash系**：有 [ClashX](https://en.clashx.org/)、ClashX Pro、[Clash Verge Rev](https://github.com/Clash-Verge-rev/clash-verge-rev/releases) 和 CFW这些。
