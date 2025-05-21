@@ -3,7 +3,9 @@
 # 根据 schema 提供自动补全
 "$schema" = 'https://starship.rs/config-schema.json'
 right_format = """$cmd_duration"""
-add_newline = false
+scan_timeout = 30      # 扫描文件的超时时间
+command_timeout = 500  # 执行命令的超时时间
+add_newline = false    # 在提示符之间不插入空行
 
 [line_break]
 disabled = true
@@ -45,11 +47,19 @@ style = 'bold purple'
 format = '[$symbol]($style)'
 style = 'bold 149'
 symbol = " "
-# disabled = true
+disabled = true
+
+[cmake]
+format = '[$symbol]($style)'
+style  = 'bold 149'
+symbol = " "
 
 [docker_context]
-symbol = " "
-disabled = true
+format       = '[$symbol]($style)'
+style        = 'blue bold'
+symbol       = "  "
+detect_files = [ 'docker-compose.yml', 'docker-compose.yaml', 'Dockerfile', 'dockerfile' ]  # 加了个小写的 dockerfile
+disabled     = false
 
 [golang]
 format = '[$symbol]($style)'
