@@ -2,6 +2,7 @@
 ## Plugins
 ##
 
+# zi = zinit
 # 手动安装 zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -21,9 +22,12 @@ zi ice as"command" from"gh-r" \
           atpull"%atclone" src"init.zsh"
 zi light starship/starship
 
+# zinit light zdharma-continuum/zinit-annex-patch-dl
+
 # 使用 fzf-tab 代替 fzf（fzf-tab 需要在 compinit 之后，在 autosuggestion 和 highlighting 之前）
 # zi ice from"gh-r" as"program"
 # zi light junegunn/fzf
+# zi pack'binary' for fzf
 zi ice wait lucid has 'fzf'
 zi light Aloxaf/fzf-tab
 
@@ -31,10 +35,10 @@ zi light Aloxaf/fzf-tab
 # zi ice wait lucid atinit"zicompinit; zicdreplay"
 # zi light zdharma-continuum/fast-syntax-highlighting
 # 设置主题 fast-theme -t free
-zi ice wait lucid wait='0'
+zi ice wait lucid
 zi light zsh-users/zsh-syntax-highlighting
 
-# 自动建议
+# 自动建议，加载插件后执行
 zi ice wait lucid atload"_zsh_autosuggest_start"
 zi light zsh-users/zsh-autosuggestions
 
@@ -73,10 +77,12 @@ zi light mfaerevaag/wd
 
 #zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 
+fpath=($HOME/.config/zsh/completions $fpath)
+# zicompinit = autoload compinit; compinit
 autoload -U compinit && compinit
 
 zinit cdreplay -a
 
 eval "$(zoxide init zsh --cmd z)"
 # eval "$(starship init zsh)"
-eval "$(atuin init zsh)"
+# eval "$(atuin init zsh)"
