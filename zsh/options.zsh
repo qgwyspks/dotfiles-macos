@@ -8,8 +8,8 @@ zmodload zsh/complist  # 补全列表显示支持
 autoload -Uz colors  # 加载颜色支持
 colors               # 启动颜色支持
 
-fpath+=~/.zfunc
-autoload -U compinit  # 加载补全系统
+# fpath+=~/.config/zsh/completion  # 加载自定义补全脚本
+# autoload -U compinit  # 加载补全系统
 # compinit
 
 setopt autocd            # 输入目录名自动 cd
