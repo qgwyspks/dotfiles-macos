@@ -29,7 +29,7 @@ alias vim='nvim'
 alias base='mamba activate base'
 alias pytorch='mamba activate pytorch'
 alias study='mamba activate study'
-alias lab='mamba activate jupyterlab'
+alias lab='mamba activate lab'
 alias dea='mamba deactivate'
 
 # tmux
