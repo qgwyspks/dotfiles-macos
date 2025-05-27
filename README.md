@@ -66,7 +66,7 @@
 
 ### LaTeX :mortar_board:
 
-[$LaTex$](https://www.latex-project.org/) 是一个高质量的排版系统，专为生产技术文档和科学文档而设计的。
+[LaTex](https://www.latex-project.org/) 是一个高质量的排版系统，专为生产技术文档和科学文档而设计的。
 
 >  [!note]
 >
@@ -173,6 +173,8 @@
 
 - [**Pearcleaner**](https://itsalin.com/appInfo/?id=pearcleaner)：开源免费的 Mac 应用清理工具 :barber: ​。
 
+  > `Pearcleaner` 经常需要使用权限，也可以选择 `AppCleaner`。
+
 - [**Aldente Pro**](https://apphousekitchen.com/zh-hans/)：电池管理软件，限制最大充电电量 :battery:（收费）。
 
 - ~~[**BatteryBoi**](https://github.com/thebarbican19/BatteryBoi)：**MacOS** 菜单栏的替代电池 :battery: ​指示器。~~
@@ -196,7 +198,7 @@
 - [**SwitchHosts**](https://switchhosts.vercel.app/zh)：管理 `hosts` 文件，切换多个 `hosts` 方案。
 
   > :bangbang: **Important**：配合 [Github520](https://github.com/521xueweihan/GitHub520) 项目蛮好的，最后前往 `/etc/hosts` 修改下文件的权限，修改 **everyone** 的权限 [**只读**] :arrow_right: [**读与写**]
-  
+
 - [**Hammerspoon**](https://www.hammerspoon.org/)：​ :hammer: ​自动化工具，使用 Lua 脚本实现各种操作。
 
 - [**Bruno**](https://www.usebruno.com/)：免费开源的 API 测试工具（离线）。
