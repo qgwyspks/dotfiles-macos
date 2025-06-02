@@ -3,7 +3,7 @@ if not gitsigns_status then
     return
 end
 
-gitsigns.setup {
+local config = {
     signs = {
         add = { text = "┃" },
         change = { text = "┃" },
@@ -13,3 +13,5 @@ gitsigns.setup {
         untracked = { text = "┆" },
     },
 }
+
+gitsigns.setup(config)

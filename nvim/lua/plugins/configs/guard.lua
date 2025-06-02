@@ -5,17 +5,15 @@ end
 
 local ft = require "guard.filetype"
 
--- ft('python'):fmt({
---                 cmd = 'ruff',
---                 args = {
---                     '--line-length=120',
---                     -- '--config', "\"format.quote-style=\'single\'\"",
---                     '--config', "format.quote-style='single'",
---                 },
---                 stdin = true,
---             })
---             :lint('ruff')
-ft("python"):fmt("lsp"):append("ruff"):lint "ruff"
+ft('python'):fmt({
+    cmd = "ruff",
+    args = {
+        "format",
+        "--config", "~/.config/custom_ruff_config.toml",
+    },
+    fname = true,
+    stdin = false,
+})
 
 -- ft('c,cpp'):fmt({
 --     cmd = 'clang-format',
@@ -23,18 +21,18 @@ ft("python"):fmt("lsp"):append("ruff"):lint "ruff"
 --     ignore_patterns = { 'neovim', 'vim' },
 -- })
 
-ft("lua"):fmt("lsp"):append "stylua"
+ft("lua"):fmt("lsp"):append("stylua")
 -- :lint('selene')
 
-ft("go"):fmt("lsp"):append "gofmt"
+ft("go"):fmt("lsp"):append("gofmt")
 
-ft("json"):fmt "lsp"
+ft("json"):fmt("lsp")
 
 ft("sh"):fmt({
     cmd = "shfmt",
     args = { "-" },
     stdin = true,
-}):lint "shellcheck"
+}):lint("shellcheck")
 
 vim.g.guard_config = {
     fmt_on_save = true,

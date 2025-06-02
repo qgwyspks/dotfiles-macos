@@ -23,9 +23,49 @@ local opts = {
 --     has_blink and blink.get_lsp_capabilities() or {}
 -- )
 
-opts.servers.gopls = {
+local server_configs = {}
+
+server_configs.basedpyright = {
+    cmd = { "basedpyright-langserver", "--stdio" },
+    filetypes = { "python" },
+    root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", "pyrightconfig.json", ".git" },
+    settings = {
+        basedpyright = {
+            analysis = {
+                autoSearchPaths = true,  -- 自动添加常见搜索路径
+                diagnosticMode = "openFilesOnly",  -- 仅分析打开的文件
+                useLibraryCodeForTypes = true,
+                inlayHints = {
+                    variableTypes = true,  -- 变量赋值时显示类型提示
+                    callArgumentNames = true,  -- 在函数参数上显示类型提示
+                    functionReturnTypes = true,  -- 在函数返回类型上显示提示
+                    genericTypes = true,  -- 在推断的泛型类型上显示提示
+                }
+            }
+        }
+    }
+}
+
+server_configs.bashls = {
+    cmd = { "bash-language-server", "start" },
+    filetypes = { "bash", "sh" },
+    root_markers = { ".git" },
+    settings = {
+        bashIde = {
+            globPattern = "*@(.sh|.inc|.bash|.command)"
+        }
+    }
+}
+
+server_configs.clangd = {
+    cmd = { "clangd" },
+    filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+    root_markers = { ".clangd", ".clang-tidy", ".clang-format", "compile_commands.json", "compile_flags.txt", "configure.ac", ".git" },
+}
+
+server_configs.gopls = {
     cmd = { "gopls" },
-    filetypes = { "go", "gomod", "gowork" },
+    filetypes = { "go", "gomod", "gowork", "gotmpl" },
     settings = {
         gopls = {
             -- gofumpt = true,  -- 使用 gofumpt 格式化代码
@@ -70,27 +110,13 @@ opts.servers.gopls = {
     },
 }
 
-opts.servers.taplo = {
-    keys = {
-        {
-            "K",
-            function()
-                if vim.fn.expand "%:t" == "Cargo.toml" and require("crates").popup_available() then
-                    require("crates").show_popup()
-                else
-                    vim.lsp.buf.hover()
-                end
-            end,
-            desc = "Show Crate Documentation",
-        },
-    },
-}
-
-opts.servers.lua_ls = {
+server_configs.lua_ls = {
     cmd = {
         "lua-language-server",
         "--locale=zh-cn",
     },
+    filetypes = { "lua" },
+    root_markers = { ".luarc.json", ".luarc.jsonc", ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml", ".git" },
     settings = {
         Lua = {
             diagnostics = {
@@ -128,15 +154,12 @@ local M = {}
 
 M.setup = function(languages)
     for _, language in ipairs(languages) do
-        if language == "gopls" then
-            lspconfig.gopls.setup(opts.servers.gopls)
-        elseif language == "taplo" then
-            lspconfig.taplo.setup(opts.servers.taplo)
-        elseif language == "lua_ls" then
-            lspconfig.lua_ls.setup(opts.servers.lua_ls)
-        else
-            lspconfig[language].setup(opts)
-        end
+        vim.lsp.enable(language)
+
+        local config = server_configs[language] or {}
+        local merged_config = vim.tbl_deep_extend("force", opts, config)
+
+        vim.lsp.config(language, merged_config)
     end
 end
 

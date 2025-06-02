@@ -13,6 +13,7 @@ local languages = {
     "gopls",  -- Go
     "lua_ls",  -- Lua
     -- "marksman",  -- Markdown
+    "basedpyright",
     -- "pyright",  -- Python pylsp ruff rufflsp
     -- "texlab",  -- LaTeX
 }
@@ -26,7 +27,6 @@ return {
         event = { "InsertEnter" },
 
         ---@module 'blink.cmp'
-        ---@type blink.cmp.Config
         opts = {
             keymap = {
                 preset = 'none',  -- 'default'
