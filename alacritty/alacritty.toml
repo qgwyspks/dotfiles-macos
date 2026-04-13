@@ -3,31 +3,31 @@
 live_config_reload = true    # 实时配置重新加载
 
 [window]
-dimensions = { columns = 74, lines = 24 }  # 窗口尺寸(终端中的行/列数)
-padding = { x = 16, y = 20 }               # 窗口周围添加的空白区域
-decorations = "transparent"                # 窗口装饰 - 透明(macOS)
-dynamic_padding = true                     # 动态填充
-dynamic_title = true                       # 动态标题，允许终端应用更改窗口标题
-opacity = 0.82                             # 背景不透明度
-blur = false                               # 透明窗口后面的内容不进行模糊处理
-option_as_alt = "None"                     # Option(Macos) -> Alt -> OnlyLeft | OnlyRight| Both | None
-level = "Normal"                           # 窗口优先级 AlwaysOnTop(最上面)
+dimensions      = { columns = 74, lines = 24 }  # 窗口尺寸(终端中的行/列数)
+padding         = { x = 16, y = 20 }            # 窗口周围添加的空白区域
+decorations     = "transparent"                 # 窗口装饰 - 透明(macOS)
+dynamic_padding = true                          # 动态填充
+dynamic_title   = true                          # 动态标题，允许终端应用更改窗口标题
+opacity         = 0.82                          # 背景不透明度
+blur            = false                         # 透明窗口后面的内容不进行模糊处理
+option_as_alt   = "OnlyLeft"                    # Option(Macos) -> Alt -> OnlyLeft | OnlyRight| Both | None
+level           = "Normal"                      # 窗口优先级 AlwaysOnTop(最上面)
 
 [scrolling]
-history = 2500  # 回滚缓冲区的最大行数
-multiplier = 3  # 每个输入滚动增量滚动的行数
+history    = 2500  # 回滚缓冲区的最大行数
+multiplier = 3     # 每个输入滚动增量滚动的行数
 
 [font]
 size        = 15.6  # 14.6
-normal      = { family = "Maple Mono NF CN", style = "Light"       }
-bold        = { family = "Maple Mono NF CN", style = "Bold"        }
-italic      = { family = "Maple Mono NF CN", style = "Light Italic" }
-bold_italic = { family = "Maple Mono NF CN", style = "Bold Italic"  }
-offset = { x = 0, y = 2 }  # 每个字符周围的额外空间, x -> 字母间距, y -> 行距
+normal      = { family = "Maple Mono Normal NF CN", style = "Light"        }
+bold        = { family = "Maple Mono Normal NF CN", style = "Bold"         }
+italic      = { family = "Maple Mono Normal NF CN", style = "Light Italic" }
+bold_italic = { family = "Maple Mono Normal NF CN", style = "Bold Italic"  }
+offset      = { x = 0, y = 2 }  # 每个字符周围的额外空间, x -> 字母间距, y -> 行距
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"  # 语义转义字符
-save_to_clipboard = true                       # 保存到剪贴板
+save_to_clipboard     = true                   # 保存到剪贴板
 
 [cursor]
 style = { shape = "Beam", blinking = "Always" }  # 光标样式
@@ -48,7 +48,7 @@ bindings = [
     { key = "C",          mods = "Command",       action = "Copy"                  },  # Command C            -> 复制
     { key = "Q",          mods = "Command",       action = "Quit"                  },  # Command Q            -> 退出 Alacritty
     { key = "W",          mods = "Command",       action = "Hide"                  },  # Command W            -> 隐藏
-    { key = "T",          mods = "Command",       action = "CreateNewWindow"       },  # Command T            -> 创建新窗口
+    { key = "N",          mods = "Command",       action = "CreateNewWindow"       },  # Command N            -> 创建新窗口
     { key = "Return",     mods = "Command",       action = "ToggleMaximized"       },  # Command Return       -> 最大化
     { key = "Return" ,    mods = "Command|Shift", action = "ToggleSimpleFullscreen"},  # Command Shift Return -> 进入全屏而不占用其他空间(macOS)
     { key = "W",          mods = "Command|Shift", action = "HideOtherApplications" },  # Command Shift W      -> 隐藏其他应用程序(macOS)
@@ -60,7 +60,7 @@ bindings = [
     { key = "ArrowUp",    mods = "Command",       chars = "\u0010"                 },  # Command Up           -> Ctrl-p -> 向上浏览一条命令
     { key = "ArrowDown",  mods = "Command",       chars = "\u000E"                 },  # Command Down         -> Ctrl-n -> 向下浏览一条命令
     { key = "Back",       mods = "Command",       chars = "\u0015"                 },  # Command Back         -> Ctrl-u -> 清除整行
-    { key = "N",          mods = "Command",       chars = "\u0060c"                },  # Command N            -> ` c    -> tmux new-window
+    { key = "T",          mods = "Command",       chars = "\u0060c"                },  # Command T            -> ` c    -> tmux new-window
     { key = "LBracket",   mods = "Command",       chars = "\u0060p"                },  # Command [            -> ` p    -> tmux previous-window
     { key = "RBracket",   mods = "Command",       chars = "\u0060n"                },  # Command ]            -> ` n    -> tmux next-window
     { key = "X",          mods = "Command",       chars = "\u0060x"                },  # Command X            -> ` x    -> tmux kill-pane
@@ -101,3 +101,4 @@ bindings = [
 # t -> 窗口中央显示一个数字时钟
 # ? -> 列出所有快捷键
 # : -> 命令提示符
+
