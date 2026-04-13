@@ -79,13 +79,20 @@ symbol = " "
 # disabled = true
 
 [python]
-format = '[$symbol]($style)'
-style = 'yello bold'
+format = '[${symbol}]($style)'
+style = 'yellow bold'
 symbol = " "
+
+[pixi]
+format = '[(\($environment\)) ]($style)'
+style = 'yellow bold'
+show_default_environment = true  # 表明是否激活了 default 环境
+detect_folders = []  # 触发组件的文件夹 ['.pixi']
 
 [conda]
 format = '[$symbol$environment](dimmed green)'
 symbol = " "
+detect_env_vars = ["!PIXI_ENVIRONMENT_NAME"]  # 如果是 pixi 环境，默认情况下不会触发此模块
 disabled = true
 
 [rust]
