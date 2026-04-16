@@ -1,0 +1,153 @@
+# ---- 字体 ----
+font-family    = "Maple Mono Normal NF CN"
+font-thicken   = true
+font-size      = 15.6
+font-feature   = +cv12, +cv 18
+font-feature   = -calt, -liga, -dlig
+
+# ---- 外观 ----
+# theme = Catppuccin Macchiato
+theme                   = Catppuccin Mocha
+# 背景不透明度
+background-opacity      = 0.76
+# 背景模糊 int>0 | false | true | macos-glass-regular | macos-glass-clear
+background-blur         = false
+# 非聚焦窗口的不透明度
+unfocused-split-opacity = 0.85
+# 前景与背景色之间的最低对比度
+minimum-contrast        = 1.3
+# 调节行间距
+adjust-cell-height      = 10%
+# 滚动条
+scrollbar               = system
+
+# ----- 窗口 ----
+window-height          = 18
+window-width           = 60
+window-padding-x       = 12
+window-padding-y       = 10
+window-padding-balance = true
+# 窗口填充颜色 background | extend | extend-always
+window-padding-color   = background
+# 窗口装饰 none | auto | client | server
+window-decoration      = auto
+# 窗口主题 auto | system | light | dark | ghostty(Linux)
+window-theme           = auto
+
+# ---- 光标 ----
+# 光标样式 block | bar | underline | block_hollow
+cursor-style       = bar
+cursor-style-blink = true
+cursor-opacity     = 0.8
+
+# ---- 鼠标 ----
+# 鼠标隐藏: 输入时自动隐藏鼠标指针
+mouse-hide-while-typing = true
+# 自动将选中的文本复制到剪贴板 clipboard | false
+copy-on-select          = clipboard
+# 焦点跟鼠标
+focus-follows-mouse     = false
+# 右键点击 context-menu | paste | copy | copy-or-paste | ignore
+right-click-action      = context-menu
+
+# ---- Shell 继承 ----
+shell-integration          = detect
+shell-integration-features = cursor,sudo,title
+
+# ---- 快捷终端 ----
+# 位置 top | bottom | left | right | center
+quick-terminal-position               = top
+# 尺寸 top 高,宽
+quick-terminal-size                   = 46%,46%
+# 自动隐藏 macos -> true | Linux -> false
+quick-terminal-autohide               = true
+# 与键盘交互 none | on-demand | exclusive
+quick-terminal-keyboard-interactivity = on-demand
+
+# ---- 安全 ----
+# 是否允许程序读写剪贴版 ask | allow | deny
+clipboard-read                 = ask
+clipboard-write                = allow
+# 粘贴内容含不安全的文本时弹出确认
+clipboard-paste-protection     = true
+# 粘贴内容含括号是否安全
+clipboard-paste-bracketed-safe = true
+# 粘贴内容修剪前后空格
+clipboard-trim-trailing-spaces = true
+# 最后一个窗口关闭时不退出
+quit-after-last-window-closed  = false
+# 确认关闭曲面？
+confirm-close-surface          = false
+# URL 匹配
+link-url                       = true
+# 自动更新
+auto-update                    = off
+# 控制回滚缓冲区
+scrollback-limit               = 10000
+
+# ---- macOS ----
+# 应用图标 official | blueprint | chalkboard | microchip | glass | holographic | paper | retro | xray | custom
+macos-icon                        = glass
+# 标题栏呈现样式 native | transparent | tabs | hidden
+macos-titlebar-style              = tabs
+# 标题栏中的代理图标 visible | hidden
+macos-titlebar-proxy-icon         = hidden
+# 标题栏中的窗口按钮 visible | hidden
+macos-window-buttons              = visible
+# 原生全屏 true | false | visible-menu | padded-notch
+macos-non-native-fullscreen       = visible-menu
+# 窗口阴影
+macos-window-shadow               = true
+# 图标隐藏(dock 和 app switcher)，主要面向快速终端的用户 always | never
+macos-hidden                      = never
+# 窗口垂直同步，渲染与刷新率同步
+window-vsync                      = true
+# 按表面单元大小的离散增量调整窗口大小
+window-step-resize                = true
+# 窗口色彩空间 srgb | display-p3
+window-colorspace                 = display-p3
+# 是否启用保存和恢复窗口状态 default | never | always
+window-save-state                 = never
+# Option ⌥ -> Alt
+macos-option-as-alt               = true
+# 快捷终端在切换 macos 空间时的行为 move | remain
+quick-terminal-space-behavior     = move
+# 动画时长
+quick-terminal-animation-duration = 0.15
+# 显示界面 main | mouse | macos-menu-bar
+quick-terminal-screen             = mouse
+# 显示密码提示时自动启用安全输入
+macos-auto-secure-input           = true
+macos-secure-input-indication     = true
+macos-applescript                 = true
+# 快捷指令是否允许控制 Ghostty ask | allow | deny
+macos-shortcuts                   = ask
+
+# ---- 快捷键映射 ----
+# Super -> cmd (MacOS)
+# 快速重载配置
+keybind = super+shift+r=reload_config
+# 赋值粘贴
+keybind = super+shift+c=copy_to_clipboard
+keybind = super+shift+v=paste_from_clipboard
+# 分屏
+keybind = super+\=new_split:right
+keybind = super+-=new_split:down
+keybind = super+shift+enter=new_split:auto
+keybind = super+shift+z=toggle_split_zoom
+# 均匀分割当前 tab 的所有窗口
+keybind = super+==equalize_splits
+# Vim-like HJKL
+keybind = super+shift+h=goto_split:left
+keybind = super+shift+j=goto_split:bottom
+keybind = super+shift+k=goto_split:top
+keybind = super+shift+l=goto_split:right
+
+# 清空屏幕
+keybind = super+r=clear_screen
+# 全屏
+keybind = super+enter=toggle_fullscreen
+# 全局热键: 下拉终端
+keybind = global:cmd+backquote=toggle_quick_terminal
+# keybind = cmd+=toggle_background_opacity
+# keybind = global:cmd+=toggle_visibility
