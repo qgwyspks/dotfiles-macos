@@ -17,10 +17,10 @@ source "${ZINIT_HOME}/zinit.zsh"
 # line 1: 从 github release 克隆 starship 二进制文件作为 command
 # line 2: 克隆时设置 starship(创建 init.zsh -> completions)
 # line 3: 拉取行为与克隆相同，源 init.zsh
-zi ice as"command" from"gh-r" \
-          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-          atpull"%atclone" src"init.zsh"
-zi light starship/starship
+# zi ice as"command" from"gh-r" \
+#           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+#           atpull"%atclone" src"init.zsh"
+# zi light starship/starship
 
 # zinit light zdharma-continuum/zinit-annex-patch-dl
 
@@ -81,8 +81,8 @@ fpath=($HOME/.config/zsh/completions $fpath)
 # zicompinit = autoload compinit; compinit
 autoload -U compinit && compinit
 
-zinit cdreplay -a
+zinit cdreplay -q
 
 eval "$(zoxide init zsh --cmd z)"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 # eval "$(atuin init zsh)"

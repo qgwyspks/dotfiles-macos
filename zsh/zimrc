@@ -1,0 +1,11 @@
+zstyle ':zim:zmodule' use 'degit'
+
+zmodule environment
+zmodule input
+zmodule utility
+
+zmodule completion
+
+zmodule zsh-users/zsh-autosuggestions
+zmodule zdharma-continuum/fast-syntax-highlighting
+zmodule Aloxaf/fzf-tab
